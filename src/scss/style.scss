@@ -1,0 +1,151 @@
+/* 
+----------------------------------------------------------------------
+   ! IMPORT
+----------------------------------------------------------------------
+*/ 
+
+@import './fonts';
+@import '../libs/reset.min';
+@import '../libs/bootstrap-grid.min';
+@import './_vars';
+@import './_mixins';
+@import './_extends';
+@import '../../node_modules/swiper/swiper-bundle.min';
+
+// ? UI-компоненты
+@import './ui-components/ui-button';
+@import './ui-components/ui-input';
+@import './ui-components/mobileMenu/ui-mobileMenu';
+@import './ui-components/ui-close/ui-close';
+@import './ui-components/ui-decorArrow/ui-decorArrow';
+@import './ui-components/productCard/product-card';
+@import './ui-components/ui-socials/ui-socials';
+
+// ? Базовые компоненты
+@import './_header';
+@import './_footer';
+
+
+
+// ? Страницы
+
+
+// ? Секции
+@import './sections/section-our-sites';
+@import './sections/section-welcome';
+@import './sections/section-catalog';
+@import './sections/catalog-accordion-item';
+@import './sections/section-for-why';
+@import './sections/section-contact';
+
+
+
+
+* {
+   box-sizing: border-box;
+}
+
+button {
+   border: none;
+   background: transparent;
+   &:active, &:focus {
+      border: none;
+   }
+}
+html,body {
+   height: 100%;
+   // all: unset; // сбрасывыает все стили до значений по умолчанию
+}
+
+body {
+   position: relative;
+   font-family: $Roboto;
+   &.hidden {
+      overflow: hidden;
+   }
+}
+
+a, a:focus, a:hover, a:active,
+button, button:hover, button:active,
+input, input:focus, input:hover, input:active {
+   text-decoration: none;
+   outline: none;
+   // all: unset;
+   cursor: pointer;
+}
+
+
+
+// * pagination swiper
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+   bottom: 0;
+}
+
+.swiper .swiper-pagination-bullet-active {
+   background: $decoration;
+}
+
+
+// * arrows swiper 
+.swiper-container {
+   .swiper-button-next:after,
+   .swiper-button-prev:after {
+      content: '';
+   }
+
+   .swiper-button-next,
+   .swiper-button-prev {
+      opacity: 0;
+      transition: all 0.2s ease-out;
+      &:after {
+         content: '';
+      }
+      svg {
+         opacity: 0.7;
+         width: 13px;
+         height: 26px;
+         stroke: $decorElements;
+         transition: all 0.1s ease-out;
+      }
+      &:hover {
+         svg {
+            opacity: 1;
+            stroke: $decoration;
+            transform: scale(1.2);
+         }
+      }
+   }
+   .swiper-button-next {
+      opacity: 0;
+      right: 0;
+   }
+
+   .swiper-button-prev {
+      opacity: 0;
+      left: 0;
+   }
+
+   &:hover {
+      .swiper-button-next {
+         opacity: 1;
+         right: 10px;
+      }
+
+      .swiper-button-prev {
+         opacity: 1;
+         left: 10px;
+      }
+   }
+   @media (pointer: coarse) {
+      .swiper-button-next,
+      .swiper-button-prev {
+         opacity: 1;
+      }
+      .swiper-button-next {right: 10px; }
+      .swiper-button-prev {left: 10px; }
+   }
+}
+

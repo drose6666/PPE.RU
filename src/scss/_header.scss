@@ -1,0 +1,93 @@
+header {
+   padding: 8px 0;
+   .ui-container {
+      @include container ($flex: true)
+   }
+   .work {
+      font-family: $Montserrat;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 169%;
+      letter-spacing: 0.1px;
+      color: $text;
+      display: flex;
+      align-items: center;
+      strong {
+         font-weight: 600;
+      }
+      img {
+         margin-right: 8px;
+         display: inline-block;
+         width: 16px;
+         height: 16px;
+      }
+   }
+
+   .contacts {
+      display: flex;
+      align-items: center;
+      .phone {
+         padding-right: 20px;
+         font-family: $Montserrat;
+         font-weight: 400;
+         font-size: 13px;
+         line-height: 169%;
+         display: flex;
+         align-items: center;
+         letter-spacing: 0.1px;
+         color: $text;
+         border-right: 1px solid $borders;
+         span {
+            position: relative;
+            transition: all 0.1s ease-out;
+            &:after {
+               content: '';
+               position: absolute;
+               left: 0;
+               bottom: 0;
+               width: 0;
+               height: 1px;
+               background: $decoration;
+               transition: all 0.1s ease-out;
+            }
+         }
+         img {
+            margin-right: 8px;
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+         }
+         &:hover {
+            span {
+               transform: translateX(3px);
+               &:after {
+                  width: 100%;
+               }
+            }
+         }
+      }
+   }
+}
+
+@media all and (max-width: 670px) {
+   header {
+      .work {
+         font-weight: 600;
+         strong { display: none; }
+      }
+      .contacts .socials { display: none; }
+   }
+}
+
+@media all and (max-width: 420px) {
+   header {
+      .work { display: none; }
+      .contacts {
+         width: 100%;
+         justify-content: space-between;
+         .phone {
+            border-right: none;
+         }
+      }
+   }
+}

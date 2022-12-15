@@ -1,0 +1,43 @@
+.ui-decorArrow {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   right: 15px;
+   width: 13px;
+   &:before, &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 8px;
+      height: 1px;
+      background: $black;
+      transition: all 0.2s ease-out;
+   }
+   &:before {
+      left: 0;
+      transform: rotate(45deg);
+   }
+   &:after {
+      right: 0;
+      transform: rotate(-45deg);
+   }
+}
+
+.show-all.has-children {
+   .ui-decorArrow {
+      right: 0;
+   }
+}
+
+.has-children:hover, .has-children.active {
+   .ui-decorArrow {
+      &:before {
+         background: $white;
+         transform: rotate(-45deg);
+      }
+      &:after {
+         background: $white;
+         transform: rotate(45deg);
+      }
+   }
+}

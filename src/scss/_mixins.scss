@@ -1,0 +1,47 @@
+/* 
+----------------------------------------------------------------------
+   ! IMPORT
+----------------------------------------------------------------------
+*/
+@use "sass:list";
+@use "sass:math";
+
+/* 
+----------------------------------------------------------------------
+   TODO: Container
+----------------------------------------------------------------------
+*/
+
+@mixin container ($maxWidth: 1200px,
+   $margin: 0 auto,
+   $padding: 0 20px,
+   $flex: false,
+   $grid: false,
+   $columns: 0,
+   $rows: auto,
+   $gap: 30px) {
+   margin: $margin;
+   padding: $padding;
+   max-width: $maxWidth;
+   width: 100%;
+   position: relative;
+   z-index: 1;
+
+   @if $flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   @if $grid {
+      display: grid;
+      grid-template-columns: $columns;
+      grid-template-rows: $rows;
+      align-items: start;
+      gap: $gap
+   }
+}
+
+.ui-container {
+   @include container
+}

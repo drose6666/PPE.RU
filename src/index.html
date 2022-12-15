@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.html', {
+   "title": "Стартовая сборка Gulp 2022 для многостраничных сайтов"
+})
+<body>
+   @@include('html/_header.html')
+
+   <main>
+      @@include('./html/sections/section-our-sites.html')
+      @@include('./html/sections/section-welcome.html')
+      @@include('./html/sections/section-catalog.html')
+      @@include('./html/sections/section-for-why.html')
+      @@include('./html/sections/section-contact.html')
+   </main>
+
+   @@include('html/_footer.html')
+   <div class="ui-overlay"></div>
+   
+   <script src="js/bundle.min.js"></script>
+</body>
+</html>
