@@ -1,10 +1,8 @@
 let options = {
    root: null,
    rootMargin: '0px',
-   threshold: 0.2
+   threshold: 0.7
 }
-
-let observer = new IntersectionObserver(callback, options)
 
 let callback = (entries, observer) => {
    entries.forEach(entry => {
@@ -13,6 +11,8 @@ let callback = (entries, observer) => {
       }
    })
 }
+
+let observer = new IntersectionObserver(callback, options)
 
 let animateList = document.querySelectorAll('.animate')
 animateList?.forEach(i => {

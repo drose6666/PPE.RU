@@ -19,7 +19,8 @@
 @import './ui-components/ui-close/ui-close';
 @import './ui-components/ui-decorArrow/ui-decorArrow';
 @import './ui-components/productCard/product-card';
-@import './ui-components/ui-socials/ui-socials';
+@import '../html/ui-components/socials/socials';
+@import '../html/ui-components/titles/titles';
 
 // ? Базовые компоненты
 @import './_header';

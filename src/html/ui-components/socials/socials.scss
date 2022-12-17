@@ -1,24 +1,35 @@
 .socials {
-   padding-left: 20px;
    display: flex;
    align-items: center;
-   gap: 15px;
-   font-size: 15px;
+   gap: 19px;
+   font-size: 16px;
+
    a {
+      transition: all 0.2s ease-out;
       i {
-      color: $socials;
+         color: $text;
       }
+
       svg {
          fill: $socials;
       }
+
       &:hover {
+         transform: translateY(-3px);
          svg {
             fill: $decoration
          }
+
          i {
             color: $decoration
          }
       }
    }
-   
+   &.socials-header {
+      padding-left: 23px;
+      @media all and (max-width: 670px) {
+         display: none;
+      }
+   }
+
 }

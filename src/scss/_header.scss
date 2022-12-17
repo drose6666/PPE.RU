@@ -1,93 +1,157 @@
 header {
-   padding: 8px 0;
-   .ui-container {
-      @include container ($flex: true)
-   }
-   .work {
-      font-family: $Montserrat;
-      font-weight: 400;
-      font-size: 13px;
-      line-height: 169%;
-      letter-spacing: 0.1px;
-      color: $text;
-      display: flex;
-      align-items: center;
-      strong {
-         font-weight: 600;
+   .h-top {
+      padding: 10px 0;
+      background: $white;
+      .ui-container {
+         @include container($flex: true)
       }
-      img {
-         margin-right: 8px;
-         display: inline-block;
-         width: 16px;
-         height: 16px;
-      }
-   }
-
-   .contacts {
-      display: flex;
-      align-items: center;
-      .phone {
-         padding-right: 20px;
+      .work {
          font-family: $Montserrat;
          font-weight: 400;
          font-size: 13px;
          line-height: 169%;
-         display: flex;
-         align-items: center;
          letter-spacing: 0.1px;
          color: $text;
-         border-right: 1px solid $borders;
-         span {
-            position: relative;
-            transition: all 0.1s ease-out;
-            &:after {
-               content: '';
-               position: absolute;
-               left: 0;
-               bottom: 0;
-               width: 0;
-               height: 1px;
-               background: $decoration;
-               transition: all 0.1s ease-out;
-            }
+         display: flex;
+         align-items: center;
+         strong {
+            font-weight: 600;
          }
          img {
             margin-right: 8px;
             display: inline-block;
-            width: 15px;
-            height: 15px;
+            width: 16px;
+            height: 16px;
+         }
+      }
+
+      .icons-nav {
+         display: flex;
+         align-items: center;
+         gap: 25px;
+         li {
+            position: relative;
+            span {
+               width: 18px;
+               height: 18px;
+               background: $decoration;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               font-weight: 500;
+               font-size: 10px;
+               line-height: 19px;
+               letter-spacing: -0.02em;
+               color: $white;
+               position: absolute;
+               top: -9px;
+               right: -12px;
+               border-radius: 50%;
+            }
+            svg {
+               fill: none;
+               stroke: $text;
+               max-width: 19px;
+               max-height: 19px;
+            }
+         }
+      }
+   }
+
+   .h-bottom {
+      padding: 10px 0 10px 0;
+      background: $grey;
+      .ui-container {
+         @include container($flex: true)
+      }
+      .logo {
+         display: flex;
+         align-items: center;
+         gap: 24px;
+         img {
+            max-width: 112px;
+            width: 100%;
+            height: auto;
+
+         }
+         .logo-title {
+            padding-left: 17px;
+            font-family: $Montserrat;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 140%;
+            color: $black;
+            max-width: 250px;
+            border-left: 1px solid $sectionGrey;
+            transition: all 0.1s ease-out;
          }
          &:hover {
+            .logo-title {
+               color: $decoration;
+            }
+         }
+      }
+
+      .contacts {
+         display: flex;
+         align-items: center;
+         .phone {
+            padding-right: 23px;
+            font-family: $Montserrat;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 169%;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.122579px;
+            color: $black;
+            border-right: 1px solid $sectionGrey;
             span {
-               transform: translateX(3px);
+               position: relative;
+               transition: all 0.2s ease-out;
                &:after {
-                  width: 100%;
+                  content: '';
+                  position: absolute;
+                  left: 0;
+                  bottom: 0;
+                  width: 0;
+                  height: 1px;
+                  background: $decoration;
+                  transition: all 0.2s ease-out;
+               }
+            }
+            img {
+               margin-right: 10px;
+               display: inline-block;
+               width: 19px;
+               height: 19px;
+            }
+            &:hover {
+               span {
+                  transform: translateX(3px);
+                  &:after {
+                     width: 100%;
+                  }
                }
             }
          }
       }
    }
-}
 
-@media all and (max-width: 670px) {
-   header {
-      .work {
-         font-weight: 600;
-         strong { display: none; }
+   @media all and (max-width: 900px) {
+      .h-bottom {
+         .logo .logo-title { display: none; }
       }
-      .contacts .socials { display: none; }
    }
-}
-
-@media all and (max-width: 420px) {
-   header {
-      .work { display: none; }
-      .contacts {
-         width: 100%;
-         justify-content: space-between;
-         .phone {
-            border-right: none;
-         }
-      }
+   @media all and (max-width: 480px) {
+      .h-bottom .contacts .phone { display: none; }
+      .h-bottom .logo img { max-width: 100px; }
+   }
+   @media all and (max-width: 430px) {
+      .h-top .work strong { display: none; }
+      .h-top .work p { font-weight: 600;}
+   }
+   @media all and (max-width: 350px) {
+      .h-bottom .logo img { max-width: 85px; }
    }
 }

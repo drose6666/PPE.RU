@@ -4,6 +4,7 @@
 import $ from "jquery"
 import openMobileMenu from "./modules/openMobileMenu.js";
 import { AccordionAndTabs } from "./modules/accordionAndTabs.js"
+import './modules/scrollAnimation.js'
 
 import Swiper from 'swiper/bundle';
 
