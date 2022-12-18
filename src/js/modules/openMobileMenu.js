@@ -4,6 +4,7 @@ export default class openMobileMenu {
       this.$selectorClose = document.querySelector(selectorClose)
       this.$burger = document.querySelector(burger)
       this.$overlay = document.querySelector(overlay)
+      this.$mobContent = document.querySelector('.m-body')
 
       this.#setup()
    }
@@ -18,12 +19,17 @@ export default class openMobileMenu {
    }
 
    #open = () => {
+
       this.$selectorMenu.classList.add('active')
       this.$overlay.classList.add('active')
+      this.$mobContent.classList.add('active')
+      document.body.classList.add('no-scroll')
    }
 
    #close = () => {
       this.$selectorMenu.classList.remove('active')
       this.$overlay.classList.remove('active')
+      this.$mobContent.classList.remove('active')
+      document.body.classList.remove('no-scroll')
    }
 }

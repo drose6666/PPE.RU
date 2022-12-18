@@ -1,47 +1,52 @@
 <div class="ui-mobileMenu">
-   <div class="head">
-      Каталог
-     <div class="ui-close-wrap light">@@include('../ui-close/ui-close.html')</div>
+   <div class="m-head">
+      <a href="/" class="logo mobile-logo">
+         <img src="../img/optimized/logos/pperu-main-logo.svg" alt="PPE.RU Logo">
+         <h5 class="logo-title">Официальный представитель IntegraWay и TECRON в России</h5>
+      </a>
+      @@include('../ui-close/ui-close.html')
    </div>
 
-   <div class="content">
-      <ul class="mob-catalog">
-         <li class="has-children">
-            <span >Комбинезоны защитные одноразовые @@include('../ui-decorArrow/ui-decorArrow.html')</span>
-            <ul class="mob-catalog_1">
-               <li><a href="#">Комбинезон защитный TECRON PRO</a></li>
-               <li><a href="#">Комбинезон защитный TECRON PRO</a></li>
-            </ul>
-         </li>
+   <div class="m-body active">
+      <div class="mobile-item">
+         <h3 class="mobile-title">Каталог</h3>
 
-         <li class="has-children">
-            <span >Комбинезоны защитные одноразовые @@include('../ui-decorArrow/ui-decorArrow.html')</span>
-            <ul class="mob-catalog_1">
-               <li><a href="#">Комбинезон защитный TECRON PRO</a></li>
-               <li><a href="#">Комбинезон защитный TECRON PRO</a></li>
-            </ul>
-         </li>
-      </ul>
-
-      <div class="mob-contacts">
-         <a href="tel: +79685260007">
-            <svg stroke-width="1" width="19" height="19"><use xlink:href="../img/optimized/svg-sprite.svg#phone"></use></svg>
-            <span>+7 (968) 526 000 7</span>
-         </a>
-         <a href="mailto: tecronppe@gmail.com">
-            <svg stroke-width="1" class="dark-icon" width="21" height="17"><use xlink:href="../img/optimized/svg-sprite.svg#mail"></use></svg>
-            <span>tecronppe@gmail.com</span>
-         </a>
+         <ul class="mobile-catalog">
+            <li data-decArrowActive>
+               <h6 class="has-children"><span>Комбинезоны защитные</span></h6>
+               <ul class="menu-level-2">
+                  <li><a href="#">Комбинезон защитный TECRON PRO</a></li>
+                  <li><a href="#">Комбинезон защитный IntegraWay Extra Safe</a></li>
+                  <li><a href="#">Комбинезон защитный TECRON Classic Light</a></li>
+                  <li><a href="#">Комбинезон защитный TECRON SMS Comfort</a></li>
+               </ul>
+            </li>
+            <li data-decArrowActive><a href="#"><span>Очки защитные</span></a></li>
+            <li data-decArrowActive>
+               <h6 class="has-children"><span>Перчатки рабочие</span></h6>
+               <ul class="menu-level-2">
+                  <li><a href="#">Перчатки комбинированные летние TECRON™ 201788</a></li>
+                  <li><a href="#">Нитриловые перчатки-краги TECRON™ Nitril</a></li>
+                  <li><a href="#">Кожаные перчатки TECRON™ 3319</a></li>
+                  <li><a href="#">Кожаные перчатки TECRON™ 3317</a></li>
+                  <li><a href="#">Кожаные перчатки TECRON™ 3340</a></li>
+                  <li><a href="#">Кожаные перчатки TECRON™ 3319</a></li>
+                  <li><a href="#">Кожаные перчатки TECRON™ 3341</a></li>
+               </ul>
+            </li>
+         </ul>
       </div>
 
-      <div class="socials">
-         <a target="_blank" href="https://t.me/tecron" class="telegram"><i class="fab fa-telegram-plane"></i></a>
-         <a target="_blank" href="https://wa.me/+8618098948684" class=" whatsapp"><i class="fab fa-whatsapp"></i></a>
-         <a target="_blank" href="#"><i class="fab fa-viber"></i></a>
-         <a target="_blank" href="#"><svg width="65" height="22"><use xlink:href="../img/optimized/svg-sprite.svg#ozon"></use></svg></a>
-         <a target="_blank" href="#"><svg width="21" height="22"><use xlink:href="../img/optimized/svg-sprite.svg#avito"></use></svg></a>
+      <div class="separate-line"></div>
+
+      <div class="mobile-item">
+         <h3 class="mobile-title">Контакты</h3>
+
+         <div class="contact-links mobile">
+            @@include('../contact-links/contact-links.html')
+         </div>
+
+         <div class="socials socials-mobile">@@include('../socials/socials.html')</div>
       </div>
    </div>
-
-   
 </div>

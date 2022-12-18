@@ -11,8 +11,8 @@
    <meta property="og:image" content="http://bkb-company.ru/img/about/about1.jpg">
    <meta property="og:site_name" content="Название">
    
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css?_v=20221217143710" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <link rel="stylesheet" href="css/style.min.css?_v=20221217143710">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css?_v=20221219000533" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="css/style.min.css?_v=20221219000533">
    <title>Стартовая сборка Gulp 2022 для многостраничных сайтов</title>
 </head>
 
@@ -48,8 +48,8 @@
 <a target="_blank" href="https://t.me/tecron" class="telegram"><i class="fab fa-telegram-plane"></i></a>
 <a target="_blank" href="https://wa.me/+8618098948684" class=" whatsapp"><i class="fab fa-whatsapp"></i></a>
 <a target="_blank" href="#"><i class="fab fa-viber"></i></a>
-<a target="_blank" href="#"><svg width="55" height="19"><use xlink:href="../img/optimized/svg-sprite.svg#ozon"></use></svg></a>
-<a target="_blank" href="#"><svg width="15" height="16"><use xlink:href="../img/optimized/svg-sprite.svg#avito"></use></svg></a>
+<a target="_blank" href="#"><svg class="ozon" width="55" height="19"><use xlink:href="../img/optimized/svg-sprite.svg#ozon"></use></svg></a>
+<a target="_blank" href="#"><svg class="avito" width="15" height="16"><use xlink:href="../img/optimized/svg-sprite.svg#avito"></use></svg></a>
 </div>
                <button class="ui-burger">
    <span></span><span></span><span></span>
@@ -59,53 +59,71 @@
       </div>
 
    <div class="ui-mobileMenu">
-   <div class="head">
-      Каталог
-     <div class="ui-close-wrap light"><button class="ui-close">
+   <div class="m-head">
+      <a href="/" class="logo mobile-logo">
+         <img src="../img/optimized/logos/pperu-main-logo.svg" alt="PPE.RU Logo">
+         <h5 class="logo-title">Официальный представитель IntegraWay и TECRON в России</h5>
+      </a>
+      <button class="ui-close">
    <svg><use xlink:href="../img/optimized/svg-sprite.svg#close"></use></svg>
-</button></div>
+</button>
    </div>
 
-   <div class="content">
-      <ul class="mob-catalog">
-         <li class="has-children">
-            <span >Комбинезоны защитные одноразовые <div class="ui-decorArrow"></div></span>
-            <ul class="mob-catalog_1">
-               <li><a href="#">Комбинезон защитный TECRON PRO</a></li>
-               <li><a href="#">Комбинезон защитный TECRON PRO</a></li>
-            </ul>
-         </li>
+   <div class="m-body active">
+      <div class="mobile-item">
+         <h3 class="mobile-title">Каталог</h3>
 
-         <li class="has-children">
-            <span >Комбинезоны защитные одноразовые <div class="ui-decorArrow"></div></span>
-            <ul class="mob-catalog_1">
-               <li><a href="#">Комбинезон защитный TECRON PRO</a></li>
-               <li><a href="#">Комбинезон защитный TECRON PRO</a></li>
-            </ul>
-         </li>
-      </ul>
-
-      <div class="mob-contacts">
-         <a href="tel: +79685260007">
-            <svg stroke-width="1" width="19" height="19"><use xlink:href="../img/optimized/svg-sprite.svg#phone"></use></svg>
-            <span>+7 (968) 526 000 7</span>
-         </a>
-         <a href="mailto: tecronppe@gmail.com">
-            <svg stroke-width="1" class="dark-icon" width="21" height="17"><use xlink:href="../img/optimized/svg-sprite.svg#mail"></use></svg>
-            <span>tecronppe@gmail.com</span>
-         </a>
+         <ul class="mobile-catalog">
+            <li data-decArrowActive>
+               <h6 class="has-children"><span>Комбинезоны защитные</span></h6>
+               <ul class="menu-level-2">
+                  <li><a href="#">Комбинезон защитный TECRON PRO</a></li>
+                  <li><a href="#">Комбинезон защитный IntegraWay Extra Safe</a></li>
+                  <li><a href="#">Комбинезон защитный TECRON Classic Light</a></li>
+                  <li><a href="#">Комбинезон защитный TECRON SMS Comfort</a></li>
+               </ul>
+            </li>
+            <li data-decArrowActive><a href="#"><span>Очки защитные</span></a></li>
+            <li data-decArrowActive>
+               <h6 class="has-children"><span>Перчатки рабочие</span></h6>
+               <ul class="menu-level-2">
+                  <li><a href="#">Перчатки комбинированные летние TECRON™ 201788</a></li>
+                  <li><a href="#">Нитриловые перчатки-краги TECRON™ Nitril</a></li>
+                  <li><a href="#">Кожаные перчатки TECRON™ 3319</a></li>
+                  <li><a href="#">Кожаные перчатки TECRON™ 3317</a></li>
+                  <li><a href="#">Кожаные перчатки TECRON™ 3340</a></li>
+                  <li><a href="#">Кожаные перчатки TECRON™ 3319</a></li>
+                  <li><a href="#">Кожаные перчатки TECRON™ 3341</a></li>
+               </ul>
+            </li>
+         </ul>
       </div>
 
-      <div class="socials">
-         <a target="_blank" href="https://t.me/tecron" class="telegram"><i class="fab fa-telegram-plane"></i></a>
-         <a target="_blank" href="https://wa.me/+8618098948684" class=" whatsapp"><i class="fab fa-whatsapp"></i></a>
-         <a target="_blank" href="#"><i class="fab fa-viber"></i></a>
-         <a target="_blank" href="#"><svg width="65" height="22"><use xlink:href="../img/optimized/svg-sprite.svg#ozon"></use></svg></a>
-         <a target="_blank" href="#"><svg width="21" height="22"><use xlink:href="../img/optimized/svg-sprite.svg#avito"></use></svg></a>
+      <div class="separate-line"></div>
+
+      <div class="mobile-item">
+         <h3 class="mobile-title">Контакты</h3>
+
+         <div class="contact-links mobile">
+            <a href="tel: +79685260007">
+   <svg width="19" height="19"><use xlink:href="../img/optimized/svg-sprite.svg#phone"></use></svg>
+   <span>+7 (968) 526 000 7</span>
+</a>
+<a href="mailto: tecronppe@gmail.com">
+   <svg class="dark-icon" width="21" height="17"><use xlink:href="../img/optimized/svg-sprite.svg#mail"></use></svg>
+   <span>tecronppe@gmail.com</span>
+</a>
+         </div>
+
+         <div class="socials socials-mobile"><!-- .socials (wrapper element) -->
+<a target="_blank" href="https://t.me/tecron" class="telegram"><i class="fab fa-telegram-plane"></i></a>
+<a target="_blank" href="https://wa.me/+8618098948684" class=" whatsapp"><i class="fab fa-whatsapp"></i></a>
+<a target="_blank" href="#"><i class="fab fa-viber"></i></a>
+<a target="_blank" href="#"><svg class="ozon" width="55" height="19"><use xlink:href="../img/optimized/svg-sprite.svg#ozon"></use></svg></a>
+<a target="_blank" href="#"><svg class="avito" width="15" height="16"><use xlink:href="../img/optimized/svg-sprite.svg#avito"></use></svg></a>
+</div>
       </div>
    </div>
-
-   
 </div>
 </header>
 
@@ -127,9 +145,9 @@
    <div class="ui-container">
       <ul>
          <li class="accordion-item">
-   <div class="accordion-head has-children">
+   <div class="accordion-head" data-decArrowActive>
       <h4 class="head-title">Комбинезоны защитные одноразовые</h4>
-      <span class="show-all has-children">Смотерть все <div class="ui-decorArrow"></div></span>
+      <span class="show-all has-children">Смотерть все</span>
    </div>
 
 
@@ -246,9 +264,9 @@
    </div>
 </li>
          <li class="accordion-item">
-   <div class="accordion-head has-children">
+   <div class="accordion-head" data-decArrowActive>
       <h4 class="head-title">Комбинезоны защитные одноразовые</h4>
-      <span class="show-all has-children">Смотерть все <div class="ui-decorArrow"></div></span>
+      <span class="show-all has-children">Смотерть все</span>
    </div>
 
 
@@ -419,13 +437,13 @@
 
          <li class="contact-links">
             <a href="tel: +79685260007">
-               <svg width="19" height="19"><use xlink:href="../img/optimized/svg-sprite.svg#phone"></use></svg>
-               <span>+7 (968) 526 000 7</span>
-            </a>
-            <a href="mailto: tecronppe@gmail.com">
-               <svg class="dark-icon" width="21" height="17"><use xlink:href="../img/optimized/svg-sprite.svg#mail"></use></svg>
-               <span>tecronppe@gmail.com</span>
-            </a>
+   <svg width="19" height="19"><use xlink:href="../img/optimized/svg-sprite.svg#phone"></use></svg>
+   <span>+7 (968) 526 000 7</span>
+</a>
+<a href="mailto: tecronppe@gmail.com">
+   <svg class="dark-icon" width="21" height="17"><use xlink:href="../img/optimized/svg-sprite.svg#mail"></use></svg>
+   <span>tecronppe@gmail.com</span>
+</a>
          </li>
 
          <li>
@@ -433,8 +451,8 @@
 <a target="_blank" href="https://t.me/tecron" class="telegram"><i class="fab fa-telegram-plane"></i></a>
 <a target="_blank" href="https://wa.me/+8618098948684" class=" whatsapp"><i class="fab fa-whatsapp"></i></a>
 <a target="_blank" href="#"><i class="fab fa-viber"></i></a>
-<a target="_blank" href="#"><svg width="55" height="19"><use xlink:href="../img/optimized/svg-sprite.svg#ozon"></use></svg></a>
-<a target="_blank" href="#"><svg width="15" height="16"><use xlink:href="../img/optimized/svg-sprite.svg#avito"></use></svg></a>
+<a target="_blank" href="#"><svg class="ozon" width="55" height="19"><use xlink:href="../img/optimized/svg-sprite.svg#ozon"></use></svg></a>
+<a target="_blank" href="#"><svg class="avito" width="15" height="16"><use xlink:href="../img/optimized/svg-sprite.svg#avito"></use></svg></a>
 </div>
          </li>
       </ul>
@@ -466,6 +484,6 @@
 </footer>
    <div class="ui-overlay"></div>
    
-   <script src="js/bundle.min.js?_v=20221217143710"></script>
+   <script src="js/bundle.min.js?_v=20221219000533"></script>
 </body>
 </html>

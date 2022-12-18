@@ -1,0 +1,189 @@
+.ui-mobileMenu {
+   position: fixed;
+   top: 0;
+   right: -450px;
+   width: 100%;
+   height: 100%;
+   max-width: 450px;
+   background: $white;
+   overflow-y: auto;
+   z-index: 3;
+   transition: all 0.5s ease-out 0s;
+   box-shadow: 10px 0px 30px 10px rgb(0, 0, 0, 0.15);
+   &.active {
+      right: 0;
+      transition-delay: 0.5s;
+   }
+   
+   .m-head {
+      margin-bottom: 60px;
+      padding: 25px 0;
+      background: $grey;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   .m-body {
+      margin-bottom: 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px);
+      transition: all 0.4s ease-out 0s;
+      &.active {
+         transition-delay: 1.1s;
+         opacity: 1;
+         visibility: visible;
+         transform: none;
+      }
+   }   
+
+   .mobile-catalog {
+      margin-top: -16px;
+      & > li {
+         max-width: 425px;
+         position: relative;
+         cursor: pointer;
+         & > a, & > h6 {
+            padding: 16px 25px 16px 50px;
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 129%;
+            color: $black;
+            border-top-right-radius: 80px;
+            border-bottom-right-radius: 80px;
+            display: flex;
+            position: relative;
+            transition: all 0.2s ease-out;
+            span {
+               max-width: 300px;
+            }
+         }
+         &:hover, &.active {
+            & > a, & > h6 {
+               background: $grey;
+               color: $decoration;
+            }
+         }
+         &.active {
+            & > a, & > h6 .uidecorArrow {
+               &:before {
+                  background: $white;
+                  transform: rotate(-45deg);
+               }
+            
+               &:after {
+                  background: $white;
+                  transform: rotate(45deg);
+               }
+            }
+         }
+
+         .menu-level-2 {
+            margin: 15px 0 15px 70px;
+            padding-left: 30px;
+            border-left: 1px solid $borders;
+            & > li {
+               max-width: 300px;
+               &:not(:last-child) {
+                  margin-bottom: 15px;
+               }
+               a {
+                  font-size: 14px;
+                  font-weight: 400;
+                  line-height: 129%;
+                  color: $black;
+                  display: inline-block;
+                  transition: all 0.2s ease-out;
+               }
+               &:hover {
+                  a {
+                     color: $decoration;
+                     transform: translateX(3px);
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   .separate-line {
+      margin: 0 auto 16px auto;
+      width: calc(100% - 100px);
+      height: 1px;
+      background: $borders;
+   }
+
+   @media all and (max-width: 490px) {
+      .m-head { justify-content: space-between; padding: 25px 30px; }
+      .mobile-catalog > li {
+         margin-right: 15px;
+         max-width: 405px;
+         & > a, & > h6 { padding: 16px 25px 16px 30px; }
+         .menu-level-2 { margin: 15px 0 15px 30px; padding-left: 20px; }
+      }
+      .separate-line { width: calc(100% - 60px); }
+   }
+
+   @media all and (max-width: 400px) {
+      .m-head { padding: 12px 20px; }
+      .mobile-catalog > li {
+         margin-right: 15px;
+         max-width: 100%;
+         & > a, & > h6 { padding: 16px 25px 16px 20px; }
+         .menu-level-2 { margin: 15px 0 15px 20px; padding-left: 25px 20px; }
+      }
+      .separate-line { width: calc(100% - 40px); }
+   }
+
+   @media all and (max-width: 330px) {
+      .mobile-catalog > li {
+         margin-right: 15px;
+         max-width: 100%;
+         & > a, & > h6 { padding: 12px 25px 12px 20px; font-size: 15px; }
+         .menu-level-2 { margin: 15px 0 15px 20px; padding-left: 20px; }
+      }
+      .separate-line { margin: 0 auto 12px auto; }
+   }
+}
+
+
+
+// * burger
+.ui-burger {
+   margin: 0 0 0 20px;
+   padding: 0;
+   width: 25px;
+   height: 18px;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+   justify-content: space-between;
+
+   span {
+      width: 100%;
+      height: 2px;
+      background: $black;
+      border-radius: 30px;
+      transition: all 0.1s ease-out;
+      &:nth-child(2) {
+         // width: 70%;
+         background: $decoration;
+      }
+      &:nth-child(3) {
+         // width: 40%;
+      }
+   }
+   // &:hover {
+   //    span:nth-child(2), span:nth-child(3) {
+   //       width: 100%;
+   //    }
+   // }
+}
+
+@media all and (max-width: 670px) {
+   .ui-burger { display: flex; }
+}

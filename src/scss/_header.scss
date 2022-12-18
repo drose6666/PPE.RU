@@ -64,34 +64,7 @@ header {
       .ui-container {
          @include container($flex: true)
       }
-      .logo {
-         display: flex;
-         align-items: center;
-         gap: 24px;
-         img {
-            max-width: 112px;
-            width: 100%;
-            height: auto;
-
-         }
-         .logo-title {
-            padding-left: 17px;
-            font-family: $Montserrat;
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 140%;
-            color: $black;
-            max-width: 250px;
-            border-left: 1px solid $sectionGrey;
-            transition: all 0.1s ease-out;
-         }
-         &:hover {
-            .logo-title {
-               color: $decoration;
-            }
-         }
-      }
-
+      
       .contacts {
          display: flex;
          align-items: center;

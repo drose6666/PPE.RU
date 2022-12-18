@@ -1,0 +1,94 @@
+@mixin decArrow (
+   $centerY: true,
+   $isRight: true,
+   $top: 16px,
+   $right: 15px,
+   $left: 15px,
+   $width: 13px,
+   $color: $black,
+   $colorHover: $white,
+
+) {
+   @if $centerY {
+      top: 50%;
+      transform: translateY(-50%);
+   } @else {
+      top: $top;
+      transform: none;
+   }
+
+   @if $isRight {
+      right: $right;
+      left: auto;
+   } @else {
+      left: $left;
+      right: auto;
+   }
+   position: absolute;
+   width: $width;
+   right: $right;
+   &:before, &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 8px;
+      height: 1px;
+      background: $color;
+      transition: all 0.2s ease-out;
+   }
+
+   &:before {
+      left: 0;
+      transform: rotate(45deg);
+   }
+
+   &:after {
+      right: 0;
+      transform: rotate(-45deg);
+   }
+}
+
+%decArrowActive {
+   &:before {
+      background: $white;
+      transform: rotate(-45deg);
+   }
+
+   &:after {
+      background: $white;
+      transform: rotate(45deg);
+   }
+}
+
+.has-children {
+   position: relative;
+   .decArrow {
+      @include decArrow;
+   }
+}
+
+.show-all .decArrow {
+   @include decArrow($right: 0);
+}
+
+.mobile-catalog .decArrow {
+   @include decArrow($right: 25px);
+}
+
+[data-decArrowActive].active .has-children .decArrow,
+.has-children.active .decArrow { 
+   @extend %decArrowActive;
+}
+
+.accordion-head:hover {
+   .decArrow {
+      &:before, &:after { background: $white; }
+   }
+}
+
+.mobile-catalog > li[data-decArrowActive]:hover,
+.mobile-catalog > li[data-decArrowActive].active {
+   .decArrow {
+      &:before, &:after { background: $decoration; }
+   }
+}

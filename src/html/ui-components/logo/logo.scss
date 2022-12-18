@@ -1,0 +1,53 @@
+.logo {
+   display: flex;
+   align-items: center;
+   gap: 24px;
+
+   img {
+      max-width: 112px;
+      width: 100%;
+      height: auto;
+
+   }
+
+   .logo-title {
+      padding-left: 17px;
+      font-family: $Montserrat;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 140%;
+      color: $black;
+      max-width: 250px;
+      border-left: 1px solid $sectionGrey;
+      transition: all 0.1s ease-out;
+   }
+
+   &.mobile-logo {
+      justify-content: center;
+      gap: 23px;
+      img {
+         max-width: 100px;
+      }
+      .logo-title {
+         padding-left: 15px;
+         font-size: 13px;
+         max-width: 235px;
+      }
+      @media all and (max-width: 490px) {
+         gap: 20px;
+         img { max-width: 80px; }
+         .logo-title { padding-left: 13px; font-size: 11px; }
+      }
+
+      @media all and (max-width: 400px) {
+         img { max-width: 95px; }
+         .logo-title { display: none; }
+      }
+   }
+
+   &:hover {
+      .logo-title {
+         color: $decoration;
+      }
+   }
+}

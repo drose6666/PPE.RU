@@ -3,32 +3,76 @@
    align-items: center;
    gap: 19px;
    font-size: 16px;
-
-   a {
-      transition: all 0.2s ease-out;
-      i {
-         color: $text;
-      }
-
-      svg {
-         fill: $socials;
-      }
-
-      &:hover {
-         transform: translateY(-3px);
-         svg {
-            fill: $decoration
-         }
-
-         i {
-            color: $decoration
-         }
-      }
-   }
+   
    &.socials-header {
       padding-left: 23px;
       @media all and (max-width: 670px) {
          display: none;
+      }
+   }
+   &.socials-contacts, &.socials-mobile {
+      a {
+         i { font-size: 22px; color: $white; }
+         svg {
+            fill: $white;
+            &.ozon { width: 82px; height: 18px; }
+            &.avito { width: 21px; height: 21px; }
+         }
+      }
+   }
+
+   &.socials-contacts {
+      padding-left: 0;
+      gap: 67px;
+      @media all and (max-width: 1200px) {
+         gap: 30px;
+      }
+      @media all and (max-width: 960px) {
+         width: 100%;
+         justify-content: center;
+         max-width: 100%;
+         flex: 0 0 100%;
+         gap: 67px;
+      }
+      @media all and (max-width: 576px) {
+         gap: 30px;
+      }
+   }
+
+   &.socials-mobile {
+      margin-top: 25px;
+      margin-left: 50px;
+      justify-content: flex-start;
+      a {
+         i { color: $socials; }
+         svg { fill: $socials; }
+      }
+      @media all and (max-width: 490px) {
+         margin-left: 30px;
+      }
+      @media all and (max-width: 400px) {
+         margin-left: 20px;
+      }
+      @media all and (max-width: 330px)  {
+         a {
+            i { font-size: 18px; }
+            svg {
+               &.ozon { width: 60px; height: 17px; }
+               &.avito { width: 17px; height: 17px; }
+            }
+         }
+      }
+   }
+
+   a {
+      transition: all 0.2s ease-out;
+      i { color: $text; }
+      svg { fill: $socials;  }
+
+      &:hover {
+         transform: translateY(-3px);
+         i {  color: $decoration }
+         svg {  fill: $decoration }
       }
    }
 

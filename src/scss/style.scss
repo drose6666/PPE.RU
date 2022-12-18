@@ -13,23 +13,23 @@
 @import '../../node_modules/swiper/swiper-bundle.min';
 
 // ? UI-компоненты
-@import './ui-components/ui-button';
-@import './ui-components/ui-input';
-@import './ui-components/mobileMenu/ui-mobileMenu';
-@import './ui-components/ui-close/ui-close';
-@import './ui-components/ui-decorArrow/ui-decorArrow';
-@import './ui-components/productCard/product-card';
+@import '../html/ui-components/logo/logo';
+@import '../html/ui-components/ui-button/ui-button';
+@import '../html/ui-components/ui-input/ui-input';
+@import '../html/ui-components/ui-titles/titles';
+@import '../html/ui-components/ui-close/ui-close';
+
+@import '../html/ui-components/productCard/product-card';
+@import '../html/ui-components/arrows/arrows';
 @import '../html/ui-components/socials/socials';
-@import '../html/ui-components/titles/titles';
+@import '../html/ui-components/contact-links/contact-links';
+@import '../html/ui-components/mobileMenu/ui-mobileMenu';
 
 // ? Базовые компоненты
 @import './_header';
 @import './_footer';
 
-
-
 // ? Страницы
-
 
 // ? Секции
 @import './sections/section-our-sites';
@@ -61,7 +61,7 @@ html,body {
 body {
    position: relative;
    font-family: $Roboto;
-   &.hidden {
+   &.no-scroll {
       overflow: hidden;
    }
 }

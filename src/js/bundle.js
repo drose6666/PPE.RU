@@ -9,14 +9,28 @@ import './modules/scrollAnimation.js'
 import Swiper from 'swiper/bundle';
 
 
+// * Добавление декоративной стрелки (decArrow) к элементам .has-children
+const addDecArrow = () => {
+   let hasChildrenItems = document.querySelectorAll('.has-children')
+
+   hasChildrenItems?.forEach(item => {
+      item.insertAdjacentHTML('beforeend', "<code class='decArrow'></code>")
+   })
+}
+
+addDecArrow()
+
+
 // * Мобильное меню
 window.addEventListener('load', function() {
-   const mobileMenu = new openMobileMenu('.ui-mobileMenu', '.ui-close', '.ui-burger', '.ui-overlay')
+   new openMobileMenu('.ui-mobileMenu', '.ui-close', '.ui-burger', '.ui-overlay')
 })
 
 
+
+
 // * Аккордион (каталог) в мобильном меню
-const mobilMenuCatalog = new AccordionAndTabs('accordion', '.mob-catalog > li', '.mob-catalog_1')
+new AccordionAndTabs('accordion', '.mobile-catalog > li', '.menu-level-2')
 
 
 // * Кастомные стрелки для swiper

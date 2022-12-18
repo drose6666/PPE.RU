@@ -46,23 +46,42 @@
 }
 
 .section-title {
-   @extend %sectionTitle
+   @extend %sectionTitle;
 }
 
-;
-
 @media all and (max-width: 768px) {
-   .section-title .border-wrap {
-      padding-bottom: 15px;
-   }
+   .section-title .border-wrap { padding-bottom: 15px; }
 }
 
 @keyframes titleLine {
-   0% {
-      left: -50px;
+   0% { left: -50px; }
+   100% { left: 100%; }
+}
+
+
+.mobile-title {
+   margin: 0 50px 40px 50px;
+   padding-bottom: 10px;
+   font-family: $Montserrat;
+   font-size: 25px;
+   font-weight: 700;
+   line-height: 100%;
+   color: $black;
+   position: relative;
+   &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 3px;
+      background: $decoration;
    }
 
-   100% {
-      left: 100%;
+   @media all and (max-width: 490px) {
+      margin: 0 30px 40px 30px;
+   }
+   @media all and (max-width: 400px) {
+      margin: 0 30px 40px 20px;
    }
 }
