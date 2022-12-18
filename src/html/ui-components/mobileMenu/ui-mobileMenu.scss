@@ -49,7 +49,7 @@
          cursor: pointer;
          & > a, & > h6 {
             padding: 16px 25px 16px 50px;
-            font-size: 17px;
+            font-size: 18px;
             font-weight: 500;
             line-height: 129%;
             color: $black;
@@ -120,7 +120,7 @@
    @media all and (max-width: 490px) {
       .m-head { justify-content: space-between; padding: 25px 30px; }
       .mobile-catalog > li {
-         margin-right: 15px;
+         margin-right: 16px;
          max-width: 405px;
          & > a, & > h6 { padding: 16px 25px 16px 30px; }
          .menu-level-2 { margin: 15px 0 15px 30px; padding-left: 20px; }
