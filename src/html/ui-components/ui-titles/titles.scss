@@ -8,11 +8,13 @@
    color: $black;
    position: relative;
    overflow: hidden;
-   transition: all 0.3s ease-out;
-   
    .border-wrap {
       padding-bottom: 9px;
       border-bottom: 1px solid $borders;
+   }
+
+   &.animate {
+      @include animateScrollFadeIn($toTop: true, $delay: 0.2s);
    }
 
    &:after {

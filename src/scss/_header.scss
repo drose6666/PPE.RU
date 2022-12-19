@@ -63,7 +63,7 @@ header {
       background: $grey;
       .ui-container {
          @include container($flex: true)
-      }
+      }transition-delay: 0.5s;
       
       .contacts {
          display: flex;

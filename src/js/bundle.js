@@ -8,6 +8,13 @@ import './modules/scrollAnimation.js'
 
 import Swiper from 'swiper/bundle';
 
+// * Preloader
+const preloader = document.querySelector('.preloader')
+window.onload = () => {
+   preloader?.classList.add('hide')
+}
+
+
 
 // * Добавление декоративной стрелки (decArrow) к элементам .has-children
 const addDecArrow = () => {

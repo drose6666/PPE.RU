@@ -64,7 +64,7 @@
    &:hover {
       border-color: $decoration;
       // transform: translateY(-5px);
-      box-shadow: 0px 10px 15px rgba(0, 114, 169, 0.1);
+      box-shadow: 0px 10px 20px rgba(0, 114, 169, 0.06);
       .info {
          border-top: 1px solid $decoration;
          border-image: linear-gradient(90deg, transparent, rgba(0, 137, 203, .48), $decoration, rgba(0, 137, 203, .48), transparent);

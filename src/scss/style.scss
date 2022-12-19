@@ -9,15 +9,17 @@
 @import '../libs/bootstrap-grid.min';
 @import './_vars';
 @import './_mixins';
-@import './_extends';
+// @import './_extends';
 @import '../../node_modules/swiper/swiper-bundle.min';
 
 // ? UI-компоненты
+@import '../html/ui-components/preloader/preloader';
 @import '../html/ui-components/logo/logo';
 @import '../html/ui-components/ui-button/ui-button';
 @import '../html/ui-components/ui-input/ui-input';
 @import '../html/ui-components/ui-titles/titles';
 @import '../html/ui-components/ui-close/ui-close';
+@import '../html/ui-components/ui-overlay/ui-overlay';
 
 @import '../html/ui-components/productCard/product-card';
 @import '../html/ui-components/arrows/arrows';
@@ -32,12 +34,12 @@
 // ? Страницы
 
 // ? Секции
-@import './sections/section-our-sites';
-@import './sections/section-welcome';
-@import './sections/section-catalog';
-@import './sections/catalog-accordion-item';
-@import './sections/section-for-why';
-@import './sections/section-contact';
+@import '../html/pages/home/sections/section-our-sites/section-our-sites';
+@import '../html/pages/home/sections/section-welcome/section-welcome';
+@import '../html/pages/home/sections/section-catalog/section-catalog';
+@import '../html/pages/home/sections/section-catalog/catalog-accordion-item';
+@import '../html/pages/home/sections/section-for-why/section-for-why';
+@import '../html/pages/home/sections/section-contact/section-contact';
 
 
 

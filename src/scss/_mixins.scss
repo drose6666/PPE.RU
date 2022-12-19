@@ -47,3 +47,47 @@
 .ui-container {
    @include container
 }
+
+
+@mixin animateScrollFadeIn (
+   $fade: true,
+   $opacity: false,
+   $toTop: false,
+   $toRight: false,
+   $toBottom: false,
+   $toLeft: false,
+   $duration: .9s,
+   $timingFunction: $animationTimingFunction,
+   $delay: .4s,
+   $transform: 15px,
+
+) {
+   opacity: 0;
+   visibility: hidden;
+   transition: transform $duration $timingFunction $delay, opacity $duration $timingFunction $delay, visibility $duration $timingFunction $delay;
+   @if $fade {
+      @if $toTop {
+         transform: translateY($transform);
+      }
+   
+      @if $toRight {
+         transform: translateX(-$transform);
+      }
+   
+      @if $toBottom {
+         transform: translateY(-$transform);
+      }
+   
+      @if $toLeft {
+         transform: translateX($transform);
+      }
+   }
+   &.animation {
+      opacity: 1;
+      visibility: visible;
+
+      @if $fade {
+         transform: none;
+      }
+   }
+}
