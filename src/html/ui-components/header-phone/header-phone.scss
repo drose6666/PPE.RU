@@ -1,0 +1,30 @@
+.phone {
+   padding-right: 23px;
+   font-family: $Montserrat;
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 169%;
+   display: flex;
+   align-items: center;
+   letter-spacing: 0.122579px;
+   color: $black;
+   border-right: 1px solid $sectionGrey;
+   @include linksHover($hoverFullLinks: true);
+   &:before {
+      content: '';
+      margin-right: 10px;
+      display: block;
+      width: 19px;
+      height: 19px;
+      background: url('../../../img/optimized/phone.svg') no-repeat center / contain;
+   }
+   span {
+      position: relative;
+      display: inline-block;
+   }
+   &:hover {
+      span {
+         transform: translateX(3px);
+      }
+   }
+}

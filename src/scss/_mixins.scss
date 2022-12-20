@@ -49,6 +49,12 @@
 }
 
 
+/* 
+----------------------------------------------------------------------
+   TODO: animation on scroll animation
+----------------------------------------------------------------------
+*/
+
 @mixin animateScrollFadeIn (
    $fade: true,
    $opacity: false,
@@ -88,6 +94,55 @@
 
       @if $fade {
          transform: none;
+      }
+   }
+}
+
+
+
+/* 
+----------------------------------------------------------------------
+   TODO: links hover
+----------------------------------------------------------------------
+*/
+@mixin linksHover (
+   $hoverFullLinks: false,
+   $hasMoreTransition: true,
+   $moreTransition: transform,
+   $moreDuration: 0.2s,
+   $moreTimingFunction: ease-out,
+   $color: $decoration,
+   $height: 1px,
+) {
+   @if $hoverFullLinks == false {
+      background: linear-gradient($color);
+      background-size: 0% $height;
+      background-position: right 0% bottom;
+      background-repeat: no-repeat;
+      @if $hasMoreTransition {
+         transition: background-size 0.3s $animationTimingFunction, $moreTransition $moreDuration $moreTimingFunction;
+      } @else {
+         transition: background-size 0.3s;
+      }
+      &:hover {
+         background-position: left 0% bottom;
+         background-size: 100% $height;
+      }
+   } @else if $hoverFullLinks {
+      & > span {
+         background: linear-gradient($color);
+         background-size: 0% $height;
+         background-position: right 0% bottom;
+         background-repeat: no-repeat;
+         @if $hasMoreTransition {
+            transition: background-size 0.3s $animationTimingFunction, $moreTransition $moreDuration $moreTimingFunction;
+         } @else {
+            transition: background-size 0.3s;
+         }
+      }
+      &:hover > span {
+         background-position: left 0% bottom;
+         background-size: 100% $height;
       }
    }
 }

@@ -12,6 +12,7 @@
       color: $white;
       display: flex;
       align-items: center;
+      @include linksHover($hoverFullLinks: true, $color: $white);
       svg {
          stroke: $white;
          fill: none;
@@ -21,16 +22,6 @@
          margin-left: 14px;
          position: relative;
          display: inline-block;
-         &:after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background: $white;
-            transition: all 0.2s ease-out;
-         }
       }
       &:hover {
          svg {
@@ -38,7 +29,7 @@
             stroke: $decoration;
          }
          span {
-            &:after { width: 100%; }
+            transform: translateX(3px);
          }
       }
    }
@@ -54,11 +45,6 @@
          svg {
             stroke: $decoration;
             fill: none;
-         }
-         span {
-            &:after {
-               background: $black;
-            }
          }
       }
       @media all and (max-width: 490px) {

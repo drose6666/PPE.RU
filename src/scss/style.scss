@@ -15,6 +15,7 @@
 // ? UI-компоненты
 @import '../html/ui-components/preloader/preloader';
 @import '../html/ui-components/logo/logo';
+@import '../html/ui-components/header-phone/header-phone';
 @import '../html/ui-components/ui-button/ui-button';
 @import '../html/ui-components/ui-input/ui-input';
 @import '../html/ui-components/ui-titles/titles';
@@ -27,8 +28,9 @@
 @import '../html/ui-components/contact-links/contact-links';
 @import '../html/ui-components/mobileMenu/ui-mobileMenu';
 
-// ? Базовые компоненты
-@import './_header';
+// ? Templates
+@import '../html/templates/header-default/header-default';
+@import '../html/templates/header-single/header-single';
 @import './_footer';
 
 // ? Страницы

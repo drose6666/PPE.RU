@@ -63,51 +63,12 @@ header {
       background: $grey;
       .ui-container {
          @include container($flex: true)
-      }transition-delay: 0.5s;
+      }
       
       .contacts {
          display: flex;
          align-items: center;
-         .phone {
-            padding-right: 23px;
-            font-family: $Montserrat;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 169%;
-            display: flex;
-            align-items: center;
-            letter-spacing: 0.122579px;
-            color: $black;
-            border-right: 1px solid $sectionGrey;
-            span {
-               position: relative;
-               transition: all 0.2s ease-out;
-               &:after {
-                  content: '';
-                  position: absolute;
-                  left: 0;
-                  bottom: 0;
-                  width: 0;
-                  height: 1px;
-                  background: $decoration;
-                  transition: all 0.2s ease-out;
-               }
-            }
-            img {
-               margin-right: 10px;
-               display: inline-block;
-               width: 19px;
-               height: 19px;
-            }
-            &:hover {
-               span {
-                  transform: translateX(3px);
-                  &:after {
-                     width: 100%;
-                  }
-               }
-            }
-         }
+         
       }
    }
 
