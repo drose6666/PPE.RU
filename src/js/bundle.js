@@ -30,7 +30,23 @@ addDecArrow()
 
 // * Мобильное меню
 window.addEventListener('load', function() {
-   new openMobileMenu('.ui-mobileMenu', '.ui-close', '.ui-burger', '.ui-overlay')
+   const mobileMenu = new openMobileMenu('.ui-mobileMenu', '.ui-close', '.ui-burger', '.ui-overlay')
+   let input = document.querySelector('.search-form input')
+   let startSearch = document.querySelector('.search-form .form-item svg')
+
+   startSearch?.addEventListener('click', () => {
+      mobileMenu.close()
+      input.value = ''
+   })
+
+   let searchIconHeader = document.querySelector('header .openSearch')
+   searchIconHeader?.addEventListener('click', () => {
+      mobileMenu.open()
+
+      setTimeout(() => {
+         input.focus()
+      }, 1200)
+   })
 })
 
 

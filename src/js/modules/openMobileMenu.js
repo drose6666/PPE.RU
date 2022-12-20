@@ -10,23 +10,22 @@ export default class openMobileMenu {
    }
 
    #setup = () => {
-      this.$burger?.addEventListener('click', this.#open)
-      this.$overlay?.addEventListener('click', this.#close)
-      this.$selectorClose?.addEventListener('click', this.#close)
+      this.$burger?.addEventListener('click', this.open)
+      this.$overlay?.addEventListener('click', this.close)
+      this.$selectorClose?.addEventListener('click', this.close)
       document.body?.addEventListener('keydown', (e) => {
-         if (e.keyCode == 27) this.#close()
+         if (e.keyCode == 27) this.close()
       })
    }
 
-   #open = () => {
-
+   open = () => {
       this.$selectorMenu.classList.add('active')
       this.$overlay.classList.add('active')
       this.$mobContent.classList.add('active')
       document.body.classList.add('no-scroll')
    }
 
-   #close = () => {
+   close = () => {
       this.$selectorMenu.classList.remove('active')
       this.$overlay.classList.remove('active')
       this.$mobContent.classList.remove('active')

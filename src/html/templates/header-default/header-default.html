@@ -1,33 +1,33 @@
 <header>
-      <div class="h-top">
-         <div class="ui-container">
-            <div class="work">
-               <img src="../img/optimized/clock.svg" alt="Clock">
-               <p><strong>График работы:</strong> круглосуточно</p>
-            </div>
-
-            <ul class="icons-nav">
-               <li><svg><use xlink:href="../img/optimized/svg-sprite.svg#basket"></use></svg> <span class="notification">25</span></li>
-               <li><svg><use xlink:href="../img/optimized/svg-sprite.svg#search"></use></svg></li>
-            </ul>
+   <div class="h-top">
+      <div class="ui-container">
+         <div class="work">
+            <img src="../img/optimized/clock.svg" alt="Clock">
+            <p><strong>График работы:</strong> круглосуточно</p>
          </div>
-      </div>
 
-      <div class="h-bottom">
-         <div class="ui-container">
-            <a href="/" class="logo">
-               <img src="../img/optimized/logos/pperu-main-logo.svg" alt="PPE.RU Logo">
-               <h5 class="logo-title">Официальный представитель IntegraWay и TECRON в России</h5>
-            </a>
-            
-            <div class="contacts">
-               @@include('../../ui-components/header-phone/header-phone.html')
+         <ul class="icons-nav">
+            <li><svg><use xlink:href="../img/optimized/svg-sprite.svg#basket"></use></svg> <span class="notification">25</span></li>
+            <li class="openSearch"> <svg><use xlink:href="../img/optimized/svg-sprite.svg#search"></use></svg> </li>
+         </ul>
+      </div>
+   </div>
+
+   <div class="h-bottom">
+      <div class="ui-container">
+         <a href="/" class="logo">
+            <img src="../img/optimized/logos/pperu-main-logo.svg" alt="PPE.RU Logo">
+            <h5 class="logo-title">Официальный представитель IntegraWay и TECRON в России</h5>
+         </a>
          
-               <div class="socials socials-header">@@include('../../ui-components/socials/socials.html')</div>
-               @@include('../../ui-components/mobileMenu/ui-burger.html')
-            </div>
+         <div class="contacts">
+            @@include('../../ui-components/header-phone/header-phone.html')
+      
+            <div class="socials socials-header">@@include('../../ui-components/socials/socials.html')</div>
+            @@include('../../ui-components/mobileMenu/ui-burger.html')
          </div>
       </div>
+   </div>
 
    @@include('../../ui-components/mobileMenu/ui-mobileMenu.html')
 </header>

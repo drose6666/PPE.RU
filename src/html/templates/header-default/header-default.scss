@@ -2,6 +2,7 @@ header {
    .h-top {
       padding: 10px 0;
       background: $white;
+      position: relative;
       .ui-container {
          @include container($flex: true)
       }
@@ -31,6 +32,7 @@ header {
          gap: 25px;
          li {
             position: relative;
+            cursor: pointer;
             span {
                width: 18px;
                height: 18px;
