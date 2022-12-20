@@ -96,13 +96,12 @@
                   font-weight: 400;
                   line-height: 129%;
                   color: $black;
-                  display: inline-block;
-                  transition: all 0.2s ease-out;
+                  @include linksHover;
+                  transition: $bgsTransition, color 0.1s ease-out
                }
                &:hover {
                   a {
                      color: $decoration;
-                     transform: translateX(3px);
                   }
                }
             }
