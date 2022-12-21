@@ -2796,6 +2796,22 @@ button.swiper-pagination-bullet {
   color: #0089cb;
 }
 
+.header-single .logo {
+  gap: 18px;
+}
+
+.header-single .logo img {
+  max-width: 90px;
+}
+
+.header-single .logo .logo-title {
+  padding-left: 12px;
+  font-size: 12px;
+  color: #fff;
+  letter-spacing: -0.01em;
+  border-color: #D60000;
+}
+
 .phone {
   padding-right: 23px;
   font-family: "Montserrat", sans-serif;
@@ -2860,6 +2876,86 @@ button.swiper-pagination-bullet {
       -ms-transform: translateX(3px);
        -o-transform: translateX(3px);
           transform: translateX(3px);
+}
+
+.phone.tecron > span {
+  background: -webkit-gradient(linear, left top, left bottom, from(#D60000));
+  background: -webkit-linear-gradient(#D60000);
+  background: -o-linear-gradient(#D60000);
+  background: linear-gradient(#D60000);
+  -webkit-background-size: 0% 1px;
+       -o-background-size: 0% 1px;
+          background-size: 0% 1px;
+  background-position: right 0% bottom;
+  background-repeat: no-repeat;
+}
+
+.phone.tecron:hover > span {
+  background-position: left 0% bottom;
+  -webkit-background-size: 100% 1px;
+       -o-background-size: 100% 1px;
+          background-size: 100% 1px;
+}
+
+.phone.tecron:before {
+  background: url("../../../img/optimized/phone_red.svg") no-repeat center/contain;
+}
+
+.icons-nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 25px;
+}
+
+.icons-nav li {
+  position: relative;
+  cursor: pointer;
+}
+
+.icons-nav li span {
+  width: 18px;
+  height: 18px;
+  background: #0089cb;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 19px;
+  letter-spacing: -0.02em;
+  color: #fff;
+  position: absolute;
+  top: -9px;
+  right: -12px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+
+.icons-nav li svg {
+  fill: none;
+  stroke: #4F5355;
+  max-width: 19px;
+  max-height: 19px;
 }
 
 .ui-input {
@@ -3849,6 +3945,54 @@ button.swiper-pagination-bullet {
   background: #0089cb;
 }
 
+.nav-menu ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+
+.nav-menu ul li a {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFEEED));
+  background: -webkit-linear-gradient(#FFEEED);
+  background: -o-linear-gradient(#FFEEED);
+  background: linear-gradient(#FFEEED);
+  -webkit-background-size: 0% 1px;
+       -o-background-size: 0% 1px;
+          background-size: 0% 1px;
+  background-position: right 0% bottom;
+  background-repeat: no-repeat;
+  padding: 0 5px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: -0.01em;
+  color: #fff;
+  -webkit-transition: color 0.2s ease-out, -webkit-background-size 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: color 0.2s ease-out, -webkit-background-size 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -o-transition: color 0.2s ease-out, -o-background-size 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: background-size 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), color 0.2s ease-out;
+  transition: background-size 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), color 0.2s ease-out, -webkit-background-size 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), -o-background-size 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.nav-menu ul li a:hover {
+  background-position: left 0% bottom;
+  -webkit-background-size: 100% 1px;
+       -o-background-size: 100% 1px;
+          background-size: 100% 1px;
+}
+
+.nav-menu ul li a:hover {
+  color: #FFEEED;
+}
+
 .search-form {
   padding: 0 50px 20px 50px;
   max-width: 100%;
@@ -3985,63 +4129,6 @@ header .h-top .work img {
   height: 16px;
 }
 
-header .h-top .icons-nav {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 25px;
-}
-
-header .h-top .icons-nav li {
-  position: relative;
-  cursor: pointer;
-}
-
-header .h-top .icons-nav li span {
-  width: 18px;
-  height: 18px;
-  background: #0089cb;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-     -moz-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-weight: 500;
-  font-size: 10px;
-  line-height: 19px;
-  letter-spacing: -0.02em;
-  color: #fff;
-  position: absolute;
-  top: -9px;
-  right: -12px;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
-}
-
-header .h-top .icons-nav li svg {
-  fill: none;
-  stroke: #4F5355;
-  max-width: 19px;
-  max-height: 19px;
-}
-
 header .h-bottom {
   padding: 10px 0 10px 0;
   background: #F4F6F8;
@@ -4082,6 +4169,35 @@ header .h-bottom .contacts {
      -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.header-single {
+  padding: 7px 0;
+  background: #000;
+}
+
+.header-single .ui-container {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1200px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 footer {
@@ -9134,7 +9250,7 @@ input:active {
 }
 
 @media all and (max-width: 900px) {
-  header .h-bottom .logo .logo-title {
+  .header-default .h-bottom .logo .logo-title {
     display: none;
   }
 
@@ -9489,7 +9605,7 @@ input:active {
 }
 
 @media all and (max-width: 350px) {
-  header .h-bottom .logo img {
+  .header-default .h-bottom .logo img {
     max-width: 85px;
   }
 }

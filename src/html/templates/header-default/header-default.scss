@@ -26,38 +26,7 @@ header {
          }
       }
 
-      .icons-nav {
-         display: flex;
-         align-items: center;
-         gap: 25px;
-         li {
-            position: relative;
-            cursor: pointer;
-            span {
-               width: 18px;
-               height: 18px;
-               background: $decoration;
-               display: flex;
-               align-items: center;
-               justify-content: center;
-               font-weight: 500;
-               font-size: 10px;
-               line-height: 19px;
-               letter-spacing: -0.02em;
-               color: $white;
-               position: absolute;
-               top: -9px;
-               right: -12px;
-               border-radius: 50%;
-            }
-            svg {
-               fill: none;
-               stroke: $text;
-               max-width: 19px;
-               max-height: 19px;
-            }
-         }
-      }
+      
    }
 
    .h-bottom {
@@ -74,11 +43,6 @@ header {
       }
    }
 
-   @media all and (max-width: 900px) {
-      .h-bottom {
-         .logo .logo-title { display: none; }
-      }
-   }
    @media all and (max-width: 480px) {
       .h-bottom .contacts .phone { display: none; }
       .h-bottom .logo img { max-width: 100px; }
@@ -86,8 +50,5 @@ header {
    @media all and (max-width: 430px) {
       .h-top .work strong { display: none; }
       .h-top .work p { font-weight: 600;}
-   }
-   @media all and (max-width: 350px) {
-      .h-bottom .logo img { max-width: 85px; }
    }
 }

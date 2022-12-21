@@ -28,35 +28,50 @@ const addDecArrow = () => {
 addDecArrow()
 
 
-// * Мобильное меню
+/**
+ * TODO: Mobile menu
+ */
 window.addEventListener('load', function() {
    const mobileMenu = new openMobileMenu('.ui-mobileMenu', '.ui-close', '.ui-burger', '.ui-overlay')
    let input = document.querySelector('.search-form input')
-   let startSearch = document.querySelector('.search-form .form-item svg')
+   
+   clearSearchInputValue(input, mobileMenu)
+   openSearchForm(input, mobileMenu) 
+})
 
-   startSearch?.addEventListener('click', () => {
-      mobileMenu.close()
-      input.value = ''
-   })
-
+// * Opening a search form
+function openSearchForm(input, mobMenu) {
    let searchIconHeader = document.querySelector('header .openSearch')
    searchIconHeader?.addEventListener('click', () => {
-      mobileMenu.open()
+      mobMenu.open()
 
       setTimeout(() => {
          input.focus()
-      }, 1200)
+      }, 1000)
    })
-})
+}
+
+// * Closing the search form and clear search value
+function clearSearchInputValue(input, mobMenu) {
+   let startSearch = document.querySelector('.search-form .form-item svg')
+   startSearch?.addEventListener('click', () => {
+      mobMenu.close()
+      input.value = ''
+   })
+}
 
 
 
 
-// * Аккордион (каталог) в мобильном меню
+/**
+ * TODO: Accordion (catalog) in mobile menu
+ */
 new AccordionAndTabs('accordion', '.mobile-catalog > li', '.menu-level-2')
 
 
-// * Кастомные стрелки для swiper
+/**
+ * TODO: Custom arrows for Swiper
+ */
 customSliderArrow('.swiper-button-prev', 'prev')
 customSliderArrow('.swiper-button-next', 'next')
 
@@ -71,7 +86,9 @@ function customSliderArrow(selector, direction) {
 }
 
 
-// * Слайдер товаров (аккордион на главном экране)
+/**
+ * TODO: Product slider (home screen accordion)
+ */
 document.querySelectorAll('.swiper-container').forEach((item, index) => {
    item.querySelector('.swiper-pagination').classList.add('pagID' + index)
 })
@@ -121,7 +138,9 @@ document.querySelectorAll('.catalog-swiper').forEach((item, index) => {
 
 
 
-// * Аккордион каталога товаров
+/**
+ * TODO: Product catalog accordion
+ */
 $('.accordion-collapse').hide()
 $('.accordion-head').on('click', function() {
    $('.accordion-head').not($(this)).removeClass('active')

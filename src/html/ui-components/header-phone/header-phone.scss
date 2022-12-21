@@ -28,4 +28,11 @@
          transform: translateX(3px);
       }
    }
+
+   &.tecron {
+      @include linksHover($hoverFullLinks: true, $color: $proDecorBright);
+      &:before {
+         background: url('../../../img/optimized/phone_red.svg') no-repeat center / contain;
+      }
+   }
 }
