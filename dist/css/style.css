@@ -1644,6 +1644,12 @@ html {
 ----------------------------------------------------------------------
 */
 
+/* 
+----------------------------------------------------------------------
+   TODO: Excerpt visible lines
+----------------------------------------------------------------------
+*/
+
 /**
  * Swiper 8.0.7
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -2704,8 +2710,8 @@ button.swiper-pagination-bullet {
   left: 11px;
   -webkit-border-radius: 50%;
           border-radius: 50%;
-  -webkit-box-shadow: 0 4px 0 0 #0089cb;
-          box-shadow: 0 4px 0 0 #0089cb;
+  -webkit-box-shadow: 0 4px 0 0 #0089CB;
+          box-shadow: 0 4px 0 0 #0089CB;
   -webkit-transform-origin: 44px 45.1px;
       -ms-transform-origin: 44px 45.1px;
        -o-transform-origin: 44px 45.1px;
@@ -2739,6 +2745,28 @@ button.swiper-pagination-bullet {
           box-sizing: content-box;
 }
 
+.header-default .logo .logo-title {
+  color: #000;
+  border-left: 1px solid #3B434A;
+}
+
+.header-single .logo {
+  gap: 18px;
+}
+
+.header-single .logo img {
+  max-width: 90px;
+}
+
+.header-single .logo .logo-title {
+  padding-left: 12px;
+  font-size: 12px;
+  color: #fff;
+  letter-spacing: -0.01em;
+  border-left: 1px solid #0089CB;
+  max-width: 210px;
+}
+
 .logo {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2765,12 +2793,14 @@ button.swiper-pagination-bullet {
   font-size: 14px;
   font-weight: 500;
   line-height: 140%;
-  color: #2C2D2F;
   max-width: 250px;
-  border-left: 1px solid #3B434A;
   -webkit-transition: all 0.1s ease-out;
   -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
+}
+
+.logo:hover .logo-title {
+  color: #0089CB;
 }
 
 .logo.mobile-logo {
@@ -2790,26 +2820,6 @@ button.swiper-pagination-bullet {
   padding-left: 15px;
   font-size: 13px;
   max-width: 235px;
-}
-
-.logo:hover .logo-title {
-  color: #0089cb;
-}
-
-.header-single .logo {
-  gap: 18px;
-}
-
-.header-single .logo img {
-  max-width: 90px;
-}
-
-.header-single .logo .logo-title {
-  padding-left: 12px;
-  font-size: 12px;
-  color: #fff;
-  letter-spacing: -0.01em;
-  border-color: #D60000;
 }
 
 .phone {
@@ -2834,10 +2844,10 @@ button.swiper-pagination-bullet {
 }
 
 .phone > span {
-  background: -webkit-gradient(linear, left top, left bottom, from(#0089cb));
-  background: -webkit-linear-gradient(#0089cb);
-  background: -o-linear-gradient(#0089cb);
-  background: linear-gradient(#0089cb);
+  background: -webkit-gradient(linear, left top, left bottom, from(#0089CB));
+  background: -webkit-linear-gradient(#0089CB);
+  background: -o-linear-gradient(#0089CB);
+  background: linear-gradient(#0089CB);
   -webkit-background-size: 0% 1px;
        -o-background-size: 0% 1px;
           background-size: 0% 1px;
@@ -2878,11 +2888,19 @@ button.swiper-pagination-bullet {
           transform: translateX(3px);
 }
 
-.phone.tecron > span {
-  background: -webkit-gradient(linear, left top, left bottom, from(#D60000));
-  background: -webkit-linear-gradient(#D60000);
-  background: -o-linear-gradient(#D60000);
-  background: linear-gradient(#D60000);
+.header-single .phone {
+  padding-right: 16px;
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: 0;
+  border-color: #fff;
+}
+
+.header-single .phone > span {
+  background: -webkit-gradient(linear, left top, left bottom, from(#0089CB));
+  background: -webkit-linear-gradient(#0089CB);
+  background: -o-linear-gradient(#0089CB);
+  background: linear-gradient(#0089CB);
   -webkit-background-size: 0% 1px;
        -o-background-size: 0% 1px;
           background-size: 0% 1px;
@@ -2890,15 +2908,24 @@ button.swiper-pagination-bullet {
   background-repeat: no-repeat;
 }
 
-.phone.tecron:hover > span {
+.header-single .phone:hover > span {
   background-position: left 0% bottom;
   -webkit-background-size: 100% 1px;
        -o-background-size: 100% 1px;
           background-size: 100% 1px;
 }
 
-.phone.tecron:before {
+.header-single .phone:before {
+  margin-right: 6px;
   background: url("../../../img/optimized/phone_red.svg") no-repeat center/contain;
+}
+
+.header-default .icons-nav li svg {
+  stroke: #4F5355;
+}
+
+.header-single .icons-nav li svg {
+  stroke: #fff;
 }
 
 .icons-nav {
@@ -2923,7 +2950,7 @@ button.swiper-pagination-bullet {
 .icons-nav li span {
   width: 18px;
   height: 18px;
-  background: #0089cb;
+  background: #0089CB;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -2953,9 +2980,17 @@ button.swiper-pagination-bullet {
 
 .icons-nav li svg {
   fill: none;
-  stroke: #4F5355;
   max-width: 19px;
   max-height: 19px;
+}
+
+.icons-nav li:hover svg {
+  stroke: #0089CB;
+}
+
+.icons-nav li.openSearch svg {
+  width: 16px;
+  height: 16px;
 }
 
 .ui-input {
@@ -3047,7 +3082,7 @@ button.swiper-pagination-bullet {
   bottom: 0.5px;
   height: 3px;
   width: 50px;
-  background: #0089cb;
+  background: #0089CB;
   -webkit-animation: titleLine 5s linear infinite forwards;
        -o-animation: titleLine 5s linear infinite forwards;
           animation: titleLine 5s linear infinite forwards;
@@ -3123,7 +3158,7 @@ button.swiper-pagination-bullet {
   left: 0;
   width: 40px;
   height: 3px;
-  background: #0089cb;
+  background: #0089CB;
 }
 
 .ui-close {
@@ -3158,7 +3193,7 @@ button.swiper-pagination-bullet {
 }
 
 .ui-mobileMenu .ui-close:hover {
-  stroke: #0089cb;
+  stroke: #0089CB;
 }
 
 .ui-overlay {
@@ -3217,10 +3252,9 @@ button.swiper-pagination-bullet {
   top: 20px;
   left: 20px;
   max-width: 58px;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
   font-size: 12px;
+  font-weight: 600;
   line-height: 100%;
   color: #356795;
   z-index: 1;
@@ -3273,10 +3307,6 @@ button.swiper-pagination-bullet {
   font-weight: 600;
   line-height: 120%;
   color: #2C2D2F;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 
 .product-card .info .excerpt {
@@ -3286,24 +3316,24 @@ button.swiper-pagination-bullet {
   letter-spacing: -0.02em;
   color: #4F5355;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
 .product-card:hover {
-  border-color: #0089cb;
+  border-color: #0089CB;
   -webkit-box-shadow: 0px 10px 20px rgba(0, 114, 169, 0.06);
           box-shadow: 0px 10px 20px rgba(0, 114, 169, 0.06);
 }
 
 .product-card:hover .info {
-  border-top: 1px solid #0089cb;
-  -webkit-border-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(rgba(0, 137, 203, 0.48)), color-stop(#0089cb), color-stop(rgba(0, 137, 203, 0.48)), to(transparent));
-  -webkit-border-image: -webkit-linear-gradient(left, transparent, rgba(0, 137, 203, 0.48), #0089cb, rgba(0, 137, 203, 0.48), transparent);
-       -o-border-image: -o-linear-gradient(left, transparent, rgba(0, 137, 203, 0.48), #0089cb, rgba(0, 137, 203, 0.48), transparent);
-          border-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(rgba(0, 137, 203, 0.48)), color-stop(#0089cb), color-stop(rgba(0, 137, 203, 0.48)), to(transparent));
-          border-image: linear-gradient(90deg, transparent, rgba(0, 137, 203, 0.48), #0089cb, rgba(0, 137, 203, 0.48), transparent);
+  border-top: 1px solid #0089CB;
+  -webkit-border-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(rgba(0, 137, 203, 0.48)), color-stop(#0089CB), color-stop(rgba(0, 137, 203, 0.48)), to(transparent));
+  -webkit-border-image: -webkit-linear-gradient(left, transparent, rgba(0, 137, 203, 0.48), #0089CB, rgba(0, 137, 203, 0.48), transparent);
+       -o-border-image: -o-linear-gradient(left, transparent, rgba(0, 137, 203, 0.48), #0089CB, rgba(0, 137, 203, 0.48), transparent);
+          border-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(rgba(0, 137, 203, 0.48)), color-stop(#0089CB), color-stop(rgba(0, 137, 203, 0.48)), to(transparent));
+          border-image: linear-gradient(90deg, transparent, rgba(0, 137, 203, 0.48), #0089CB, rgba(0, 137, 203, 0.48), transparent);
   border-image-slice: 1;
 }
 
@@ -3349,7 +3379,7 @@ button.swiper-pagination-bullet {
   top: 0;
   width: 8px;
   height: 1px;
-  background: #2C2D2F;
+  background: #000;
   -webkit-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
@@ -3391,10 +3421,10 @@ button.swiper-pagination-bullet {
   top: 0;
   width: 8px;
   height: 1px;
-  background: #2C2D2F;
-  -webkit-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
+  background: #000;
+  -webkit-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
 }
 
 .show-all .decArrow:before {
@@ -3433,7 +3463,7 @@ button.swiper-pagination-bullet {
   top: 0;
   width: 8px;
   height: 1px;
-  background: #2C2D2F;
+  background: #000;
   -webkit-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
@@ -3464,7 +3494,7 @@ button.swiper-pagination-bullet {
 .mobile-catalog > li[data-decArrowActive]:hover .decArrow:after,
 .mobile-catalog > li[data-decArrowActive].active .decArrow:before,
 .mobile-catalog > li[data-decArrowActive].active .decArrow:after {
-  background: #0089cb;
+  background: #0089CB;
 }
 
 .socials {
@@ -3525,11 +3555,25 @@ button.swiper-pagination-bullet {
 }
 
 .socials.socials-mobile a i {
-  color: #666;
+  color: #4F5355;
 }
 
 .socials.socials-mobile a svg {
-  fill: #666;
+  fill: #4F5355;
+}
+
+.socials.header-single-socials {
+  padding: 3px 16px 3px 0;
+  gap: 15px;
+  border-right: 1px solid #fff;
+}
+
+.socials.header-single-socials a i {
+  color: #fff;
+}
+
+.socials.header-single-socials a:hover i {
+  color: #0089CB;
 }
 
 .socials a {
@@ -3543,7 +3587,7 @@ button.swiper-pagination-bullet {
 }
 
 .socials a svg {
-  fill: #666;
+  fill: #4F5355;
 }
 
 .socials a:hover {
@@ -3554,11 +3598,11 @@ button.swiper-pagination-bullet {
 }
 
 .socials a:hover i {
-  color: #0089cb;
+  color: #0089CB;
 }
 
 .socials a:hover svg {
-  fill: #0089cb;
+  fill: #0089CB;
 }
 
 .contact-links {
@@ -3641,7 +3685,7 @@ button.swiper-pagination-bullet {
 
 .contact-links a:hover svg {
   fill: transparent;
-  stroke: #0089cb;
+  stroke: #0089CB;
 }
 
 .contact-links a:hover span {
@@ -3674,14 +3718,14 @@ button.swiper-pagination-bullet {
 }
 
 .contact-links.mobile a {
-  color: #2C2D2F;
+  color: #000;
 }
 
 .contact-links.mobile a > span {
-  background: -webkit-gradient(linear, left top, left bottom, from(#0089cb));
-  background: -webkit-linear-gradient(#0089cb);
-  background: -o-linear-gradient(#0089cb);
-  background: linear-gradient(#0089cb);
+  background: -webkit-gradient(linear, left top, left bottom, from(#0089CB));
+  background: -webkit-linear-gradient(#0089CB);
+  background: -o-linear-gradient(#0089CB);
+  background: linear-gradient(#0089CB);
   -webkit-background-size: 0% 1px;
        -o-background-size: 0% 1px;
           background-size: 0% 1px;
@@ -3697,7 +3741,7 @@ button.swiper-pagination-bullet {
 }
 
 .contact-links.mobile a svg {
-  stroke: #0089cb;
+  stroke: #0089CB;
   fill: none;
 }
 
@@ -3800,7 +3844,7 @@ button.swiper-pagination-bullet {
   font-size: 18px;
   font-weight: 500;
   line-height: 129%;
-  color: #2C2D2F;
+  color: #000;
   -webkit-border-top-right-radius: 80px;
           border-top-right-radius: 80px;
   -webkit-border-bottom-right-radius: 80px;
@@ -3826,7 +3870,7 @@ button.swiper-pagination-bullet {
 .ui-mobileMenu .mobile-catalog > li.active > a,
 .ui-mobileMenu .mobile-catalog > li.active > h6 {
   background: #F4F6F8;
-  color: #0089cb;
+  color: #0089CB;
 }
 
 .ui-mobileMenu .mobile-catalog > li.active > a:before,
@@ -3865,11 +3909,11 @@ button.swiper-pagination-bullet {
   font-size: 14px;
   font-weight: 400;
   line-height: 129%;
-  color: #2C2D2F;
-  background: -webkit-gradient(linear, left top, left bottom, from(#0089cb));
-  background: -webkit-linear-gradient(#0089cb);
-  background: -o-linear-gradient(#0089cb);
-  background: linear-gradient(#0089cb);
+  color: #000;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0089CB));
+  background: -webkit-linear-gradient(#0089CB);
+  background: -o-linear-gradient(#0089CB);
+  background: linear-gradient(#0089CB);
   -webkit-background-size: 0% 1px;
        -o-background-size: 0% 1px;
           background-size: 0% 1px;
@@ -3890,7 +3934,7 @@ button.swiper-pagination-bullet {
 }
 
 .ui-mobileMenu .mobile-catalog > li .menu-level-2 > li:hover a {
-  color: #0089cb;
+  color: #0089CB;
 }
 
 .ui-mobileMenu .separate-line {
@@ -3904,7 +3948,7 @@ button.swiper-pagination-bullet {
 .ui-burger {
   margin: 0 0 0 20px;
   padding: 0;
-  width: 25px;
+  width: 30px;
   height: 18px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3918,11 +3962,11 @@ button.swiper-pagination-bullet {
      -moz-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: end;
-  -webkit-align-items: flex-end;
-     -moz-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
      -moz-box-pack: justify;
@@ -3933,7 +3977,7 @@ button.swiper-pagination-bullet {
 .ui-burger span {
   width: 100%;
   height: 2px;
-  background: #2C2D2F;
+  background: #000;
   -webkit-border-radius: 30px;
           border-radius: 30px;
   -webkit-transition: all 0.1s ease-out;
@@ -3942,7 +3986,19 @@ button.swiper-pagination-bullet {
 }
 
 .ui-burger span:nth-child(2) {
-  background: #0089cb;
+  background: #0089CB;
+}
+
+.header-single .ui-burger {
+  display: none;
+}
+
+.header-single .ui-burger span {
+  background: #fff;
+}
+
+.header-single .ui-burger span:nth-child(2) {
+  background: #0089CB;
 }
 
 .nav-menu ul {
@@ -3960,16 +4016,16 @@ button.swiper-pagination-bullet {
 }
 
 .nav-menu ul li a {
-  background: -webkit-gradient(linear, left top, left bottom, from(#FFEEED));
-  background: -webkit-linear-gradient(#FFEEED);
-  background: -o-linear-gradient(#FFEEED);
-  background: linear-gradient(#FFEEED);
+  background: -webkit-gradient(linear, left top, left bottom, from(#0089CB));
+  background: -webkit-linear-gradient(#0089CB);
+  background: -o-linear-gradient(#0089CB);
+  background: linear-gradient(#0089CB);
   -webkit-background-size: 0% 1px;
        -o-background-size: 0% 1px;
           background-size: 0% 1px;
   background-position: right 0% bottom;
   background-repeat: no-repeat;
-  padding: 0 5px;
+  padding: 3px 5px;
   font-weight: 500;
   font-size: 16px;
   line-height: 130%;
@@ -3990,7 +4046,7 @@ button.swiper-pagination-bullet {
 }
 
 .nav-menu ul li a:hover {
-  color: #FFEEED;
+  color: #0089CB;
 }
 
 .search-form {
@@ -4023,7 +4079,7 @@ button.swiper-pagination-bullet {
 
 .search-form .form-item svg:hover {
   font-style: italic;
-  stroke: #0089cb;
+  stroke: #0089CB;
 }
 
 .ui-input {
@@ -4200,8 +4256,22 @@ header .h-bottom .contacts {
           justify-content: space-between;
 }
 
+.header-single .h-contacts {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 13px;
+}
+
 footer {
-  background: #242A30;
+  background: #1B1F24;
 }
 
 footer .copyright {
@@ -4216,7 +4286,7 @@ footer .copyright {
 
 .section-our-sites {
   padding: 17px 0;
-  background: #F4F6F8;
+  background: #3B434A;
 }
 
 .section-our-sites ul {
@@ -4437,7 +4507,7 @@ footer .copyright {
 
 .accordion-head:hover,
 .accordion-head.active {
-  background: #0089cb;
+  background: #0089CB;
 }
 
 .accordion-head:hover .head-title,
@@ -4505,7 +4575,7 @@ footer .copyright {
 .accordion-collapse .hide-btn svg {
   width: 21px;
   height: 16px;
-  stroke: #0089cb;
+  stroke: #0089CB;
   fill: transparent;
   cursor: pointer;
   -webkit-transition: all 0.2s ease-out;
@@ -4684,8 +4754,8 @@ footer .copyright {
   text-transform: uppercase;
   color: #fff;
   position: relative;
-  -webkit-border-radius: 3px;
-          border-radius: 3px;
+  -webkit-border-radius: 51px;
+          border-radius: 51px;
   overflow: hidden;
   text-align: center;
   -webkit-transition: all 0.2s ease-out;
@@ -4705,7 +4775,7 @@ footer .copyright {
   width: 100%;
   height: 100%;
   background: transparent;
-  border: 2px solid #0089cb;
+  border: 2px solid #0089CB;
   z-index: 0;
 }
 
@@ -4716,7 +4786,7 @@ footer .copyright {
   top: 0;
   width: 51%;
   height: 101%;
-  background: #0089cb;
+  background: #0089CB;
   -webkit-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
@@ -4731,18 +4801,9 @@ footer .copyright {
   right: 0;
 }
 
-.section-for-why .btn-wrap button:hover {
-  color: #0089cb;
-}
-
-.section-for-why .btn-wrap button:hover:before,
-.section-for-why .btn-wrap button:hover:after {
-  width: 0;
-}
-
 .section-contact {
   padding: 98px 0 85px 0;
-  background: #3b434a;
+  background: #3B434A;
 }
 
 .section-contact .contact-info {
@@ -5007,7 +5068,7 @@ input:active {
 }
 
 .swiper .swiper-pagination-bullet-active {
-  background: #0089cb;
+  background: #0089CB;
 }
 
 .swiper-container .swiper-button-next:after,
@@ -5042,7 +5103,7 @@ input:active {
 .swiper-container .swiper-button-next:hover svg,
 .swiper-container .swiper-button-prev:hover svg {
   opacity: 1;
-  stroke: #0089cb;
+  stroke: #0089CB;
   -webkit-transform: scale(1.2);
       -ms-transform: scale(1.2);
        -o-transform: scale(1.2);

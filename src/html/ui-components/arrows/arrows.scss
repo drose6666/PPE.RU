@@ -5,8 +5,9 @@
    $right: 15px,
    $left: 15px,
    $width: 13px,
-   $color: $black,
-   $colorHover: $white,
+   $color: $darkness,
+   $duration: 0.2s,
+   $colorHover: $lightness,
 
 ) {
    @if $centerY {
@@ -34,7 +35,7 @@
       width: 8px;
       height: 1px;
       background: $color;
-      transition: all 0.2s ease-out;
+      transition: all $duration ease-out;
    }
 
    &:before {
@@ -50,12 +51,12 @@
 
 %decArrowActive {
    &:before {
-      background: $white;
+      background: $lightness;
       transform: rotate(-45deg);
    }
 
    &:after {
-      background: $white;
+      background: $lightness;
       transform: rotate(45deg);
    }
 }
@@ -68,7 +69,7 @@
 }
 
 .show-all .decArrow {
-   @include decArrow($right: 0);
+   @include decArrow($right: 0, $duration: 0.1s);
 }
 
 .mobile-catalog .decArrow {
@@ -82,13 +83,13 @@
 
 .accordion-head:hover {
    .decArrow {
-      &:before, &:after { background: $white; }
+      &:before, &:after { background: $lightness; }
    }
 }
 
 .mobile-catalog > li[data-decArrowActive]:hover,
 .mobile-catalog > li[data-decArrowActive].active {
    .decArrow {
-      &:before, &:after { background: $decoration; }
+      &:before, &:after { background: $decorationBright; }
    }
 }

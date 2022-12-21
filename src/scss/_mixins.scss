@@ -108,7 +108,7 @@
 $bgsTransition: background-size 0.4s $animationTimingFunction;
 @mixin linksHover (
    $hoverFullLinks: false,
-   $color: $decoration,
+   $color: $decorationBright,
    $height: 1px,
 ) {
    @if $hoverFullLinks == false {
@@ -132,4 +132,21 @@ $bgsTransition: background-size 0.4s $animationTimingFunction;
          background-size: 100% $height;
       }
    }
+}
+
+
+
+/* 
+----------------------------------------------------------------------
+   TODO: Excerpt visible lines
+----------------------------------------------------------------------
+*/
+
+@mixin visibleLines (
+   $lineCount: 3,
+) {
+   display: -webkit-box;
+      -webkit-line-clamp: $lineCount;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
 }

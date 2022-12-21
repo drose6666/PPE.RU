@@ -6,7 +6,7 @@
    color: $text;
    max-width: 100%;
    width: 100%;
-   border: 1px solid $inputBorder;
+   border: 1px solid $borderInput;
    border-radius: 5px;
    &::placeholder {
       font-style: italic;

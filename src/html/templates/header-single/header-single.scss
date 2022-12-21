@@ -1,7 +1,12 @@
 .header-single {
    padding: 7px 0;
-   background: $blackDarkness;
+   background: $darkness;
    .ui-container {
       @include container ($flex: true);
+   }
+   .h-contacts {
+      display: flex;
+      align-items: center;
+      gap: 13px;
    }
 }

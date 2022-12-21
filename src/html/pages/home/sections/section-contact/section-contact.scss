@@ -1,10 +1,10 @@
 .section-contact {
    padding: 98px 0 85px 0;
-   background: #3b434a;
+   background: $sectionDark;
 
    .contact-info {
       padding: 19px 35px;
-      background: $sectionDarkGrey;
+      background: $decorationDarkness;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -37,7 +37,7 @@
          justify-content: center;
          &:nth-child(2) {
             padding-left: 54px;
-            border-left: 1px solid $borders;
+            border-left: 1px solid $border;
          } 
          
          a {
@@ -46,7 +46,7 @@
             align-items: center;
             justify-content: center;
             transition: all 0.2s ease-out;
-            @include linksHover($hoverFullLinks: true, $color: $white);
+            @include linksHover($hoverFullLinks: true, $color: $lightness);
             img {
                max-width: 100%;
                height: auto;
@@ -58,7 +58,7 @@
                font-size: 14px;
                font-weight: 400;
                line-height: 143%;
-               color: $white;
+               color: $lightness;
                position: relative;
                transition: $bgsTransition;
             }

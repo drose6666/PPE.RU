@@ -1,30 +1,35 @@
-$white: #fff;
-$black: #2C2D2F;
-$decoration: #0089cb;
+// * Colors
+$border: #DAE0E3;
+$borderInput: #C0C0C0;
+$copyrightBg: #1B1F24;
+$darkness: #000;
+$decoration: #0089CB;
+$decorationBright: #0089CB;
+$decorationLight: #F4F6F8;
 $decorationDark: #356795;
-$decorElements: #BCBEC0;
-$grey: #F4F6F8;
-$darkGrey: #1B1F24;
-$sectionGrey: #3B434A;
-$sectionDarkGrey: #242A30;
-$text: #4F5355;
-$socials: #666;
-$borders: #DAE0E3;
-$inputBorder: #C0C0C0; // #E3E8EA
-$placeholder: #A5A4A4;
+$decorationDarkness: #242A30;
+$lightness: #fff;
 $overlay: rgba(0, 0, 0, 0.7);
+$placeholder: #A5A4A4;
+$sectionDark: #3B434A;
+$sliderNavElementsLight: #BCBEC0;
+$title: #2C2D2F;
+$text: #4F5355;
 
-// TECRON PRO
-$blackDarkness: #000;
-$proDecorBright: #D60000;
-$proDecorLight: #FFEEED;
+// * Gradients
+$horizontalLine: linear-gradient(90deg, transparent, rgba(218, 224, 227, .48), $border, rgba(218, 224, 227, .48), transparent);
+$horizontalLineDecorationBright: linear-gradient(90deg, transparent, rgba(0, 137, 203, .48), $decorationBright, rgba(0, 137, 203, .48), transparent);
 
+// * Radius
+$btnRadius: 51px;
 
-
-
+// * Animation
 $animationTimingFunction: cubic-bezier(0.25, 0.8, 0.25, 1);
 
-$shadow1: 0px 0px 60px rgba(46, 78, 96, 0.11);
+// * Shadows
+$hoverCard: 0px 10px 20px rgba(0, 114, 169, 0.06);
 
+
+// * Fonts
 $Montserrat: 'Montserrat', sans-serif;
 $Roboto: 'Roboto', sans-serif;

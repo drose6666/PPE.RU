@@ -1,3 +1,21 @@
+.header-default .icons-nav {
+   li {
+      svg {
+         stroke: $text;
+      }
+   }
+}
+
+.header-single {
+   .icons-nav {
+      li {
+         svg {
+            stroke: $lightness;
+         }
+      }
+   }
+}
+
 .icons-nav {
    display: flex;
    align-items: center;
@@ -10,7 +28,7 @@
       span {
          width: 18px;
          height: 18px;
-         background: $decoration;
+         background: $decorationBright;
          display: flex;
          align-items: center;
          justify-content: center;
@@ -18,7 +36,7 @@
          font-size: 10px;
          line-height: 19px;
          letter-spacing: -0.02em;
-         color: $white;
+         color: $lightness;
          position: absolute;
          top: -9px;
          right: -12px;
@@ -27,9 +45,22 @@
 
       svg {
          fill: none;
-         stroke: $text;
+         // stroke: $text;
          max-width: 19px;
          max-height: 19px;
+      }
+
+      &:hover {
+         svg {
+            stroke: $decorationBright;
+         }
+      }
+
+      &.openSearch {
+         svg {
+            width: 16px;
+            height: 16px;
+         }
       }
    }
 }

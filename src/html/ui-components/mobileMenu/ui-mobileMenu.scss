@@ -5,7 +5,7 @@
    width: 100%;
    height: 100%;
    max-width: 450px;
-   background: $white;
+   background: $lightness;
    overflow-y: auto;
    z-index: 3;
    transition: all 0.5s $animationTimingFunction 0s;
@@ -18,7 +18,7 @@
    .m-head {
       margin-bottom: 60px;
       padding: 25px 0;
-      background: $grey;
+      background: $decorationLight;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -52,7 +52,7 @@
             font-size: 18px;
             font-weight: 500;
             line-height: 129%;
-            color: $black;
+            color: $darkness;
             border-top-right-radius: 80px;
             border-bottom-right-radius: 80px;
             display: flex;
@@ -64,19 +64,19 @@
          }
          &:hover, &.active {
             & > a, & > h6 {
-               background: $grey;
+               background: $decorationLight;
                color: $decoration;
             }
          }
          &.active {
             & > a, & > h6 .uidecorArrow {
                &:before {
-                  background: $white;
+                  background: $lightness;
                   transform: rotate(-45deg);
                }
             
                &:after {
-                  background: $white;
+                  background: $lightness;
                   transform: rotate(45deg);
                }
             }
@@ -85,7 +85,7 @@
          .menu-level-2 {
             margin: 15px 0 15px 70px;
             padding-left: 30px;
-            border-left: 1px solid $borders;
+            border-left: 1px solid $border;
             & > li {
                max-width: 300px;
                &:not(:last-child) {
@@ -95,7 +95,7 @@
                   font-size: 14px;
                   font-weight: 400;
                   line-height: 129%;
-                  color: $black;
+                  color: $darkness;
                   @include linksHover;
                   transition: $bgsTransition, color 0.1s ease-out
                }
@@ -113,7 +113,7 @@
       margin: 0 auto 16px auto;
       width: calc(100% - 100px);
       height: 1px;
-      background: $borders;
+      background: $border;
    }
 
    @media all and (max-width: 490px) {
@@ -155,32 +155,33 @@
 .ui-burger {
    margin: 0 0 0 20px;
    padding: 0;
-   width: 25px;
+   width: 30px;
    height: 18px;
    display: flex;
    flex-direction: column;
-   align-items: flex-end;
+   align-items: center;
    justify-content: space-between;
 
    span {
       width: 100%;
       height: 2px;
-      background: $black;
+      background: $darkness;
       border-radius: 30px;
       transition: all 0.1s ease-out;
       &:nth-child(2) {
-         // width: 70%;
-         background: $decoration;
-      }
-      &:nth-child(3) {
-         // width: 40%;
+         background: $decorationBright;
       }
    }
-   // &:hover {
-   //    span:nth-child(2), span:nth-child(3) {
-   //       width: 100%;
-   //    }
-   // }
+}
+
+.header-single .ui-burger {
+   display: none;
+   span {
+      background: $lightness;
+      &:nth-child(2) {
+         background: $decorationBright;
+      }
+   }
 }
 
 @media all and (max-width: 670px) {

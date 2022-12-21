@@ -10,7 +10,7 @@
       line-height: 115%;
       letter-spacing: -0.03em;
       text-transform: uppercase;
-      color: $white;
+      color: $lightness;
       &.animate {
          @include animateScrollFadeIn($toLeft: true, $delay: 0.2s);
       }
@@ -33,10 +33,10 @@
          line-height: 100%;
          text-align: center;
          letter-spacing: -0.02em;
-         color: $white;
+         color: $lightness;
          &:not(:last-child) {
             padding-right: 15px;
-            border-right: 1px solid $white;
+            border-right: 1px solid $lightness;
          }
       }
    }

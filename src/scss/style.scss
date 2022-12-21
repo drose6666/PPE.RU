@@ -93,7 +93,7 @@ input, input:focus, input:hover, input:active {
 }
 
 .swiper .swiper-pagination-bullet-active {
-   background: $decoration;
+   background: $decorationBright;
 }
 
 
@@ -115,13 +115,13 @@ input, input:focus, input:hover, input:active {
          opacity: 0.7;
          width: 13px;
          height: 26px;
-         stroke: $decorElements;
+         stroke: $sliderNavElementsLight;
          transition: all 0.1s ease-out;
       }
       &:hover {
          svg {
             opacity: 1;
-            stroke: $decoration;
+            stroke: $decorationBright;
             transform: scale(1.2);
          }
       }

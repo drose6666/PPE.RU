@@ -13,7 +13,7 @@
    display: flex;
    align-items: center;
    justify-content: center;
-   background: $white;
+   background: $lightness;
    z-index: 2;
    transition: all 0.2s ease-out;
    &.hide {
@@ -36,7 +36,7 @@
    top: 11px;
    left: 11px;
    border-radius: 50%;
-   box-shadow: 0 4px 0 0 $decoration;
+   box-shadow: 0 4px 0 0 $decorationBright;
    transform-origin: 44px 45.1px;
 }
 

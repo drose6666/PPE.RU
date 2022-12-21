@@ -5,12 +5,12 @@
    font-size: 26px;
    font-weight: 700;
    line-height: 120%;
-   color: $black;
+   color: $title;
    position: relative;
    overflow: hidden;
    .border-wrap {
       padding-bottom: 9px;
-      border-bottom: 1px solid $borders;
+      border-bottom: 1px solid $border;
    }
 
    &.animate {
@@ -39,7 +39,7 @@
    }
 
    &.light {
-      color: $white;
+      color: $lightness;
    }
 
    @media all and (max-width: 380px) {
@@ -68,7 +68,7 @@
    font-size: 25px;
    font-weight: 700;
    line-height: 100%;
-   color: $black;
+   color: $title;
    position: relative;
    &:after {
       content: '';

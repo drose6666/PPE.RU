@@ -9,12 +9,12 @@
       font-size: 14px;
       font-weight: 600;
       line-height: 143%;
-      color: $white;
+      color: $lightness;
       display: flex;
       align-items: center;
-      @include linksHover($hoverFullLinks: true, $color: $white);
+      @include linksHover($hoverFullLinks: true, $color: $lightness);
       svg {
-         stroke: $white;
+         stroke: $lightness;
          fill: none;
          transition: all 0.1s ease-out;
       }
@@ -27,7 +27,7 @@
       &:hover {
          svg {
             fill: transparent;
-            stroke: $decoration;
+            stroke: $decorationBright;
          }
          span {
             transform: translateX(3px);
@@ -42,10 +42,10 @@
       align-items: flex-start;
       gap: 25px;
       a {
-         color: $black;
-         @include linksHover($hoverFullLinks: true, $color: $decoration);
+         color: $darkness;
+         @include linksHover($hoverFullLinks: true, $color: $decorationBright);
          svg {
-            stroke: $decoration;
+            stroke: $decorationBright;
             fill: none;
          }
       }

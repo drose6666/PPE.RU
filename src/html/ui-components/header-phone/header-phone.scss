@@ -7,8 +7,8 @@
    display: flex;
    align-items: center;
    letter-spacing: 0.122579px;
-   color: $black;
-   border-right: 1px solid $sectionGrey;
+   color: $title;
+   border-right: 1px solid $sectionDark;
    @include linksHover($hoverFullLinks: true);
    &:before {
       content: '';
@@ -28,10 +28,18 @@
          transform: translateX(3px);
       }
    }
+}
 
-   &.tecron {
-      @include linksHover($hoverFullLinks: true, $color: $proDecorBright);
+.header-single {
+   .phone {
+      @include linksHover($hoverFullLinks: true);
+      padding-right: 16px;
+      font-size: 14px;
+      color: $lightness;
+      letter-spacing: 0;
+      border-color: $lightness;
       &:before {
+         margin-right: 6px;
          background: url('../../../img/optimized/phone_red.svg') no-repeat center / contain;
       }
    }

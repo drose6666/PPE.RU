@@ -1,7 +1,7 @@
 header {
    .h-top {
       padding: 10px 0;
-      background: $white;
+      background: $lightness;
       position: relative;
       .ui-container {
          @include container($flex: true)
@@ -31,7 +31,7 @@ header {
 
    .h-bottom {
       padding: 10px 0 10px 0;
-      background: $grey;
+      background: $decorationLight;
       .ui-container {
          @include container($flex: true)
       }

@@ -1,6 +1,6 @@
 .section-our-sites {
    padding: 17px 0;
-   background: $grey;
+   background: $sectionDark;
    ul {
       margin: 0 auto;
       max-width: 800px;
@@ -14,7 +14,7 @@
          justify-content: center;
          &:not(:last-child) {
             padding-right: 45px;
-            border-right: 1px solid $borders;
+            border-right: 1px solid $border;
          }
       }
    }
