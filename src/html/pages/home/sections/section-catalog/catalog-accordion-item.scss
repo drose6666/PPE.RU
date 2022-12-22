@@ -9,10 +9,14 @@
    justify-content: space-between;
    background: var(--decorationLight);
    cursor: pointer;
-   transition: background 0.1s ease-out;
    &.animate {
-      @include animateScrollFadeIn($toTop: true, $delay: 0.2s);
+      @include animateScrollFadeIn($toTop: true, $delay: 0.2s, $hasMoreTransition: true);
+      transition: transform .9s $animationTimingFunction .2s,
+                  opacity .9s $animationTimingFunction .2s,
+                  visibility .9s $animationTimingFunction .2s,
+                  background .1s ease-out;
    }
+   
 
    .head-title {
       padding-right: 15px;

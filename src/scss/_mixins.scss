@@ -54,7 +54,6 @@
    TODO: animation on scroll animation
 ----------------------------------------------------------------------
 */
-
 @mixin animateScrollFadeIn (
    $fade: true,
    $opacity: false,
@@ -66,11 +65,14 @@
    $timingFunction: $animationTimingFunction,
    $delay: .4s,
    $transform: 15px,
-
+   $hasMoreTransition: false,
 ) {
    opacity: 0;
    visibility: hidden;
-   transition: transform $duration $timingFunction $delay, opacity $duration $timingFunction $delay, visibility $duration $timingFunction $delay;
+   @if $hasMoreTransition == false {
+      transition: transform $duration $timingFunction $delay, opacity $duration $timingFunction $delay, visibility $duration $timingFunction $delay;
+   }
+   
    @if $fade {
       @if $toTop {
          transform: translateY($transform);
@@ -88,6 +90,7 @@
          transform: translateX($transform);
       }
    }
+   
    &.animation {
       opacity: 1;
       visibility: visible;
