@@ -5,9 +5,9 @@
    $right: 15px,
    $left: 15px,
    $width: 13px,
-   $color: $darkness,
+   $color: var(--darkness),
    $duration: 0.2s,
-   $colorHover: $lightness,
+   $colorHover: var(--lightness),
 
 ) {
    @if $centerY {
@@ -51,12 +51,12 @@
 
 %decArrowActive {
    &:before {
-      background: $lightness;
+      background: var(--lightness);
       transform: rotate(-45deg);
    }
 
    &:after {
-      background: $lightness;
+      background: var(--lightness);
       transform: rotate(45deg);
    }
 }
@@ -83,13 +83,13 @@
 
 .accordion-head:hover {
    .decArrow {
-      &:before, &:after { background: $lightness; }
+      &:before, &:after { background: var(--lightness); }
    }
 }
 
 .mobile-catalog > li[data-decArrowActive]:hover,
 .mobile-catalog > li[data-decArrowActive].active {
    .decArrow {
-      &:before, &:after { background: $decorationBright; }
+      &:before, &:after { background: var(--decorationBright); }
    }
 }

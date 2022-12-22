@@ -7,8 +7,8 @@
    display: flex;
    align-items: center;
    letter-spacing: 0.122579px;
-   color: $title;
-   border-right: 1px solid $sectionDark;
+   color: var(--text);
+   border-right: 1px solid var(--sectionDark);
    @include linksHover($hoverFullLinks: true);
    &:before {
       content: '';
@@ -35,9 +35,9 @@
       @include linksHover($hoverFullLinks: true);
       padding-right: 16px;
       font-size: 14px;
-      color: $lightness;
+      color: var(--lightness);
       letter-spacing: 0;
-      border-color: $lightness;
+      border-color: var(--lightness);
       &:before {
          margin-right: 6px;
          background: url('../../../img/optimized/phone_red.svg') no-repeat center / contain;

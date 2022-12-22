@@ -11,13 +11,13 @@
          right: 15px;
          width: 16px;
          height: 16px;
-         stroke: $text;
+         stroke: var(--text);
          fill: none;
          cursor: pointer;
          transition: all 0.1s ease-out;
          &:hover {
             font-style: italic;
-            stroke: $decorationBright;
+            stroke: var(--decorationBright);
          }
       }
    }

@@ -22,7 +22,6 @@
 @import '../html/ui-components/ui-titles/titles';
 @import '../html/ui-components/ui-close/ui-close';
 @import '../html/ui-components/ui-overlay/ui-overlay';
-@import '../html/ui-components/productCard/product-card';
 @import '../html/ui-components/arrows/arrows';
 @import '../html/ui-components/socials/socials';
 @import '../html/ui-components/contact-links/contact-links';
@@ -42,7 +41,6 @@
 @import '../html/pages/home/sections/section-our-sites/section-our-sites';
 @import '../html/pages/home/sections/section-welcome/section-welcome';
 @import '../html/pages/home/sections/section-catalog/section-catalog';
-@import '../html/pages/home/sections/section-catalog/catalog-accordion-item';
 @import '../html/pages/home/sections/section-for-why/section-for-why';
 @import '../html/pages/home/sections/section-contact/section-contact';
 
@@ -93,7 +91,7 @@ input, input:focus, input:hover, input:active {
 }
 
 .swiper .swiper-pagination-bullet-active {
-   background: $decorationBright;
+   background: var(--decorationBright);
 }
 
 
@@ -115,13 +113,13 @@ input, input:focus, input:hover, input:active {
          opacity: 0.7;
          width: 13px;
          height: 26px;
-         stroke: $sliderNavElementsLight;
+         stroke: var(--sliderNavElementsLight);
          transition: all 0.1s ease-out;
       }
       &:hover {
          svg {
             opacity: 1;
-            stroke: $decorationBright;
+            stroke: var(--decorationBright);
             transform: scale(1.2);
          }
       }

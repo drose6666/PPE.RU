@@ -3,7 +3,7 @@
    display: flex;
    flex-direction: column;
    border-radius: 5px;
-   border: 1px solid $border;
+   border: 1px solid var(--border);
    position: relative;
    transition: all 0.2s ease-out;
    .hidden-text {
@@ -15,12 +15,12 @@
       font-size: 12px;
       font-weight: 600;
       line-height: 100%;
-      color: $decorationDark;
+      color: var(--decorationDark);
       z-index: 1;
    }
    .img {
       padding-bottom: 10px;
-      background: $lightness;
+      background: var(--lightness);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -33,8 +33,8 @@
    }
    .info {
       padding: 16px 11px 13px 11px;
-      border-top: 1px solid $border;
-      border-image: $horizontalLine;
+      border-top: 1px solid var(--border);
+      border-image: var(--horizontalLine);
       border-image-slice: 1;
       transition: all 0.2s ease-out;
       .product-card-title {
@@ -42,7 +42,7 @@
          font-size: 17px;
          font-weight: 600;
          line-height: 120%;
-         color: $title;
+         color: var(--title);
          
       }
       .excerpt {
@@ -50,16 +50,16 @@
          font-weight: 300;
          line-height: 130%;
          letter-spacing: -0.02em;
-         color: $text;
+         color: var(--text);
          @include visibleLines;
       }
    }
    &:hover {
-      border-color: $decorationBright;
-      box-shadow: $hoverCard;
+      border-color: var(--decorationBright);
+      box-shadow: var(--hoverCard);
       .info {
-         border-top: 1px solid $decorationBright;
-         border-image: $horizontalLineDecorationBright;
+         border-top: 1px solid var(--decorationBright);
+         border-image: var(--horizontalLineDecorationBright);
          border-image-slice: 1;
       }
    }

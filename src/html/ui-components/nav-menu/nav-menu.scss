@@ -5,16 +5,16 @@
       gap: 5px;
       li {
          a {
-            @include linksHover($color: $decorationBright);
+            @include linksHover($color: var(--decorationBright));
             padding: 3px 5px;
             font-weight: 500;
             font-size: 16px;
             line-height: 130%;
             letter-spacing: -0.01em;
-            color: $lightness;
+            color: var(--lightness);
             transition: $bgsTransition, color 0.2s ease-out;
             &:hover {
-               color: $decorationBright;
+               color: var(--decorationBright);
             }
          }
       }

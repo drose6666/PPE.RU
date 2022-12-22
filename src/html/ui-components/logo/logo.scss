@@ -1,8 +1,8 @@
 .header-default {
    .logo {
       .logo-title {
-         color: $darkness;
-         border-left: 1px solid $sectionDark;
+         color: var(--darkness);
+         border-left: 1px solid var(--sectionDark);
       }
    }
 }
@@ -10,18 +10,38 @@
 .header-single {
    .logo {
       gap: 18px;
-      img { max-width: 90px; }
+
+      img { max-width: 90px;}
       .logo-title {
          padding-left: 12px;
          font-size: 12px;
-         color: $lightness;
+         color: var(--lightness);
          letter-spacing: -0.01em;
-         border-left: 1px solid $decorationBright;
+         border-left: 1px solid var(--decorationBright);
          max-width: 210px;
       }
    }
 }
 
+[color-theme="main"] {
+   .logo.mobile-logo {
+      .logo-title {
+         border-left: 1px solid var(--sectionDark);
+      }
+   }
+}
+
+[color-theme="tecron"] {
+   .logo.mobile-logo {
+      .logo-title {
+         border-left: 1px solid var(--decorationBright);
+      }
+   }
+}
+
+
+
+// * logo default
 .logo {
    display: flex;
    align-items: center;
@@ -45,7 +65,7 @@
 
    &:hover {
       .logo-title {
-         color: $decorationBright;
+         color: var(--decorationBright);
       }
    }
 
@@ -59,6 +79,10 @@
          padding-left: 15px;
          font-size: 13px;
          max-width: 235px;
+         color: var(--darkness);
+      }
+      &:hover {
+         .logo-title { color: var(--decorationBright); }
       }
       @media all and (max-width: 490px) {
          gap: 20px;
@@ -76,11 +100,9 @@
 
 
 @media all and (max-width: 900px) {
-   .header-default .h-bottom {
-      .logo .logo-title { display: none; }
-   }
+   .header-default .logo .logo-title { display: none; }
 }
 
 @media all and (max-width: 350px) {
-   .header-default .h-bottom .logo img { max-width: 85px; }
+   .header-default .logo img { max-width: 85px; }
 }

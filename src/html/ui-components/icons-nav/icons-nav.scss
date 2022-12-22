@@ -1,7 +1,7 @@
 .header-default .icons-nav {
    li {
       svg {
-         stroke: $text;
+         stroke: var(--text);
       }
    }
 }
@@ -10,15 +10,16 @@
    .icons-nav {
       li {
          svg {
-            stroke: $lightness;
+            stroke: var(--lightness);
          }
       }
    }
 }
 
 .icons-nav {
-   display: flex;
-   align-items: center;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: auto;
    gap: 25px;
 
    li {
@@ -28,7 +29,7 @@
       span {
          width: 18px;
          height: 18px;
-         background: $decorationBright;
+         background: var(--decorationBright);
          display: flex;
          align-items: center;
          justify-content: center;
@@ -36,7 +37,7 @@
          font-size: 10px;
          line-height: 19px;
          letter-spacing: -0.02em;
-         color: $lightness;
+         color: var(--lightness);
          position: absolute;
          top: -9px;
          right: -12px;
@@ -45,14 +46,14 @@
 
       svg {
          fill: none;
-         // stroke: $text;
+         // stroke: var(--text);
          max-width: 19px;
          max-height: 19px;
       }
 
       &:hover {
          svg {
-            stroke: $decorationBright;
+            stroke: var(--decorationBright);
          }
       }
 

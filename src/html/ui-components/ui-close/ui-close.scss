@@ -24,7 +24,7 @@
       right: 0;
       display: none;
       &:hover {
-         stroke: $decorationBright;
+         stroke: var(--decorationBright);
       }
       @media all and (max-width: 490px) {
          display: block;

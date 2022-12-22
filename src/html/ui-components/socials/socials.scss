@@ -13,9 +13,9 @@
 
    &.socials-contacts, &.socials-mobile {
       a {
-         i { font-size: 22px; color: $lightness; }
+         i { font-size: 22px; color: var(--lightness); }
          svg {
-            fill: $lightness;
+            fill: var(--lightness);
             &.ozon { width: 82px; height: 18px; }
             &.avito { width: 21px; height: 21px; }
          }
@@ -45,8 +45,8 @@
       margin-left: 50px;
       justify-content: flex-start;
       a {
-         i { color: $text; }
-         svg { fill: $text; }
+         i { color: var(--text); }
+         svg { fill: var(--text); }
       }
       @media all and (max-width: 490px) {
          margin-left: 30px;
@@ -68,22 +68,22 @@
    &.header-single-socials {
       padding: 3px 16px 3px 0;
       gap: 15px;
-      border-right: 1px solid $lightness;
+      border-right: 1px solid var(--lightness);
       a {
-         i { color: $lightness; }
-         &:hover i { color: $decorationBright; }
+         i { color: var(--lightness); }
+         &:hover i { color: var(--decorationBright); }
       }
    }
 
    a {
       transition: all 0.2s ease-out;
-      i { color: $text; }
-      svg { fill: $text;  }
+      i { color: var(--text); }
+      svg { fill: var(--text);  }
 
       &:hover {
          transform: translateY(-3px);
-         i {  color: $decorationBright }
-         svg {  fill: $decorationBright }
+         i {  color: var(--decorationBright) }
+         svg {  fill: var(--decorationBright) }
       }
    }
 }

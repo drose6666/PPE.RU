@@ -7,7 +7,7 @@
    display: flex;
    align-items: center;
    justify-content: space-between;
-   background: $decorationLight;
+   background: var(--decorationLight);
    cursor: pointer;
    transition: background 0.1s ease-out;
    &.animate {
@@ -20,7 +20,7 @@
       font-weight: 700;
       font-size: 22px;
       line-height: 120%;
-      color: $title;
+      color: var(--title);
       transition: all 0.1s ease-out;
    }
 
@@ -31,15 +31,15 @@
       font-weight: 400;
       font-size: 14px;
       line-height: 17px;
-      color: $title;
+      color: var(--title);
       white-space: nowrap;
       transition: all 0.1s ease-out;
    }
 
    &:hover, &.active {
-      background: $decorationBright;
+      background: var(--decorationBright);
       .head-title, .show-all {
-         color: $lightness;
+         color: var(--lightness);
       }
    }
 }
@@ -72,12 +72,12 @@
       svg {
          width: 21px;
          height: 16px;
-         stroke: $decorationBright;
+         stroke: var(--decorationBright);
          fill: transparent;
          cursor: pointer;
-         transition: all 0.2s ease-out;
+         transition: all 0.1s ease-out;
          &:hover {
-            transform: scale(1.2);
+            transform: scale(1.1);
          }
       }
    }

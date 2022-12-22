@@ -108,11 +108,11 @@
 $bgsTransition: background-size 0.4s $animationTimingFunction;
 @mixin linksHover (
    $hoverFullLinks: false,
-   $color: $decorationBright,
+   $color: var(--decorationBright),
    $height: 1px,
 ) {
    @if $hoverFullLinks == false {
-      background: linear-gradient($color);
+      background: -webkit-gradient(linear, left top, left bottom, from($color));
       background-size: 0% $height;
       background-position: right 0% bottom;
       background-repeat: no-repeat;
@@ -122,7 +122,7 @@ $bgsTransition: background-size 0.4s $animationTimingFunction;
       }
    } @else if $hoverFullLinks {
       & > span {
-         background: linear-gradient($color);
+         background: -webkit-gradient(linear, left top, left bottom, from($color));
          background-size: 0% $height;
          background-position: right 0% bottom;
          background-repeat: no-repeat;

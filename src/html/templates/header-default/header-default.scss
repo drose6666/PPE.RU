@@ -1,7 +1,7 @@
 header {
    .h-top {
       padding: 10px 0;
-      background: $lightness;
+      background: var(--lightness);
       position: relative;
       .ui-container {
          @include container($flex: true)
@@ -12,7 +12,7 @@ header {
          font-size: 13px;
          line-height: 169%;
          letter-spacing: 0.1px;
-         color: $text;
+         color: var(--text);
          display: flex;
          align-items: center;
          strong {
@@ -31,7 +31,7 @@ header {
 
    .h-bottom {
       padding: 10px 0 10px 0;
-      background: $decorationLight;
+      background: var(--decorationLight);
       .ui-container {
          @include container($flex: true)
       }

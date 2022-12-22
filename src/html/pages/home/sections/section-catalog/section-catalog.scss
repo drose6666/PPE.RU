@@ -1,3 +1,6 @@
 .section-catalog {
    padding: 20px 0 92px 0;
 }
+
+@import './catalog-accordion-item';
+@import '../../../../ui-components/productCard/product-card'

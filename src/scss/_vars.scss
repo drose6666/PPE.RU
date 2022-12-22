@@ -1,24 +1,65 @@
 // * Colors
-$border: #DAE0E3;
-$borderInput: #C0C0C0;
-$copyrightBg: #1B1F24;
-$darkness: #000;
-$decoration: #0089CB;
-$decorationBright: #0089CB;
-$decorationLight: #F4F6F8;
-$decorationDark: #356795;
-$decorationDarkness: #242A30;
-$lightness: #fff;
-$overlay: rgba(0, 0, 0, 0.7);
-$placeholder: #A5A4A4;
-$sectionDark: #3B434A;
-$sliderNavElementsLight: #BCBEC0;
-$title: #2C2D2F;
-$text: #4F5355;
 
-// * Gradients
-$horizontalLine: linear-gradient(90deg, transparent, rgba(218, 224, 227, .48), $border, rgba(218, 224, 227, .48), transparent);
-$horizontalLineDecorationBright: linear-gradient(90deg, transparent, rgba(0, 137, 203, .48), $decorationBright, rgba(0, 137, 203, .48), transparent);
+:root[color-theme="main"] {
+   --border: #DAE0E3;
+   --borderInput: #C0C0C0;
+   --copyrightBg: #1B1F24;
+   --darkness: #000;
+   --decoration: #0089CB;
+   --decorationBright: #0089CB;
+   --decorationLight: #F4F6F8;
+   --decorationDark: #356795;
+   --decorationDarkness: #242A30;
+   --lightness: #fff;
+   --overlay: rgba(0, 0, 0, 0.7);
+   --placeholder: #A5A4A4;
+   --sectionDark: #3B434A;
+   --sliderNavElementsLight: #BCBEC0;
+   --title: #2C2D2F;
+   --text: #4F5355;
+   --linksHoverColorful: linear-gradient(--decorationBright);
+   --linksHoverLight: linear-gradient(--lightness);
+   --linksHoverDark: linear-gradient(--darkness);
+
+   // * Gradients
+   --horizontalLine: linear-gradient(90deg, transparent, rgba(218, 224, 227, .48), var(--border), rgba(218, 224, 227, .48), transparent);
+   --horizontalLineDecorationBright: linear-gradient(90deg, transparent, rgba(0, 137, 203, .48), var(--decorationBright), rgba(0, 137, 203, .48), transparent);
+
+   // * Shadows
+   --hoverCard: 0px 10px 20px rgba(0, 114, 169, 0.06);
+}
+
+:root[color-theme="tecron"] {
+   --border: #DAE0E3;
+   --borderInput: #C0C0C0;
+   --copyrightBg: #1B1F24;
+   --darkness: #000;
+   --decoration: #AC1410;
+   --decorationBright: #D60000;
+   --decorationLight: #FFEEED;
+   --decorationDark: #356795;
+   --decorationDarkness: #242A30;
+   --lightness: #fff;
+   --overlay: rgba(0, 0, 0, 0.7);
+   --placeholder: #A5A4A4;
+   --sectionDark: #3B434A;
+   --sliderNavElementsLight: #BCBEC0;
+   --title: #2C2D2F;
+   --text: #4F5355;
+   --linksHoverColorful: linear-gradient(--decorationBright);
+   --linksHoverLight: linear-gradient(--lightness);
+   --linksHoverDark: linear-gradient(--darkness);
+
+   // * Gradients
+   --horizontalLine: linear-gradient(90deg, transparent, rgba(218, 224, 227, .48), var(--border), rgba(218, 224, 227, .48), transparent);
+   --horizontalLineDecorationBright: linear-gradient(90deg, transparent, rgba(0, 137, 203, .48), var(--decorationBright), rgba(0, 137, 203, .48), transparent);
+
+   // * Shadows
+   --hoverCard: 0px 10px 20px rgba(0, 114, 169, 0.06);
+}
+
+
+
 
 // * Radius
 $btnRadius: 51px;
@@ -26,8 +67,7 @@ $btnRadius: 51px;
 // * Animation
 $animationTimingFunction: cubic-bezier(0.25, 0.8, 0.25, 1);
 
-// * Shadows
-$hoverCard: 0px 10px 20px rgba(0, 114, 169, 0.06);
+
 
 
 // * Fonts
