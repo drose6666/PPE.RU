@@ -157,3 +157,15 @@ $('.accordion-collapse .hide-btn svg').on('click', function() {
    $(this).parents('.accordion-item').children('.accordion-collapse').slideUp()
 })
 
+
+
+
+
+// let btnWrap = document.querySelector('.btn-wrap button') 
+// btnWrap.addEventListener('click', function(e) {
+//    let animationEL = this.querySelector('span')
+//    // console.log(e);
+//    animationEL.style.top = e.offsetY + 'px'
+//    animationEL.style.left = e.offsetX + 'px'
+//    animationEL.style.animation.setPro
+// })

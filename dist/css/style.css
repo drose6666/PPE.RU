@@ -4778,47 +4778,14 @@ footer .copyright {
           border-radius: 51px;
   overflow: hidden;
   text-align: center;
+  background: var(--decorationBright);
   -webkit-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
 
 .section-for-why .btn-wrap button span {
-  position: relative;
-  z-index: 1;
-}
-
-.section-for-why .btn-wrap button .border {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  border: 2px solid var(--decorationBright);
-  z-index: 0;
-}
-
-.section-for-why .btn-wrap button:before,
-.section-for-why .btn-wrap button:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 51%;
-  height: 101%;
-  background: var(--decorationBright);
-  -webkit-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-  z-index: 0;
-}
-
-.section-for-why .btn-wrap button:before {
-  left: 0;
-}
-
-.section-for-why .btn-wrap button:after {
-  right: 0;
 }
 
 .section-contact {

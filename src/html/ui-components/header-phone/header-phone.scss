@@ -21,7 +21,7 @@
    span {
       position: relative;
       display: inline-block;
-      transition: $bgsTransition, transform 0.2s ease-out
+      transition: $bgsTransition, transform 0.2s ease-out;
    }
    &:hover {
       span {
