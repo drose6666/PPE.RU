@@ -25,7 +25,6 @@
    li {
       position: relative;
       cursor: pointer;
-
       span {
          width: 18px;
          height: 18px;
@@ -46,9 +45,9 @@
 
       svg {
          fill: none;
-         // stroke: var(--text);
          max-width: 19px;
          max-height: 19px;
+         vertical-align: middle;
       }
 
       &:hover {

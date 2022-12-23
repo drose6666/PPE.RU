@@ -18,7 +18,7 @@
    .m-head {
       margin-bottom: 60px;
       padding: 25px 0;
-      background: var(--decorationLight);
+      background: var(--bgMobileMenuHead);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -141,13 +141,13 @@
 
 // * burger
 .ui-burger {
-   margin: 0 0 0 20px;
+   margin: 0 0 0 10px;
    padding: 0;
    width: 30px;
    height: 18px;
    display: flex;
    flex-direction: column;
-   align-items: center;
+   align-items: flex-end;
    justify-content: space-between;
 
    span {
@@ -155,10 +155,14 @@
       height: 2px;
       background: var(--darkness);
       border-radius: 30px;
-      transition: all 0.1s ease-out;
+      transition: all 0.2s ease-out;
       &:nth-child(2) {
          background: var(--decorationBright);
       }
+   }
+   &:hover {
+      span:nth-child(2) { width: 70%; }
+      span:nth-child(3) { width: 40%;  }
    }
 }
 
@@ -169,6 +173,9 @@
       &:nth-child(2) {
          background: var(--decorationBright);
       }
+   }
+   @media all and (max-width: 1170px) {
+      display: flex;
    }
 }
 

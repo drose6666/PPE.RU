@@ -73,6 +73,9 @@
          i { color: var(--lightness); }
          &:hover i { color: var(--decorationBright); }
       }
+      @media all and (max-width: 620px) {
+         display: none;
+      }
    }
 
    a {

@@ -43,4 +43,7 @@
          background: url('../../../img/optimized/phone_red.svg') no-repeat center / contain;
       }
    }
+   @media all and (max-width: 490px) {
+      .phone { display: none; }
+   }
 }

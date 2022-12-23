@@ -1,6 +1,7 @@
 // * Colors
 
 :root[color-theme="main"] {
+   --bgMobileMenuHead: #F4F6F8;
    --border: #DAE0E3;
    --borderInput: #C0C0C0;
    --buttonHoverSolid: #00578F;
@@ -32,6 +33,7 @@
 }
 
 :root[color-theme="tecron"] {
+   --bgMobileMenuHead: #F4F6F8;
    --border: #DAE0E3;
    --borderInput: #C0C0C0;
    --buttonHoverSolid: #00578F;
