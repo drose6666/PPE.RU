@@ -3050,6 +3050,141 @@ button.swiper-pagination-bullet {
   height: 16px;
 }
 
+.ui-btn {
+  padding: 15px 27px;
+  background: transparent;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 121%;
+  text-transform: uppercase;
+  color: var(--lightness);
+  position: relative;
+  -webkit-border-radius: 51px;
+          border-radius: 51px;
+  overflow: hidden;
+  text-align: center;
+  background: var(--decorationBright);
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: unset;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+}
+
+.ui-btn:hover {
+  background: var(--buttonHoverSolid);
+  -webkit-box-shadow: var(--buttonHoverSolidShadow);
+          box-shadow: var(--buttonHoverSolidShadow);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  outline: none;
+  pointer-events: unset;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+}
+
+.btn-ripple {
+  padding: 15px 27px;
+  background: transparent;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 121%;
+  text-transform: uppercase;
+  color: var(--lightness);
+  position: relative;
+  -webkit-border-radius: 51px;
+          border-radius: 51px;
+  overflow: hidden;
+  text-align: center;
+  background: var(--decorationBright);
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+.btn-ripple .btn-hidden-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  z-index: 1;
+}
+
+.btn-ripple span.ripple {
+  position: absolute;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.4);
+  z-index: 0;
+  -webkit-animation: ripple 1.3s ease-out;
+       -o-animation: ripple 1.3s ease-out;
+          animation: ripple 1.3s ease-out;
+}
+
+@-webkit-keyframes ripple {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) scale(0);
+            transform: translate(-50%, -50%) scale(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) scale(4);
+            transform: translate(-50%, -50%) scale(4);
+  }
+}
+
+@-o-keyframes ripple {
+  0% {
+    opacity: 1;
+    -o-transform: translate(-50%, -50%) scale(0);
+       transform: translate(-50%, -50%) scale(0);
+  }
+
+  100% {
+    opacity: 0;
+    -o-transform: translate(-50%, -50%) scale(4);
+       transform: translate(-50%, -50%) scale(4);
+  }
+}
+
+@keyframes ripple {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) scale(0);
+         -o-transform: translate(-50%, -50%) scale(0);
+            transform: translate(-50%, -50%) scale(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) scale(4);
+         -o-transform: translate(-50%, -50%) scale(4);
+            transform: translate(-50%, -50%) scale(4);
+  }
+}
+
 .ui-input {
   padding: 12px 45px 12px 20px;
   font-size: 16px;
@@ -3773,7 +3908,6 @@ button.swiper-pagination-bullet {
 .ui-mobileMenu .mobile-catalog > li {
   max-width: 425px;
   position: relative;
-  cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -3797,6 +3931,7 @@ button.swiper-pagination-bullet {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  cursor: pointer;
   -webkit-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
@@ -4465,7 +4600,7 @@ footer .copyright {
 }
 
 .accordion-visible.swiper-container .catalog-swiper {
-  padding: 20px 0;
+  padding-bottom: 20px;
 }
 
 .accordion-collapse {
@@ -4481,13 +4616,37 @@ footer .copyright {
   display: flex;
 }
 
-.accordion-collapse .hide-btn {
-  margin-top: 7px;
-  width: 100%;
-  text-align: center;
+.accordion-collapse .btn-hide {
+  margin: 7px auto 0 auto;
+  padding: 0;
+  width: 60px;
+  height: 60px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: var(--lightness);
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
-.accordion-collapse .hide-btn svg {
+.accordion-collapse .btn-hide svg {
   width: 21px;
   height: 16px;
   stroke: var(--decorationBright);
@@ -4498,11 +4657,8 @@ footer .copyright {
   transition: all 0.1s ease-out;
 }
 
-.accordion-collapse .hide-btn svg:hover {
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-       -o-transform: scale(1.1);
-          transform: scale(1.1);
+.accordion-collapse .btn-hide:hover {
+  background: var(--decorationLight);
 }
 
 .product-card {
@@ -4769,57 +4925,6 @@ footer .copyright {
           transform: none;
 }
 
-.section-for-why .btn-wrap button {
-  padding: 15px 27px;
-  background: transparent;
-  font-size: 21px;
-  font-weight: 700;
-  line-height: 121%;
-  text-transform: uppercase;
-  color: var(--lightness);
-  position: relative;
-  -webkit-border-radius: 51px;
-          border-radius: 51px;
-  overflow: hidden;
-  text-align: center;
-  background: var(--decorationBright);
-  -webkit-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-}
-
-.section-for-why .btn-wrap button .btn-hidden-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  -webkit-border-radius: var(--btnRadius);
-          border-radius: var(--btnRadius);
-  z-index: 1;
-}
-
-.section-for-why .btn-wrap button span.ripple {
-  position: absolute;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-       -o-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255, 0.7);
-  z-index: 0;
-}
-
-.section-for-why .btn-wrap button:hover {
-  background: var(--buttonHoverSolid);
-  -webkit-box-shadow: var(--buttonHoverSolidShadow);
-          box-shadow: var(--buttonHoverSolidShadow);
-}
-
 .section-contact {
   padding: 98px 0 85px 0;
   background: var(--sectionDark);
@@ -5034,6 +5139,8 @@ footer .copyright {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 button {

@@ -1,25 +1,29 @@
-let btnRipple = document.querySelectorAll('.button-ripple .btn-hidden-overlay')
+let btnRipple = document.querySelectorAll('.btn-ripple .btn-hidden-overlay')
 
 for (let item of btnRipple) {
    item.addEventListener('click', function (e) {
-      let duration = 500
-      const animationElFrames = {
-         'opacity': [1, 0],
-         'transform': ['translate(-50%, -50%) scale(0)', 'translate(-50%, -50%) scale(4)'],
-      }
-
-      let timing = {
-         duration: duration,
-         iterations: 1,
-      }
+      let btnWidth = item.getBoundingClientRect().width.toFixed(2)
+      let duration = 1300
+      let button = item.parentNode
+      
+      // const animationElFrames = {
+      //    'opacity': [1, 0],
+      //    'transform': ['translate(-50%, -50%) scale(0)', 'translate(-50%, -50%) scale(4)'],
+      // }
+      
+      // let timing = {
+      //    duration: duration,
+      //    iterations: 1,
+      // }
 
       let ripple = document.createElement('span')
-      ripple.classList.add('ripple')
+      
       ripple.style.top = e.offsetY + 'px'
       ripple.style.left = e.offsetX + 'px'
-      ripple.animate(animationElFrames, timing)
-
-      let button = item.parentNode
+      ripple.style.width = ripple.style.height = btnWidth + 'px'
+      // ripple.animate(animationElFrames, timing)
+      ripple.classList.add('ripple')
+      
       button.append(ripple)
       setTimeout(() => {
          ripple.remove()

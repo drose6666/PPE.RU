@@ -46,7 +46,6 @@
       & > li {
          max-width: 425px;
          position: relative;
-         cursor: pointer;
          user-select: none;
          & > a, & > h6 {
             padding: 16px 25px 16px 50px;
@@ -58,6 +57,7 @@
             border-bottom-right-radius: 80px;
             display: flex;
             position: relative;
+            cursor: pointer;
             transition: all 0.2s ease-out;
             span {
                max-width: 300px;

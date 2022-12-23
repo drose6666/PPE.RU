@@ -1,0 +1,73 @@
+.ui-btn {
+   padding: 15px 27px;
+   background: transparent;
+   font-size: 21px;
+   font-weight: 700;
+   line-height: 121%;
+   text-transform: uppercase;
+   color: var(--lightness);
+   position: relative;
+   border-radius: $btnRadius;
+   overflow: hidden;
+   text-align: center;
+   background: var(--decorationBright);
+   transition: all 0.2s ease-out;
+   user-select: none;
+   pointer-events: unset;
+   touch-action: manipulation;
+   &:hover {
+      background: var(--buttonHoverSolid);
+      box-shadow: var(--buttonHoverSolidShadow);
+      user-select: none;
+      outline: none;
+      pointer-events: unset;
+      touch-action: manipulation;
+   }
+}
+.btn-ripple {
+   padding: 15px 27px;
+   background: transparent;
+   font-size: 21px;
+   font-weight: 700;
+   line-height: 121%;
+   text-transform: uppercase;
+   color: var(--lightness);
+   position: relative;
+   border-radius: $btnRadius;
+   overflow: hidden;
+   text-align: center;
+   background: var(--decorationBright);
+   transition: all 0.2s ease-out;
+   user-select: none;
+   cursor: pointer;
+   .btn-hidden-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      border-radius: 50%;
+      z-index: 1;
+   }
+   span.ripple {
+      position: absolute;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(255, 255, 255, 0.4);
+      z-index: 0;
+      animation: ripple 1.3s ease-out;
+   }
+}
+
+
+@keyframes ripple {
+   0% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(0);
+   }
+   100% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(4);
+   }
+}

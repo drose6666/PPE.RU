@@ -152,7 +152,7 @@ $('.accordion-head').on('click', function() {
    $(this).parent().children('.accordion-visible').slideToggle()
 })
 
-$('.accordion-collapse .hide-btn svg').on('click', function() {
+$('.accordion-collapse .btn-hide').on('click', function() {
    $(this).parents('.accordion-item').children('.accordion-head').removeClass('active')
    $(this).parents('.accordion-item').children('.accordion-visible').slideDown()
    $(this).parents('.accordion-item').children('.accordion-collapse').slideUp()
