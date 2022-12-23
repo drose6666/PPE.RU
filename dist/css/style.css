@@ -1614,12 +1614,14 @@ html {
 :root[color-theme=main] {
   --border: #DAE0E3;
   --borderInput: #C0C0C0;
+  --buttonHoverSolid: #00578F;
+  --buttonHoverSolidShadow: 0px 7px 15px rgba(0, 65, 106, 0.21);
   --copyrightBg: #1B1F24;
   --darkness: #000;
   --decoration: #0089CB;
   --decorationBright: #0089CB;
   --decorationLight: #F4F6F8;
-  --decorationDark: #356795;
+  --decorationDark: #00578F;
   --decorationDarkness: #242A30;
   --lightness: #fff;
   --overlay: rgba(0, 0, 0, 0.7);
@@ -1639,12 +1641,14 @@ html {
 :root[color-theme=tecron] {
   --border: #DAE0E3;
   --borderInput: #C0C0C0;
+  --buttonHoverSolid: #00578F;
+  --buttonHoverSolidShadow: 0px 7px 15px rgba(0, 65, 106, 0.21);
   --copyrightBg: #1B1F24;
   --darkness: #000;
   --decoration: #AC1410;
   --decorationBright: #D60000;
   --decorationLight: #FFEEED;
-  --decorationDark: #356795;
+  --decorationDark: #00578F;
   --decorationDarkness: #242A30;
   --lightness: #fff;
   --overlay: rgba(0, 0, 0, 0.7);
@@ -4784,8 +4788,36 @@ footer .copyright {
   transition: all 0.2s ease-out;
 }
 
-.section-for-why .btn-wrap button span {
+.section-for-why .btn-wrap button .btn-hidden-overlay {
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  -webkit-border-radius: var(--btnRadius);
+          border-radius: var(--btnRadius);
+  z-index: 1;
+}
+
+.section-for-why .btn-wrap button span.ripple {
+  position: absolute;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 0;
+}
+
+.section-for-why .btn-wrap button:hover {
+  background: var(--buttonHoverSolid);
+  -webkit-box-shadow: var(--buttonHoverSolidShadow);
+          box-shadow: var(--buttonHoverSolidShadow);
 }
 
 .section-contact {

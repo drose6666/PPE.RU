@@ -5,6 +5,7 @@ import $ from "jquery"
 import openMobileMenu from "./modules/openMobileMenu.js";
 import { AccordionAndTabs } from "./modules/accordionAndTabs.js"
 import './modules/scrollAnimation.js'
+import './modules/rippleAnimation.js'
 
 import Swiper from 'swiper/bundle';
 
@@ -161,11 +162,5 @@ $('.accordion-collapse .hide-btn svg').on('click', function() {
 
 
 
-// let btnWrap = document.querySelector('.btn-wrap button') 
-// btnWrap.addEventListener('click', function(e) {
-//    let animationEL = this.querySelector('span')
-//    // console.log(e);
-//    animationEL.style.top = e.offsetY + 'px'
-//    animationEL.style.left = e.offsetX + 'px'
-//    animationEL.style.animation.setPro
-// })
+
+

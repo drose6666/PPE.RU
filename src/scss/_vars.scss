@@ -3,12 +3,14 @@
 :root[color-theme="main"] {
    --border: #DAE0E3;
    --borderInput: #C0C0C0;
+   --buttonHoverSolid: #00578F;
+   --buttonHoverSolidShadow: 0px 7px 15px rgba(0, 65, 106, 0.21);
    --copyrightBg: #1B1F24;
    --darkness: #000;
    --decoration: #0089CB;
    --decorationBright: #0089CB;
    --decorationLight: #F4F6F8;
-   --decorationDark: #356795;
+   --decorationDark: #00578F;
    --decorationDarkness: #242A30;
    --lightness: #fff;
    --overlay: rgba(0, 0, 0, 0.7);
@@ -32,12 +34,14 @@
 :root[color-theme="tecron"] {
    --border: #DAE0E3;
    --borderInput: #C0C0C0;
+   --buttonHoverSolid: #00578F;
+   --buttonHoverSolidShadow: 0px 7px 15px rgba(0, 65, 106, 0.21);
    --copyrightBg: #1B1F24;
    --darkness: #000;
    --decoration: #AC1410;
    --decorationBright: #D60000;
    --decorationLight: #FFEEED;
-   --decorationDark: #356795;
+   --decorationDark: #00578F;
    --decorationDarkness: #242A30;
    --lightness: #fff;
    --overlay: rgba(0, 0, 0, 0.7);
