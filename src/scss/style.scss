@@ -20,6 +20,7 @@
 @import '../html/ui-components/ui-button/ui-button';
 @import '../html/ui-components/ui-input/ui-input';
 @import '../html/ui-components/ui-titles/titles';
+@import '../html/ui-components/ui-subtitles/ui-subtitles';
 @import '../html/ui-components/ui-close/ui-close';
 @import '../html/ui-components/ui-overlay/ui-overlay';
 @import '../html/ui-components/arrows/arrows';
@@ -35,14 +36,17 @@
 @import '../html/templates/header-single/header-single';
 @import './_footer';
 
-// ? Страницы
+// ? Home
+@import '../html/pages/home/section-our-sites/section-our-sites';
+@import '../html/pages/home/section-welcome/section-welcome';
+@import '../html/pages/home/section-catalog/section-catalog';
+@import '../html/pages/home/section-for-why/section-for-why';
+@import '../html/pages/home/section-contact/section-contact';
 
-// ? Секции
-@import '../html/pages/home/sections/section-our-sites/section-our-sites';
-@import '../html/pages/home/sections/section-welcome/section-welcome';
-@import '../html/pages/home/sections/section-catalog/section-catalog';
-@import '../html/pages/home/sections/section-for-why/section-for-why';
-@import '../html/pages/home/sections/section-contact/section-contact';
+// ? Tecron pro
+@import '../html/pages/tecron-pro/main-screen/main-screen';
+
+
 
 
 

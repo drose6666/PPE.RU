@@ -1,0 +1,81 @@
+.section-for-why {
+   padding-top: 68px;
+   padding-bottom: 90px;
+   background: var(--decorationLight);
+   .for-why-row {
+      margin: 0 -20px 52px -20px;
+      .for-why-col {
+         padding: 0 20px;
+         margin-bottom: 60px;
+         $j: 0.25s;
+         @for $i from 1 through 4 {
+            $j: $j + 0.05s;
+            &:nth-child(#{$i}) {
+               &.animate {
+                  @include animateScrollFadeIn($toTop: true, $delay: $j)
+               }
+            }
+         }
+         .item {
+            .item-title {
+               margin-bottom: 30px;
+               font-family: $Montserrat;
+               font-size: 16px;
+               font-weight: 700;
+               line-height: 115%;
+               color: var(--text);
+            }
+            .item-text {
+               font-size: 14px;
+               font-weight: 300;
+               line-height: 150%;
+               color: var(--text);
+               &:not(:last-child) {
+                  padding-bottom: 15px;
+               }
+            }
+         }
+      }
+   }
+
+   .btn-wrap {
+      width: 100%;
+      text-align: center;
+      &.animate {
+         @include animateScrollFadeIn($toTop: true, $delay: 0.2s)
+      }
+      
+   }
+}
+
+@media all and (max-width: 980px) {
+   .section-for-why .for-why-row .for-why-col {
+      flex: 0 0 50%;
+      max-width: 50%;
+   }
+}
+
+@media all and (max-width: 560px) {
+   .section-for-why .for-why-row .for-why-col {
+      margin-bottom: 40px;
+      flex: 0 0 100%;
+      max-width: 100%;
+      .item {
+         .item-title {
+            margin-bottom: 20px;
+         }
+      }
+   }
+   .section-for-why .for-why-row {
+      margin: 0 -20px 20px -20px;
+   }
+}
+
+
+
+@media all and (max-width: 425px) {
+   .section-for-why .btn-wrap button {
+      padding: 15px 20px;
+      font-size: 18px;
+   }
+}

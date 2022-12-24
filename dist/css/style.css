@@ -3356,6 +3356,26 @@ button.swiper-pagination-bullet {
   background: var(--decoration);
 }
 
+.ui-subtitle {
+  margin-bottom: 23px;
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 130%;
+  color: var(--decoration);
+  text-align: center;
+}
+
+.ui-subtitle.main {
+  margin-bottom: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 120%;
+  color: var(--decoration);
+  text-align: left;
+}
+
 .ui-close {
   padding: 0;
   width: 20px;
