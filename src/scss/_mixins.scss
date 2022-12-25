@@ -21,8 +21,8 @@
    $columns: 0,
    $rows: auto,
    $gap: 30px,
-   $alignX: center,
-   $alignY: space-between
+   $alignX: space-between,
+   $alignY: center,
    ) {
       margin: $margin;
       padding: $padding;
@@ -31,10 +31,10 @@
       position: relative;
       z-index: 1;
 
-      @if s$flex {
+      @if $flex {
          display: flex;
-         align-items: $alignX;
-         justify-content: $alignY;
+         align-items: $alignY;
+         justify-content: $alignX;
          gap: $gap;
       }
 
@@ -42,7 +42,7 @@
          display: grid;
          grid-template-columns: $columns;
          grid-template-rows: $rows;
-         align-items: $alignX;
+         align-items: $alignY;
          gap: $gap
       }
 }

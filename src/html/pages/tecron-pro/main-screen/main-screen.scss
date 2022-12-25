@@ -14,7 +14,7 @@
    .ui-container {
       @include container(
          $flex: true, 
-         $alignX: flex-start, 
+         $alignY: flex-start, 
          $margin: 40px auto 0 auto,
       );
    }

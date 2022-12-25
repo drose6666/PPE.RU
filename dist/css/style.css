@@ -1686,22 +1686,6 @@ html {
   width: 100%;
   position: relative;
   z-index: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-     -moz-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 30px;
 }
 
 /* 
@@ -4336,7 +4320,7 @@ header .h-bottom .ui-container {
      -moz-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 30px;
+  gap: 0;
 }
 
 header .h-bottom .contacts {
@@ -4381,7 +4365,7 @@ header .h-bottom .contacts {
      -moz-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 30px;
+  gap: 0;
 }
 
 .header-single .h-contacts {
