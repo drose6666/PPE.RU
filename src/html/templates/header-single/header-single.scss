@@ -1,6 +1,8 @@
 .header-single {
    padding: 7px 0;
    background: var(--darkness);
+   position: relative;
+   z-index: 2;
    .ui-container {
       @include container ($flex: true);
    }

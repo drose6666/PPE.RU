@@ -44,7 +44,13 @@
       &.animate {
          @include animateScrollFadeIn($toTop: true, $delay: 0.2s)
       }
-      
+      .ui-btn {
+         @include button (
+            $padding: 15px 27px,
+            $fontSize: 21px,
+            $lineHeight: 121%,
+         )
+      }
    }
 }
 

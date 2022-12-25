@@ -1,4 +1,4 @@
-let btnRipple = document.querySelectorAll('.btn-ripple .btn-hidden-overlay')
+let btnRipple = document.querySelectorAll('.btn-ripple .overlay-ripple')
 
 for (let item of btnRipple) {
    item.addEventListener('click', function (e) {

@@ -1,0 +1,102 @@
+.main-screen {
+   position: relative;
+   &:after {
+      content: '';
+      position: absolute;
+      top: -580px;
+      right: 25%;
+      width: 650px;
+      height: 650px;
+      border-radius: 50%;
+      background: var(--decorationLight);
+      z-index: 1;
+   }
+   .ui-container {
+      @include container(
+         $flex: true, 
+         $alignX: flex-start, 
+         $margin: 40px auto 0 auto,
+      );
+   }
+   &-info {
+      margin-top: 62px;
+      position: sticky;
+      top: 40px;
+   }
+
+   &-title {
+      margin-bottom: 62px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      font-family: $Montserrat;
+      font-size: 98px;
+      line-height: 95%;
+      letter-spacing: -0.03em;
+      color: var(--darkness);
+      strong {
+         font-weight: 800;
+      }
+      span {
+         font-weight: 400;
+      }
+      .part-with-logo {
+         display: flex;
+         align-items: center;
+         gap: 40px;
+         .product-logo {
+            padding: 10px 82px;
+            max-width: 351px;
+            width: 100%;
+            display: flex;
+            position: relative;
+            &:before {
+               content: '';
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+               background: var(--decorationLight);
+               border-left: 5px solid var(--decoration);
+               transform: skewX(-25deg);
+            }
+            img {
+               text-align: center;
+               vertical-align: middle;
+               width: 187px;
+               height: 49px;
+               position: relative;
+               z-index: 0;
+            }
+         }
+      }
+   }
+
+   &-img {
+      margin-right: -30px;
+      z-index: -1;
+      img {
+         max-width: 100%;
+         height: auto;
+      }
+   }
+   .btn-wrap {
+      margin-top: 57px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      button:nth-child(1) {
+         @include button (
+            $padding: 19px 43px,
+            $hasIcon: true,
+         )
+      }
+      button:nth-child(2) {
+         @include button (
+            $hasBorder: true,
+            $color: var(--decorationBright)
+         )
+      }
+   }
+}

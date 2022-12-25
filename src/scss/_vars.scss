@@ -4,8 +4,8 @@
    --bgMobileMenuHead: #F4F6F8;
    --border: #DAE0E3;
    --borderInput: #C0C0C0;
-   --buttonHoverSolid: #00578F;
-   --buttonHoverSolidShadow: 0px 7px 15px rgba(0, 65, 106, 0.21);
+   --buttonHover: #00578F;
+   --buttonHoverShadow: 0px 7px 15px rgba(0, 65, 106, 0.21);
    --copyrightBg: #1B1F24;
    --darkness: #000;
    --decoration: #0089CB;
@@ -36,8 +36,8 @@
    --bgMobileMenuHead: #F4F6F8;
    --border: #DAE0E3;
    --borderInput: #C0C0C0;
-   --buttonHoverSolid: #00578F;
-   --buttonHoverSolidShadow: 0px 7px 15px rgba(0, 65, 106, 0.21);
+   --buttonHover: #AC1410;
+   --buttonHoverShadow: 0px 7px 15px rgba(0, 65, 106, 0.21);
    --copyrightBg: #1B1F24;
    --darkness: #000;
    --decoration: #AC1410;
@@ -79,3 +79,4 @@ $animationTimingFunction: cubic-bezier(0.25, 0.8, 0.25, 1);
 // * Fonts
 $Montserrat: 'Montserrat', sans-serif;
 $Roboto: 'Roboto', sans-serif;
+$FontAwesome5: "Font Awesome 5 Free"

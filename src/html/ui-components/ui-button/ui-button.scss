@@ -1,50 +1,106 @@
-.ui-btn {
-   padding: 15px 27px;
-   background: transparent;
-   font-size: 21px;
-   font-weight: 700;
-   line-height: 121%;
-   text-transform: uppercase;
-   color: var(--lightness);
-   position: relative;
+@mixin button (
+   $padding: 19px 28px,
+   $fontFamily: $Montserrat,
+   $fontSize: 15px,
+   $fontWeight: 700,
+   $lineHeight: 100%,
+   $register: uppercase,
+   $color: var(--lightness),
+   $background: var(--decorationBright),
+   $radius: $btnRadius,
+   $hasBorder: false,
+   $border: 2px solid var(--decorationBright),
+   $hasIcon: false,
+   $iconGap: 13px,
+   $iconColor: var(--lightness),
+   $textAlign: center,
+   $hoverColor: var(--lightness),
+   $hoverBg: var(--buttonHover),
+   $hoverBorder: 2px solid transparent,
+   $hasHeight: true,
+   $minHeight: 54px,
+   $hasWidth: false,
+   $maxWidth: 250px,
+) {
+   padding: $padding;
+   font-family: $fontFamily;
+   font-size: $fontSize;
+   font-weight: $fontWeight;
+   line-height: $lineHeight;
+   text-transform: $register;
+   color: $color;
    border-radius: $btnRadius;
+   position: relative;
    overflow: hidden;
-   text-align: center;
-   background: var(--decorationBright);
-   transition: all 0.2s ease-out;
+   text-align: $textAlign;
+   background: $background;
    user-select: none;
    pointer-events: unset;
    touch-action: manipulation;
+   transition: all 0.2s ease-out;
+   @if $hasBorder {
+      border: $border;
+      background: transparent;
+      color: $color;
+      &:hover {
+         border: $hoverBorder;
+         background: $hoverBg;
+         color: $hoverColor;
+      }
+   }
+   @if $hasIcon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg, i, img {
+         margin-right: $iconGap;
+         display: inline-block;
+      }
+   }
+   @if $hasHeight {
+      max-height: $minHeight;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+   @if $hasWidth {
+      max-width: $maxHeight;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+   svg {
+      fill: none;
+      stroke: $iconColor;
+      width: 17px;
+      height: 17px;
+      stroke-width: 2;
+      transition: all 0.2s ease-out;
+   }
+
    &:hover {
-      background: var(--buttonHoverSolid);
-      box-shadow: var(--buttonHoverSolidShadow);
-      user-select: none;
-      outline: none;
-      pointer-events: unset;
-      touch-action: manipulation;
+      svg {
+         stroke: $hoverColor;
+      }
+   }
+   &:hover {
+      background: $hoverBg;
+      color: $hoverColor
    }
 }
+
+
+
+.ui-btn  {
+   @include button;
+}
 .btn-ripple {
-   padding: 15px 27px;
-   background: transparent;
-   font-size: 21px;
-   font-weight: 700;
-   line-height: 121%;
-   text-transform: uppercase;
-   color: var(--lightness);
-   position: relative;
-   border-radius: $btnRadius;
-   overflow: hidden;
-   text-align: center;
-   background: var(--decorationBright);
-   transition: all 0.2s ease-out;
-   user-select: none;
-   cursor: pointer;
-   .btn-hidden-overlay {
+   .overlay-ripple {
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
+      width: 100%;             
       height: 100%;
       background: transparent;
       border-radius: 50%;
