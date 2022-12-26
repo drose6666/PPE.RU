@@ -6,7 +6,7 @@
    row-gap: 15px;
    a {
       font-family: $Montserrat;
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 600;
       line-height: 143%;
       color: var(--lightness);
@@ -18,8 +18,13 @@
          fill: none;
          transition: all 0.1s ease-out;
       }
+      i {
+         font-family: $FontAwesome5;
+         font-size: 21px;
+         transition: all 0.1s ease-out;
+      }
       span {
-         margin-left: 14px;
+         margin-left: 18px;
          position: relative;
          display: inline-block;
          transition: $bgsTransition, transform 0.2s ease-out
@@ -28,6 +33,9 @@
          svg {
             fill: transparent;
             stroke: var(--decorationBright);
+         }
+         i {
+            color: var(--decorationBright);
          }
          span {
             transform: translateX(3px);
@@ -40,13 +48,22 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      gap: 25px;
+      gap: 20px;
       a {
          color: var(--darkness);
-         @include linksHover($hoverFullLinks: true, $color: var(--darkness));
+         @include linksHover($hoverFullLinks: true, $color: var(--decoration));
          svg {
             stroke: var(--decorationBright);
             fill: none;
+         }
+         i {
+            font-size: 20px;
+            color: var(--decoration);
+         }
+         &:hover {
+            i {
+               color: var(--decoration);
+            }
          }
       }
       @media all and (max-width: 490px) {

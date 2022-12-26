@@ -13,7 +13,7 @@
 
    &.socials-contacts, &.socials-mobile {
       a {
-         i { font-size: 22px; color: var(--lightness); }
+         i { color: var(--lightness); }
          svg {
             fill: var(--lightness);
             &.ozon { width: 82px; height: 18px; }
@@ -25,10 +25,20 @@
    &.socials-contacts {
       padding-left: 0;
       gap: 67px;
-      @media all and (max-width: 1200px) {
-         gap: 30px;
+      a {
+         i {
+            font-size: 24px;
+         }
+         svg.ozon { width: 75px; height: 21px; }
       }
-      @media all and (max-width: 960px) {
+
+      @media all and (max-width: 1300px) {
+         gap: 30px;
+         a {
+            i { font-size: 22px; }
+         }
+      }
+      @media all and (max-width: 1090px) {
          width: 100%;
          justify-content: center;
          max-width: 100%;
@@ -36,30 +46,32 @@
          gap: 67px;
       }
       @media all and (max-width: 576px) {
+         gap: 40px;
+      }
+      @media all and (max-width: 460px) {
          gap: 30px;
+      }
+      @media all and (max-width: 350px) {
+         gap: 20px;
       }
    }
 
    &.socials-mobile {
-      margin-top: 25px;
+      margin-top: 35px;
       margin-left: 50px;
       justify-content: flex-start;
+      gap: 27px;
       a {
-         i { color: var(--text); }
+         i { font-size: 20px; color: var(--text); }
          svg { fill: var(--text); }
       }
-      @media all and (max-width: 490px) {
-         margin-left: 30px;
-      }
-      @media all and (max-width: 400px) {
-         margin-left: 20px;
-      }
+      @media all and (max-width: 490px) { margin-left: 30px; }
+      @media all and (max-width: 400px) { margin-left: 20px; }
       @media all and (max-width: 330px)  {
          a {
-            i { font-size: 18px; }
             svg {
-               &.ozon { width: 60px; height: 17px; }
-               &.avito { width: 17px; height: 17px; }
+               &.ozon { width: 70px; height: 18px; }
+               &.avito { width: 18px; height: 18px; }
             }
          }
       }
@@ -67,7 +79,7 @@
 
    &.header-single-socials {
       padding: 3px 16px 3px 0;
-      gap: 15px;
+      gap: 20px;
       border-right: 1px solid var(--lightness);
       a {
          i { color: var(--lightness); }
@@ -85,8 +97,8 @@
 
       &:hover {
          transform: translateY(-3px);
-         i {  color: var(--decorationBright) }
-         svg {  fill: var(--decorationBright) }
+         i {  color: var(--decoration) }
+         svg {  fill: var(--decoration) }
       }
    }
 }

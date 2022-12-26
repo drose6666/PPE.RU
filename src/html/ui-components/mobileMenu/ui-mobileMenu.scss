@@ -141,7 +141,7 @@
 
 // * burger
 .ui-burger {
-   margin: 0 0 0 10px;
+   margin: 0 0 0 25px;
    padding: 0;
    width: 30px;
    height: 18px;
@@ -167,6 +167,7 @@
 }
 
 .header-single .ui-burger {
+   margin: 0 0 0 15px;
    display: none;
    span {
       background: var(--lightness);
@@ -174,7 +175,7 @@
          background: var(--decorationBright);
       }
    }
-   @media all and (max-width: 1170px) {
+   @media all and (max-width: 1200px) {
       display: flex;
    }
 }

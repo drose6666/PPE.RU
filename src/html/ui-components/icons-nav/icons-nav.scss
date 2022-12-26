@@ -8,6 +8,7 @@
 
 .header-single {
    .icons-nav {
+      gap: 20px;
       li {
          svg {
             stroke: var(--lightness);
@@ -45,6 +46,7 @@
 
       svg {
          fill: none;
+         stroke-width: 1.5;
          max-width: 19px;
          max-height: 19px;
          vertical-align: middle;

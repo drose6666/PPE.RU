@@ -11,6 +11,7 @@
       letter-spacing: -0.03em;
       text-transform: uppercase;
       color: var(--lightness);
+      max-width: 900px;
       &.animate {
          @include animateScrollFadeIn($toLeft: true, $delay: 0.2s);
       }

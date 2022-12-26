@@ -49,21 +49,22 @@
             $padding: 15px 27px,
             $fontSize: 21px,
             $lineHeight: 121%,
+            $textAlign: center
          )
       }
    }
 }
 
-@media all and (max-width: 980px) {
+@media all and (max-width: 1090px) {
    .section-for-why .for-why-row .for-why-col {
       flex: 0 0 50%;
       max-width: 50%;
    }
 }
 
-@media all and (max-width: 560px) {
+@media all and (max-width: 620px) {
    .section-for-why .for-why-row .for-why-col {
-      margin-bottom: 40px;
+      margin-bottom: 50px;
       flex: 0 0 100%;
       max-width: 100%;
       .item {
@@ -72,6 +73,16 @@
          }
       }
    }
+   .section-for-why .btn-wrap {
+      .ui-btn {
+         @include button(
+            $padding: 12px 28px,
+            $fontSize: 16px,
+            $minHeight: 44px
+         )
+      }
+   }
+
    .section-for-why .for-why-row {
       margin: 0 -20px 20px -20px;
    }
