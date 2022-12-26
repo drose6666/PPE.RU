@@ -1,6 +1,6 @@
 @mixin subtitle (
    $fontFamily: $Roboto,
-   $fontSize: 22px,
+   $fontSize: 23px,
    $fontWeight: 400,
    $lineHeight: 130%,
    $color: var(--decoration),
@@ -20,11 +20,26 @@
 }
 
 .ui-subtitle.main {
-   margin-bottom: 14px;
+   margin-bottom: 20px;
    @include subtitle(
       $fontFamily: $Montserrat,
       $fontWeight: 600,
       $lineHeight: 120%,
       $textAlign: left
-   )
+   );
+   @media all and (max-width: 1440px) {
+      font-size: calc((100vw - 1200px)/(1440 - 1200) * (22 - 21) + 21px);
+   }
+
+   @media all and (max-width: 1200px) {
+      font-size: 21px;
+   }
+
+   @media all and (max-width: 990px) {
+      font-size: 22px;
+   }
+
+   @media all and (max-width: 400px) {
+      font-size: 20px;
+   }
 }

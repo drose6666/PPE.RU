@@ -1,23 +1,43 @@
 .list-product-features {
    li {
       font-weight: 400;
-      font-size: 17px;
+      font-size: 18px;
       line-height: 130%;
       color: var(--darkness);
       position: relative;
+      display: flex;
+      align-items: flex-start;
       strong {
          font-weight: 700;
       }
       &:not(:last-child) {
-         margin-bottom: 7px;
+         margin-bottom: 8px;
       }
       &:before {
          font-family: 'Font Awesome 5 Free';
          content: "\f14a";
-         margin-right: 7px;
+         margin-right: 13px;
          font-size: 17px;
          display: inline-block;
          color: var(--decoration);
       }
+   }
+
+   @media all and (max-width: 1440px) {
+      li { font-size: calc((100vw - 1200px)/(1440 - 1200) * (18 - 17) + 17px); }
+   }
+
+   @media all and (max-width: 1200px) {
+      li { font-size: calc((100vw - 990px)/(1200 - 990) * (17 - 16) + 16px); }
+   }
+
+   @media all and (max-width: 990px) {
+      li { font-size: 18px }
+   }
+   @media all and (max-width: 760px) {
+      li { font-size: 17px; }
+   }
+   @media all and (max-width: 400px) {
+      li { font-size: 16px; }
    }
 }

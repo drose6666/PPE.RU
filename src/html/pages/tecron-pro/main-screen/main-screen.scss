@@ -1,27 +1,29 @@
 .main-screen {
    position: relative;
-   &:after {
-      content: '';
-      position: absolute;
-      top: -580px;
-      right: 25%;
-      width: 650px;
-      height: 650px;
-      border-radius: 50%;
-      background: var(--decorationLight);
-      z-index: 1;
-   }
+   overflow: hidden;
    .ui-container {
       @include container(
          $flex: true, 
          $alignY: flex-start, 
          $margin: 40px auto 0 auto,
       );
+      &:after {
+         content: '';
+         position: absolute;
+         top: -580px;
+         right: 150px;
+         width: 650px;
+         height: 650px;
+         border-radius: 50%;
+         background: var(--decorationLight);
+         z-index: 1;
+      }
    }
+   
    &-info {
-      margin-top: 62px;
+      margin-top: 110px;
       position: sticky;
-      top: 40px;
+      top: 110px;
    }
 
    &-title {
@@ -30,7 +32,7 @@
       flex-direction: column;
       align-items: flex-start;
       font-family: $Montserrat;
-      font-size: 98px;
+      font-size: 120px;
       line-height: 95%;
       letter-spacing: -0.03em;
       color: var(--darkness);
@@ -43,11 +45,9 @@
       .part-with-logo {
          display: flex;
          align-items: center;
-         gap: 40px;
+         gap: 50px;
          .product-logo {
-            padding: 10px 82px;
-            max-width: 351px;
-            width: 100%;
+            padding: 17px 50px;
             display: flex;
             position: relative;
             &:before {
@@ -65,7 +65,7 @@
                text-align: center;
                vertical-align: middle;
                width: 187px;
-               height: 49px;
+               height: auto;
                position: relative;
                z-index: 0;
             }
@@ -74,15 +74,16 @@
    }
 
    &-img {
-      margin-right: -30px;
+      margin-right: -50px;
       z-index: -1;
       img {
          max-width: 100%;
          height: auto;
       }
    }
+
    .btn-wrap {
-      margin-top: 57px;
+      margin-top: 65px;
       display: flex;
       align-items: center;
       gap: 20px;
@@ -97,6 +98,176 @@
             $hasBorder: true,
             $color: var(--decorationBright)
          )
+      }
+   }
+
+
+   @media all and (max-width: 1530px) {
+      &-img { margin-right: -20px; }
+   }
+
+   @media all and (max-width: 1440px) {
+      &-title {
+         font-size: calc((100vw - 1200px)/(1440 - 1200) * (120 - 95) + 95px);
+         .part-with-logo {
+            gap: 40px;
+            .product-logo {
+               padding: 11px 35px;
+               img {  width: 160px; }
+            }
+         }
+      }
+   }
+
+   @media all and (max-width: 1200px) {
+      &-title {
+         font-size: calc((100vw - 990px)/(1200 - 990) * (95 - 85) + 85px);
+         .part-with-logo {
+            .product-logo {
+               padding: 10px 35px;
+               img { width: 150px; }
+            }
+         }
+      }
+      .btn-wrap {
+         button:nth-child(1) {
+            @include button (
+               $padding: 15px 25px,
+               $fontSize: 14px,
+               $minHeight: 48px
+            )
+         }
+         button:nth-child(2) {
+            @include button (
+               $padding: 15px 25px,
+               $fontSize: 14px,
+               $minHeight: 48px,
+               $hasBorder: true,
+               $color: var(--decorationBright)
+            )
+         }
+      }
+   }
+
+   @media all and (max-width: 990px) {
+      .ui-container {
+         @include container(
+            $flex: true,
+            $alignY: flex-start,
+            $margin: 40px auto 0 auto,
+            $gap: 70px
+         );
+         flex-direction: column;
+         &:after {
+            right: -60px;
+         }
+      }
+      &-info {
+         position: static;
+         width: 100%;
+      }
+      &-title {
+         font-size: 130px;
+         span { font-weight: 300; }
+         .part-with-logo {
+            gap: 50px;
+            .product-logo {
+               padding: 19px 70px;
+               img { width: 190px; }
+            }
+         }
+      }
+      &-img {
+         margin-right: 0;
+      }
+      .btn-wrap {
+         button:nth-child(1) {
+            @include button (
+               $padding: 19px 43px,
+               $hasIcon: true,
+            )
+         }
+         button:nth-child(2) {
+            @include button (
+               $hasBorder: true,
+               $color: var(--decorationBright)
+            )
+         }
+      }
+   }
+
+   @media all and (max-width: 760px) {
+      &-title {
+         font-size: calc((100vw - 560px)/(760 - 560) * (130 - 110) + 110px);
+         .part-with-logo {
+            gap: 30px;
+            .product-logo {
+               padding: 17px 35px;
+               img { max-width: 155px; }
+            }
+         }
+      }
+   }
+
+   @media all and (max-width: 560px) {
+      &-title {
+         font-size: calc((100vw - 400px)/(560 - 400) * (110 - 80) + 80px);
+         .part-with-logo {
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            .product-logo {
+               margin: 0 auto;
+               padding: 11px 35px;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               width: calc(100% - 40px);
+            }
+         }
+      }
+      .btn-wrap {
+         flex-direction: column;
+         button:nth-child(1) {
+            @include button (
+               $padding: 19px 43px,
+               $hasIcon: true,
+               $hasWidth: true,
+               $maxWidth: 80%
+            )
+         }
+         button:nth-child(2) {
+            @include button (
+               $hasBorder: true,
+               $color: var(--decorationBright),
+               $hasWidth: true,
+               $maxWidth: 80%
+            )
+         }
+      }
+   }
+
+   @media all and (max-width: 400px) {
+      &-title {
+         font-size: calc((100vw - 320px)/(400 - 320) * (80 - 62) + 62px);
+      }
+      .btn-wrap {
+         button:nth-child(1) {
+            @include button (
+               $padding: 19px 43px,
+               $hasIcon: true,
+               $hasWidth: true,
+               $maxWidth: 100%
+            )
+         }
+         button:nth-child(2) {
+            @include button (
+               $hasBorder: true,
+               $color: var(--decorationBright),
+               $hasWidth: true,
+               $maxWidth: 100%
+            )
+         }
       }
    }
 }

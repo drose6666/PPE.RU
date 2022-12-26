@@ -58,10 +58,10 @@
       }
    }
    @if $hasHeight {
-      min-height: $minHeight;
+      max-height: $minHeight;
    }
    @if $hasWidth {
-      max-width: $maxHeight;
+      max-width: $maxWidth;
       width: 100%;
       display: flex;
       align-items: center;
