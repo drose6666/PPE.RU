@@ -1,6 +1,5 @@
 .main-screen {
    position: relative;
-   overflow: hidden;
    .ui-container {
       @include container(
          $flex: true, 
@@ -87,18 +86,6 @@
       display: flex;
       align-items: center;
       gap: 20px;
-      button:nth-child(1) {
-         @include button (
-            $padding: 19px 43px,
-            $hasIcon: true,
-         )
-      }
-      button:nth-child(2) {
-         @include button (
-            $hasBorder: true,
-            $color: var(--decorationBright)
-         )
-      }
    }
 
 
@@ -107,49 +94,50 @@
    }
 
    @media all and (max-width: 1440px) {
+      .ui-container { gap: 11vw; }
       &-title {
-         font-size: calc((100vw - 1200px)/(1440 - 1200) * (120 - 95) + 95px);
+         font-size: calc((100vw - 990px)/(1440 - 990) * (120 - 85) + 85px);
          .part-with-logo {
             gap: 40px;
             .product-logo {
-               padding: 11px 35px;
-               img {  width: 160px; }
+               padding: 3% 10%;
+               img {  width: calc((100vw - 990px)/(1440 - 990) * (187 - 150) + 150px); }
             }
          }
       }
    }
 
    @media all and (max-width: 1200px) {
-      &-title {
-         font-size: calc((100vw - 990px)/(1200 - 990) * (95 - 85) + 85px);
-         .part-with-logo {
-            .product-logo {
-               padding: 10px 35px;
-               img { width: 150px; }
-            }
-         }
-      }
+      // &-title {
+      //    .part-with-logo {
+      //       .product-logo {
+      //          padding: 10px 35px;
+      //          img { width: 150px; }
+      //       }
+      //    }
+      // }
       .btn-wrap {
-         button:nth-child(1) {
-            @include button (
-               $padding: 15px 25px,
-               $fontSize: 14px,
-               $minHeight: 48px
-            )
-         }
-         button:nth-child(2) {
-            @include button (
-               $padding: 15px 25px,
-               $fontSize: 14px,
-               $minHeight: 48px,
-               $hasBorder: true,
-               $color: var(--decorationBright)
-            )
-         }
+         // button:nth-child(1) {
+         //    @include button (
+         //       $padding: 15px 25px,
+         //       $fontSize: 14px,
+         //       $minHeight: 48px
+         //    )
+         // }
+         // button:nth-child(2) {
+         //    @include button (
+         //       $padding: 15px 25px,
+         //       $fontSize: 14px,
+         //       $minHeight: 48px,
+         //       $hasBorder: true,
+         //       $color: var(--decorationBright)
+         //    )
+         // }
       }
    }
 
    @media all and (max-width: 990px) {
+      overflow: hidden;
       .ui-container {
          @include container(
             $flex: true,
@@ -181,18 +169,18 @@
          margin-right: 0;
       }
       .btn-wrap {
-         button:nth-child(1) {
-            @include button (
-               $padding: 19px 43px,
-               $hasIcon: true,
-            )
-         }
-         button:nth-child(2) {
-            @include button (
-               $hasBorder: true,
-               $color: var(--decorationBright)
-            )
-         }
+         // button:nth-child(1) {
+         //    @include button (
+         //       $padding: 19px 43px,
+         //       $hasIcon: true,
+         //    )
+         // }
+         // button:nth-child(2) {
+         //    @include button (
+         //       $hasBorder: true,
+         //       $color: var(--decorationBright)
+         //    )
+         // }
       }
    }
 
@@ -228,22 +216,22 @@
       }
       .btn-wrap {
          flex-direction: column;
-         button:nth-child(1) {
-            @include button (
-               $padding: 19px 43px,
-               $hasIcon: true,
-               $hasWidth: true,
-               $maxWidth: 80%
-            )
-         }
-         button:nth-child(2) {
-            @include button (
-               $hasBorder: true,
-               $color: var(--decorationBright),
-               $hasWidth: true,
-               $maxWidth: 80%
-            )
-         }
+         // button:nth-child(1) {
+         //    @include button (
+         //       $padding: 19px 43px,
+         //       $hasIcon: true,
+         //       $hasWidth: true,
+         //       $maxWidth: 80%
+         //    )
+         // }
+         // button:nth-child(2) {
+         //    @include button (
+         //       $hasBorder: true,
+         //       $color: var(--decorationBright),
+         //       $hasWidth: true,
+         //       $maxWidth: 80%
+         //    )
+         // }
       }
    }
 
@@ -252,22 +240,22 @@
          font-size: calc((100vw - 320px)/(400 - 320) * (80 - 62) + 62px);
       }
       .btn-wrap {
-         button:nth-child(1) {
-            @include button (
-               $padding: 19px 43px,
-               $hasIcon: true,
-               $hasWidth: true,
-               $maxWidth: 100%
-            )
-         }
-         button:nth-child(2) {
-            @include button (
-               $hasBorder: true,
-               $color: var(--decorationBright),
-               $hasWidth: true,
-               $maxWidth: 100%
-            )
-         }
+         // button:nth-child(1) {
+         //    @include button (
+         //       $padding: 19px 43px,
+         //       $hasIcon: true,
+         //       $hasWidth: true,
+         //       $maxWidth: 100%
+         //    )
+         // }
+         // button:nth-child(2) {
+         //    @include button (
+         //       $hasBorder: true,
+         //       $color: var(--decorationBright),
+         //       $hasWidth: true,
+         //       $maxWidth: 100%
+         //    )
+         // }
       }
    }
 }

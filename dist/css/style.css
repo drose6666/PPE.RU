@@ -3067,51 +3067,186 @@ button.swiper-pagination-bullet {
   height: 16px;
 }
 
-.ui-btn {
+.ui-btn[colored] {
   padding: 19px 28px;
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
   font-weight: 700;
   line-height: 100%;
+  text-align: left;
   text-transform: uppercase;
-  color: var(--lightness);
   -webkit-border-radius: 51px;
           border-radius: 51px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
-  overflow: hidden;
-  text-align: center;
-  background: var(--decorationBright);
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  pointer-events: unset;
-  -ms-touch-action: manipulation;
-      touch-action: manipulation;
   -webkit-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-  max-height: 54px;
+  min-height: 54px;
+  background: var(--decorationBright);
+  color: var(--lightness);
 }
 
-.ui-btn svg {
+.ui-btn[colored] svg {
+  margin-right: 14px;
+  width: 16px;
+  height: 16px;
   fill: none;
   stroke: var(--lightness);
-  width: 17px;
-  height: 17px;
   stroke-width: 2;
   -webkit-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
 
-.ui-btn:hover svg {
-  stroke: var(--lightness);
+.ui-btn[colored]:hover {
+  color: var(--lightness);
+  background: var(--buttonHover);
+  -webkit-box-shadow: var(--buttonHoverShadow);
+          box-shadow: var(--buttonHoverShadow);
 }
 
-.ui-btn:hover {
-  background: var(--buttonHover);
+.ui-btn[colored]:hover svg {
+  stroke: var(--lightness);
+  fill: none;
+}
+
+.ui-btn[bordered] {
+  padding: 19px 28px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 100%;
+  text-align: left;
+  text-transform: uppercase;
+  -webkit-border-radius: 51px;
+          border-radius: 51px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  min-height: 54px;
+  border: 2px solid var(--decorationBright);
+  background: transparent;
+  color: var(--decorationBright);
+}
+
+.ui-btn[bordered] svg {
+  margin-right: 14px;
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: var(--decorationBright);
+  stroke-width: 2;
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.ui-btn[bordered]:hover {
+  border: 2px solid transparent;
   color: var(--lightness);
+  background: var(--buttonHover);
+  -webkit-box-shadow: var(--buttonHoverShadow);
+          box-shadow: var(--buttonHoverShadow);
+}
+
+.ui-btn[bordered]:hover svg {
+  stroke: var(--decorationBright);
+  fill: none;
+}
+
+.ui-btn[bordered-light] {
+  padding: 19px 28px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 100%;
+  text-align: left;
+  text-transform: uppercase;
+  -webkit-border-radius: 51px;
+          border-radius: 51px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  min-height: 54px;
+  border: 2px solid var(--lightness);
+  background: transparent;
+  color: var(--lightness);
+}
+
+.ui-btn[bordered-light] svg {
+  margin-right: 14px;
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: var(--lightness);
+  stroke-width: 2;
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.ui-btn[bordered-light]:hover {
+  border: 2px solid transparent;
+  color: var(--decoration);
+  background: var(--lightness);
+  -webkit-box-shadow: var(--buttonHoverShadow);
+          box-shadow: var(--buttonHoverShadow);
+}
+
+.ui-btn[bordered-light]:hover svg {
+  stroke: var(--lightness);
+  fill: none;
+}
+
+.btn-ripple {
+  overflow: hidden;
 }
 
 .btn-ripple .overlay-ripple {
@@ -5032,45 +5167,42 @@ footer .copyright {
   font-size: 21px;
   font-weight: 700;
   line-height: 121%;
+  text-align: center;
   text-transform: uppercase;
-  color: var(--lightness);
   -webkit-border-radius: 51px;
           border-radius: 51px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
-  overflow: hidden;
-  text-align: center;
-  background: var(--decorationBright);
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  pointer-events: unset;
-  -ms-touch-action: manipulation;
-      touch-action: manipulation;
   -webkit-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-  max-height: 54px;
+  min-height: 54px;
 }
 
 .section-for-why .btn-wrap .ui-btn svg {
+  margin-right: 14px;
+  width: 16px;
+  height: 16px;
   fill: none;
   stroke: var(--lightness);
-  width: 17px;
-  height: 17px;
   stroke-width: 2;
   -webkit-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-}
-
-.section-for-why .btn-wrap .ui-btn:hover svg {
-  stroke: var(--lightness);
-}
-
-.section-for-why .btn-wrap .ui-btn:hover {
-  background: var(--buttonHover);
-  color: var(--lightness);
 }
 
 .section-contact {
@@ -5285,7 +5417,6 @@ footer .copyright {
 
 .main-screen {
   position: relative;
-  overflow: hidden;
 }
 
 .main-screen .ui-container {
@@ -5438,131 +5569,6 @@ footer .copyright {
       -ms-flex-align: center;
           align-items: center;
   gap: 20px;
-}
-
-.main-screen .btn-wrap button:nth-child(1) {
-  padding: 19px 43px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 100%;
-  text-transform: uppercase;
-  color: var(--lightness);
-  -webkit-border-radius: 51px;
-          border-radius: 51px;
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-  background: var(--decorationBright);
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  pointer-events: unset;
-  -ms-touch-action: manipulation;
-      touch-action: manipulation;
-  -webkit-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-     -moz-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  max-height: 54px;
-}
-
-.main-screen .btn-wrap button:nth-child(1) svg,
-.main-screen .btn-wrap button:nth-child(1) i,
-.main-screen .btn-wrap button:nth-child(1) img {
-  margin-right: 13px;
-  display: inline-block;
-}
-
-.main-screen .btn-wrap button:nth-child(1) svg {
-  fill: none;
-  stroke: var(--lightness);
-  width: 17px;
-  height: 17px;
-  stroke-width: 2;
-  -webkit-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-}
-
-.main-screen .btn-wrap button:nth-child(1):hover svg {
-  stroke: var(--lightness);
-}
-
-.main-screen .btn-wrap button:nth-child(1):hover {
-  background: var(--buttonHover);
-  color: var(--lightness);
-}
-
-.main-screen .btn-wrap button:nth-child(2) {
-  padding: 19px 28px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 100%;
-  text-transform: uppercase;
-  color: var(--decorationBright);
-  -webkit-border-radius: 51px;
-          border-radius: 51px;
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-  background: var(--decorationBright);
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  pointer-events: unset;
-  -ms-touch-action: manipulation;
-      touch-action: manipulation;
-  -webkit-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-  border: 2px solid var(--decorationBright);
-  background: transparent;
-  color: var(--decorationBright);
-  max-height: 54px;
-}
-
-.main-screen .btn-wrap button:nth-child(2):hover {
-  border: 2px solid transparent;
-  background: var(--buttonHover);
-  color: var(--lightness);
-}
-
-.main-screen .btn-wrap button:nth-child(2) svg {
-  fill: none;
-  stroke: var(--lightness);
-  width: 17px;
-  height: 17px;
-  stroke-width: 2;
-  -webkit-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-}
-
-.main-screen .btn-wrap button:nth-child(2):hover svg {
-  stroke: var(--lightness);
-}
-
-.main-screen .btn-wrap button:nth-child(2):hover {
-  background: var(--buttonHover);
-  color: var(--lightness);
 }
 
 * {
@@ -9808,9 +9814,13 @@ input:active {
     font-size: calc((100vw - 1200px) / 240 * 1 + 17px);
   }
 
+  .main-screen .ui-container {
+    gap: 11vw;
+  }
+
   .main-screen-title {
-    font-size: -webkit-calc((100vw - 1200px) / 240 * 25 + 95px);
-    font-size: calc((100vw - 1200px) / 240 * 25 + 95px);
+    font-size: -webkit-calc((100vw - 990px) / 450 * 35 + 85px);
+    font-size: calc((100vw - 990px) / 450 * 35 + 85px);
   }
 
   .main-screen-title .part-with-logo {
@@ -9818,11 +9828,12 @@ input:active {
   }
 
   .main-screen-title .part-with-logo .product-logo {
-    padding: 11px 35px;
+    padding: 3% 10%;
   }
 
   .main-screen-title .part-with-logo .product-logo img {
-    width: 160px;
+    width: -webkit-calc((100vw - 990px) / 450 * 37 + 150px);
+    width: calc((100vw - 990px) / 450 * 37 + 150px);
   }
 }
 
@@ -9871,122 +9882,6 @@ input:active {
         -ms-flex: 0 0 33.3333%;
             flex: 0 0 33.3333%;
     max-width: 33.3333%;
-  }
-
-  .main-screen-title {
-    font-size: -webkit-calc((100vw - 990px) / 210 * 10 + 85px);
-    font-size: calc((100vw - 990px) / 210 * 10 + 85px);
-  }
-
-  .main-screen-title .part-with-logo .product-logo {
-    padding: 10px 35px;
-  }
-
-  .main-screen-title .part-with-logo .product-logo img {
-    width: 150px;
-  }
-
-  .main-screen .btn-wrap button:nth-child(1) {
-    padding: 15px 25px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 100%;
-    text-transform: uppercase;
-    color: var(--lightness);
-    -webkit-border-radius: 51px;
-            border-radius: 51px;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    background: var(--decorationBright);
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    pointer-events: unset;
-    -ms-touch-action: manipulation;
-        touch-action: manipulation;
-    -webkit-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
-    max-height: 48px;
-  }
-
-  .main-screen .btn-wrap button:nth-child(1) svg {
-    fill: none;
-    stroke: var(--lightness);
-    width: 17px;
-    height: 17px;
-    stroke-width: 2;
-    -webkit-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
-  }
-
-  .main-screen .btn-wrap button:nth-child(1):hover svg {
-    stroke: var(--lightness);
-  }
-
-  .main-screen .btn-wrap button:nth-child(1):hover {
-    background: var(--buttonHover);
-    color: var(--lightness);
-  }
-
-  .main-screen .btn-wrap button:nth-child(2) {
-    padding: 15px 25px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 100%;
-    text-transform: uppercase;
-    color: var(--decorationBright);
-    -webkit-border-radius: 51px;
-            border-radius: 51px;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    background: var(--decorationBright);
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    pointer-events: unset;
-    -ms-touch-action: manipulation;
-        touch-action: manipulation;
-    -webkit-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
-    border: 2px solid var(--decorationBright);
-    background: transparent;
-    color: var(--decorationBright);
-    max-height: 48px;
-  }
-
-  .main-screen .btn-wrap button:nth-child(2):hover {
-    border: 2px solid transparent;
-    background: var(--buttonHover);
-    color: var(--lightness);
-  }
-
-  .main-screen .btn-wrap button:nth-child(2) svg {
-    fill: none;
-    stroke: var(--lightness);
-    width: 17px;
-    height: 17px;
-    stroke-width: 2;
-    -webkit-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
-  }
-
-  .main-screen .btn-wrap button:nth-child(2):hover svg {
-    stroke: var(--lightness);
-  }
-
-  .main-screen .btn-wrap button:nth-child(2):hover {
-    background: var(--buttonHover);
-    color: var(--lightness);
   }
 }
 
@@ -10053,6 +9948,10 @@ input:active {
     font-size: 18px;
   }
 
+  .main-screen {
+    overflow: hidden;
+  }
+
   .main-screen .ui-container {
     margin: 40px auto 0 auto;
     padding: 0 20px;
@@ -10116,131 +10015,6 @@ input:active {
 
   .main-screen-img {
     margin-right: 0;
-  }
-
-  .main-screen .btn-wrap button:nth-child(1) {
-    padding: 19px 43px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 100%;
-    text-transform: uppercase;
-    color: var(--lightness);
-    -webkit-border-radius: 51px;
-            border-radius: 51px;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    background: var(--decorationBright);
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    pointer-events: unset;
-    -ms-touch-action: manipulation;
-        touch-action: manipulation;
-    -webkit-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-       -moz-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-       -moz-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    max-height: 54px;
-  }
-
-  .main-screen .btn-wrap button:nth-child(1) svg,
-  .main-screen .btn-wrap button:nth-child(1) i,
-  .main-screen .btn-wrap button:nth-child(1) img {
-    margin-right: 13px;
-    display: inline-block;
-  }
-
-  .main-screen .btn-wrap button:nth-child(1) svg {
-    fill: none;
-    stroke: var(--lightness);
-    width: 17px;
-    height: 17px;
-    stroke-width: 2;
-    -webkit-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
-  }
-
-  .main-screen .btn-wrap button:nth-child(1):hover svg {
-    stroke: var(--lightness);
-  }
-
-  .main-screen .btn-wrap button:nth-child(1):hover {
-    background: var(--buttonHover);
-    color: var(--lightness);
-  }
-
-  .main-screen .btn-wrap button:nth-child(2) {
-    padding: 19px 28px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 100%;
-    text-transform: uppercase;
-    color: var(--decorationBright);
-    -webkit-border-radius: 51px;
-            border-radius: 51px;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    background: var(--decorationBright);
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    pointer-events: unset;
-    -ms-touch-action: manipulation;
-        touch-action: manipulation;
-    -webkit-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
-    border: 2px solid var(--decorationBright);
-    background: transparent;
-    color: var(--decorationBright);
-    max-height: 54px;
-  }
-
-  .main-screen .btn-wrap button:nth-child(2):hover {
-    border: 2px solid transparent;
-    background: var(--buttonHover);
-    color: var(--lightness);
-  }
-
-  .main-screen .btn-wrap button:nth-child(2) svg {
-    fill: none;
-    stroke: var(--lightness);
-    width: 17px;
-    height: 17px;
-    stroke-width: 2;
-    -webkit-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
-  }
-
-  .main-screen .btn-wrap button:nth-child(2):hover svg {
-    stroke: var(--lightness);
-  }
-
-  .main-screen .btn-wrap button:nth-child(2):hover {
-    background: var(--buttonHover);
-    color: var(--lightness);
   }
 }
 
@@ -10407,45 +10181,42 @@ input:active {
     font-size: 16px;
     font-weight: 700;
     line-height: 100%;
+    text-align: left;
     text-transform: uppercase;
-    color: var(--lightness);
     -webkit-border-radius: 51px;
             border-radius: 51px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     position: relative;
-    overflow: hidden;
-    text-align: center;
-    background: var(--decorationBright);
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    pointer-events: unset;
-    -ms-touch-action: manipulation;
-        touch-action: manipulation;
     -webkit-transition: all 0.2s ease-out;
     -o-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
-    max-height: 44px;
+    min-height: 44px;
   }
 
   .section-for-why .btn-wrap .ui-btn svg {
+    margin-right: 14px;
+    width: 16px;
+    height: 16px;
     fill: none;
     stroke: var(--lightness);
-    width: 17px;
-    height: 17px;
     stroke-width: 2;
     -webkit-transition: all 0.2s ease-out;
     -o-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
-  }
-
-  .section-for-why .btn-wrap .ui-btn:hover svg {
-    stroke: var(--lightness);
-  }
-
-  .section-for-why .btn-wrap .ui-btn:hover {
-    background: var(--buttonHover);
-    color: var(--lightness);
   }
 
   .section-for-why .for-why-row {
@@ -10566,153 +10337,6 @@ input:active {
        -moz-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-
-  .main-screen .btn-wrap button:nth-child(1) {
-    padding: 19px 43px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 100%;
-    text-transform: uppercase;
-    color: var(--lightness);
-    -webkit-border-radius: 51px;
-            border-radius: 51px;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    background: var(--decorationBright);
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    pointer-events: unset;
-    -ms-touch-action: manipulation;
-        touch-action: manipulation;
-    -webkit-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-       -moz-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-       -moz-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    max-height: 54px;
-    max-width: 80%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .main-screen .btn-wrap button:nth-child(1) svg,
-  .main-screen .btn-wrap button:nth-child(1) i,
-  .main-screen .btn-wrap button:nth-child(1) img {
-    margin-right: 13px;
-    display: inline-block;
-  }
-
-  .main-screen .btn-wrap button:nth-child(1) svg {
-    fill: none;
-    stroke: var(--lightness);
-    width: 17px;
-    height: 17px;
-    stroke-width: 2;
-    -webkit-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
-  }
-
-  .main-screen .btn-wrap button:nth-child(1):hover svg {
-    stroke: var(--lightness);
-  }
-
-  .main-screen .btn-wrap button:nth-child(1):hover {
-    background: var(--buttonHover);
-    color: var(--lightness);
-  }
-
-  .main-screen .btn-wrap button:nth-child(2) {
-    padding: 19px 28px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 100%;
-    text-transform: uppercase;
-    color: var(--decorationBright);
-    -webkit-border-radius: 51px;
-            border-radius: 51px;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    background: var(--decorationBright);
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    pointer-events: unset;
-    -ms-touch-action: manipulation;
-        touch-action: manipulation;
-    -webkit-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
-    border: 2px solid var(--decorationBright);
-    background: transparent;
-    color: var(--decorationBright);
-    max-height: 54px;
-    max-width: 80%;
-    width: 100%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-       -moz-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-       -moz-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-
-  .main-screen .btn-wrap button:nth-child(2):hover {
-    border: 2px solid transparent;
-    background: var(--buttonHover);
-    color: var(--lightness);
-  }
-
-  .main-screen .btn-wrap button:nth-child(2) svg {
-    fill: none;
-    stroke: var(--lightness);
-    width: 17px;
-    height: 17px;
-    stroke-width: 2;
-    -webkit-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
-  }
-
-  .main-screen .btn-wrap button:nth-child(2):hover svg {
-    stroke: var(--lightness);
-  }
-
-  .main-screen .btn-wrap button:nth-child(2):hover {
-    background: var(--buttonHover);
-    color: var(--lightness);
   }
 }
 
@@ -10918,153 +10542,6 @@ input:active {
   .main-screen-title {
     font-size: -webkit-calc((100vw - 320px) / 80 * 18 + 62px);
     font-size: calc((100vw - 320px) / 80 * 18 + 62px);
-  }
-
-  .main-screen .btn-wrap button:nth-child(1) {
-    padding: 19px 43px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 100%;
-    text-transform: uppercase;
-    color: var(--lightness);
-    -webkit-border-radius: 51px;
-            border-radius: 51px;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    background: var(--decorationBright);
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    pointer-events: unset;
-    -ms-touch-action: manipulation;
-        touch-action: manipulation;
-    -webkit-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-       -moz-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-       -moz-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    max-height: 54px;
-    max-width: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .main-screen .btn-wrap button:nth-child(1) svg,
-  .main-screen .btn-wrap button:nth-child(1) i,
-  .main-screen .btn-wrap button:nth-child(1) img {
-    margin-right: 13px;
-    display: inline-block;
-  }
-
-  .main-screen .btn-wrap button:nth-child(1) svg {
-    fill: none;
-    stroke: var(--lightness);
-    width: 17px;
-    height: 17px;
-    stroke-width: 2;
-    -webkit-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
-  }
-
-  .main-screen .btn-wrap button:nth-child(1):hover svg {
-    stroke: var(--lightness);
-  }
-
-  .main-screen .btn-wrap button:nth-child(1):hover {
-    background: var(--buttonHover);
-    color: var(--lightness);
-  }
-
-  .main-screen .btn-wrap button:nth-child(2) {
-    padding: 19px 28px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 100%;
-    text-transform: uppercase;
-    color: var(--decorationBright);
-    -webkit-border-radius: 51px;
-            border-radius: 51px;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    background: var(--decorationBright);
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    pointer-events: unset;
-    -ms-touch-action: manipulation;
-        touch-action: manipulation;
-    -webkit-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
-    border: 2px solid var(--decorationBright);
-    background: transparent;
-    color: var(--decorationBright);
-    max-height: 54px;
-    max-width: 100%;
-    width: 100%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-       -moz-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-       -moz-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-
-  .main-screen .btn-wrap button:nth-child(2):hover {
-    border: 2px solid transparent;
-    background: var(--buttonHover);
-    color: var(--lightness);
-  }
-
-  .main-screen .btn-wrap button:nth-child(2) svg {
-    fill: none;
-    stroke: var(--lightness);
-    width: 17px;
-    height: 17px;
-    stroke-width: 2;
-    -webkit-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
-  }
-
-  .main-screen .btn-wrap button:nth-child(2):hover svg {
-    stroke: var(--lightness);
-  }
-
-  .main-screen .btn-wrap button:nth-child(2):hover {
-    background: var(--buttonHover);
-    color: var(--lightness);
   }
 }
 

@@ -4,95 +4,112 @@
    $fontSize: 15px,
    $fontWeight: 700,
    $lineHeight: 100%,
-   $register: uppercase,
-   $color: var(--lightness),
+   $minHeight: 54px,
    $background: var(--decorationBright),
+   $color: var(--lightness),
+   $border: 2px solid $color,
    $radius: $btnRadius,
-   $hasBorder: false,
-   $border: 2px solid var(--decorationBright),
-   $hasIcon: false,
-   $iconGap: 13px,
-   $iconColor: var(--lightness),
-   $textAlign: center,
+   $hoverBorder: 2px solid var(--decorationDark),
    $hoverColor: var(--lightness),
    $hoverBg: var(--buttonHover),
-   $hoverBorder: 2px solid transparent,
+   $hoverIconColor: $color,
+   $hoverIconBg: none,
+   $borderedMode: false,
+   $coloredMode: false,
    $hasHeight: true,
-   $minHeight: 54px,
-   $hasWidth: false,
-   $maxWidth: 250px,
-) {
+   $textAlign: left,
+   $textTransform: uppercase,
+   $iconColor: $color,
+   $iconBg: none,
+)  {
    padding: $padding;
    font-family: $fontFamily;
    font-size: $fontSize;
    font-weight: $fontWeight;
    line-height: $lineHeight;
-   text-transform: $register;
-   color: $color;
-   border-radius: $btnRadius;
-   position: relative;
-   overflow: hidden;
    text-align: $textAlign;
-   background: $background;
-   user-select: none;
-   pointer-events: unset;
-   touch-action: manipulation;
+   text-transform: $textTransform;
+   border-radius: $radius;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
    transition: all 0.2s ease-out;
-   @if $hasBorder {
-      border: $border;
-      background: transparent;
-      color: $color;
-      &:hover {
-         border: $hoverBorder;
-         background: $hoverBg;
-         color: $hoverColor;
-      }
-   }
-   @if $hasIcon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      svg, i, img {
-         margin-right: $iconGap;
-         display: inline-block;
-      }
-   }
-   @if $hasHeight {
-      max-height: $minHeight;
-   }
-   @if $hasWidth {
-      max-width: $maxWidth;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-   }
    svg {
-      fill: none;
+      margin-right: 14px;
+      width: 16px;
+      height: 16px;
+      fill: $iconBg;
       stroke: $iconColor;
-      width: 17px;
-      height: 17px;
       stroke-width: 2;
       transition: all 0.2s ease-out;
    }
 
-   &:hover {
-      svg {
-         stroke: $hoverColor;
+
+   @if $hasHeight {
+      min-height: $minHeight;
+   }
+
+   @if $coloredMode {
+      $borderedMode: false;
+      background: $background;
+      color: $color;
+      &:hover {
+         color: $hoverColor;
+         background: $hoverBg;
+         box-shadow: var(--buttonHoverShadow);
+         svg {
+            stroke: $hoverIconColor;
+            fill: $hoverIconBg;
+         }
       }
    }
-   &:hover {
-      background: $hoverBg;
-      color: $hoverColor
-   }
+
+   @if $borderedMode {
+      $coloredMode: false;
+      border: $border;
+      background: transparent;
+      color: $color;
+      &:hover {
+         border: 2px solid transparent;
+         color: $hoverColor;
+         background: $hoverBg;
+         box-shadow: var(--buttonHoverShadow);
+         svg {
+            stroke: $hoverIconColor;
+            fill: $hoverIconBg;
+         }
+      }
+   } 
+
 }
 
-
-
-.ui-btn  {
-   @include button;
+// ! colorful button
+.ui-btn[colored]  {
+   @include button ( $coloredMode: true )
 }
+
+// ! button with border
+.ui-btn[bordered] {
+   @include button (
+      $borderedMode: true,
+      $color: var(--decorationBright)
+   )
+}
+
+// ! button with light border
+.ui-btn[bordered-light] {
+   @include button (
+      $borderedMode: true,
+      $border: 2px solid var(--lightness),
+      $color: var(--lightness),
+      $hoverBg: var(--lightness),
+      $hoverColor: var(--decoration),
+   )
+}
+
 .btn-ripple {
+   overflow: hidden;
    .overlay-ripple {
       position: absolute;
       top: 0;
@@ -112,7 +129,6 @@
       animation: ripple 1.3s ease-out;
    }
 }
-
 
 @keyframes ripple {
    0% {
