@@ -31,15 +31,13 @@
       font-size: calc((100vw - 1200px)/(1440 - 1200) * (22 - 21) + 21px);
    }
 
-   @media all and (max-width: 1200px) {
-      font-size: 21px;
-   }
-
    @media all and (max-width: 990px) {
-      font-size: 22px;
+      margin-bottom: 15px;
+      font-size: 20px;
+      text-align: center;
    }
 
-   @media all and (max-width: 400px) {
-      font-size: 20px;
+   @media all and (max-width: 760px) {
+      font-size: calc((100vw - 360px)/(768 - 360) * (20 - 18) + 18px);
    }
 }

@@ -40,7 +40,8 @@
 
    .btn-wrap {
       width: 100%;
-      text-align: center;
+      display: flex;
+      justify-content: center;
       &.animate {
          @include animateScrollFadeIn($toTop: true, $delay: 0.2s)
       }
@@ -49,7 +50,6 @@
             $padding: 15px 27px,
             $fontSize: 21px,
             $lineHeight: 121%,
-            $textAlign: center
          )
       }
    }
@@ -75,11 +75,8 @@
    }
    .section-for-why .btn-wrap {
       .ui-btn {
-         @include button(
-            $padding: 12px 28px,
-            $fontSize: 16px,
-            $minHeight: 44px
-         )
+         font-size: 18px;
+         min-height: 50px;
       }
    }
 

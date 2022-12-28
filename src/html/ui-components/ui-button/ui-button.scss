@@ -17,7 +17,6 @@
    $borderedMode: false,
    $coloredMode: false,
    $hasHeight: true,
-   $textAlign: left,
    $textTransform: uppercase,
    $iconColor: $color,
    $iconBg: none,
@@ -27,13 +26,12 @@
    font-size: $fontSize;
    font-weight: $fontWeight;
    line-height: $lineHeight;
-   text-align: $textAlign;
    text-transform: $textTransform;
    border-radius: $radius;
+   position: relative;
    display: flex;
    align-items: center;
    justify-content: center;
-   position: relative;
    transition: all 0.2s ease-out;
    svg {
       margin-right: 14px;
@@ -44,7 +42,6 @@
       stroke-width: 2;
       transition: all 0.2s ease-out;
    }
-
 
    @if $hasHeight {
       min-height: $minHeight;
@@ -108,6 +105,7 @@
    )
 }
 
+// ! button with ripple click animation
 .btn-ripple {
    overflow: hidden;
    .overlay-ripple {

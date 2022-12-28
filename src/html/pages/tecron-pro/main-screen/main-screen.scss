@@ -23,6 +23,8 @@
       margin-top: 110px;
       position: sticky;
       top: 110px;
+      display: flex;
+      flex-direction: column;
    }
 
    &-title {
@@ -94,45 +96,18 @@
    }
 
    @media all and (max-width: 1440px) {
-      .ui-container { gap: 11vw; }
+      $paddingX: calc((100vw - 990px)/(1440 - 990) * (50 - 30) + 30px);
+      $paddingY: calc((100vw - 990px)/(1440 - 990) * (17 - 10) + 10px);
+
       &-title {
          font-size: calc((100vw - 990px)/(1440 - 990) * (120 - 85) + 85px);
          .part-with-logo {
             gap: 40px;
             .product-logo {
-               padding: 3% 10%;
+               padding: $paddingY $paddingX;
                img {  width: calc((100vw - 990px)/(1440 - 990) * (187 - 150) + 150px); }
             }
          }
-      }
-   }
-
-   @media all and (max-width: 1200px) {
-      // &-title {
-      //    .part-with-logo {
-      //       .product-logo {
-      //          padding: 10px 35px;
-      //          img { width: 150px; }
-      //       }
-      //    }
-      // }
-      .btn-wrap {
-         // button:nth-child(1) {
-         //    @include button (
-         //       $padding: 15px 25px,
-         //       $fontSize: 14px,
-         //       $minHeight: 48px
-         //    )
-         // }
-         // button:nth-child(2) {
-         //    @include button (
-         //       $padding: 15px 25px,
-         //       $fontSize: 14px,
-         //       $minHeight: 48px,
-         //       $hasBorder: true,
-         //       $color: var(--decorationBright)
-         //    )
-         // }
       }
    }
 
@@ -143,119 +118,122 @@
             $flex: true,
             $alignY: flex-start,
             $margin: 40px auto 0 auto,
-            $gap: 70px
+            $gap: 60px
          );
          flex-direction: column;
          &:after {
-            right: -60px;
+            right: 60%;
+            top: -45%;
          }
       }
       &-info {
+         margin-top: 0;
+         order: 2;
          position: static;
          width: 100%;
+         align-items: center;
       }
       &-title {
-         font-size: 130px;
+         margin-bottom: 0;
+         font-size: 110px;
+         align-items: center;
          span { font-weight: 300; }
          .part-with-logo {
             gap: 50px;
             .product-logo {
-               padding: 19px 70px;
+               padding: 14px 55px;
                img { width: 190px; }
             }
          }
       }
       &-img {
+         order: 1;
          margin-right: 0;
+         width: 100%;
+         display: flex;
+         justify-content: center;
+         picture {
+            display: flex;
+            justify-content: center;
+         }
+         img {
+            max-width: 70%;
+         }
       }
       .btn-wrap {
-         // button:nth-child(1) {
-         //    @include button (
-         //       $padding: 19px 43px,
-         //       $hasIcon: true,
-         //    )
-         // }
-         // button:nth-child(2) {
-         //    @include button (
-         //       $hasBorder: true,
-         //       $color: var(--decorationBright)
-         //    )
-         // }
-      }
-   }
-
-   @media all and (max-width: 760px) {
-      &-title {
-         font-size: calc((100vw - 560px)/(760 - 560) * (130 - 110) + 110px);
-         .part-with-logo {
-            gap: 30px;
-            .product-logo {
-               padding: 17px 35px;
-               img { max-width: 155px; }
-            }
+         margin: 60px 0 50px 0;
+         order: 3;
+         button {
+            padding: 19px 33px;
+            font-size: 16px;
+            min-height: 56px;
          }
       }
    }
 
-   @media all and (max-width: 560px) {
+   @media all and (max-width: 768px) {
+      $paddingX: calc((100vw - 360px)/(768 - 360) * (50 - 25) + 25px);
+      $paddingY: calc((100vw - 360px)/(768 - 360) * (17 - 8) + 8px);
+
       &-title {
-         font-size: calc((100vw - 400px)/(560 - 400) * (110 - 80) + 80px);
+         font-size: calc((100vw - 360px)/(768 - 360) * (110 - 65) + 65px);
          .part-with-logo {
-            flex-direction: column;
-            align-items: flex-start;
-            width: 100%;
+            gap: calc((100vw - 360px)/(768 - 360) * (50 - 25) + 25px);
             .product-logo {
-               margin: 0 auto;
-               padding: 11px 35px;
-               display: flex;
-               align-items: center;
-               justify-content: center;
-               width: calc(100% - 40px);
+               padding: $paddingY $paddingX;
+               img {  width: calc((100vw - 360px)/(768 - 360) * (190 - 110) + 110px); }
             }
          }
       }
+      &-img {
+         order: 1;
+         margin-right: 0;
+         width: 100%;
+         display: flex;
+         justify-content: center;
+         picture {
+            display: flex;
+            justify-content: center;
+         }
+         img {
+            max-width: 70%;
+         }
+      }
+   }
+
+   @media all and (max-width: 650px) {
+      .ui-container:after {
+         right: 60%;
+         top: -48%; 
+      }
+      &-img {
+         img { max-width: 80%; }
+      }
+   }
+
+   @media all and (max-width: 520px) {
+      &-img {
+         img { max-width: 100%; }
+      }
+
       .btn-wrap {
+         margin-top: 50px;
          flex-direction: column;
-         // button:nth-child(1) {
-         //    @include button (
-         //       $padding: 19px 43px,
-         //       $hasIcon: true,
-         //       $hasWidth: true,
-         //       $maxWidth: 80%
-         //    )
-         // }
-         // button:nth-child(2) {
-         //    @include button (
-         //       $hasBorder: true,
-         //       $color: var(--decorationBright),
-         //       $hasWidth: true,
-         //       $maxWidth: 80%
-         //    )
-         // }
+         gap: 15px;
+         button {
+            // max-width: 300px;
+            // width: 100%;
+         }
       }
    }
 
    @media all and (max-width: 400px) {
-      &-title {
-         font-size: calc((100vw - 320px)/(400 - 320) * (80 - 62) + 62px);
-      }
       .btn-wrap {
-         // button:nth-child(1) {
-         //    @include button (
-         //       $padding: 19px 43px,
-         //       $hasIcon: true,
-         //       $hasWidth: true,
-         //       $maxWidth: 100%
-         //    )
-         // }
-         // button:nth-child(2) {
-         //    @include button (
-         //       $hasBorder: true,
-         //       $color: var(--decorationBright),
-         //       $hasWidth: true,
-         //       $maxWidth: 100%
-         //    )
-         // }
+         button {
+            padding: 19px 28px;
+            font-size: 15px;
+            min-height: 54px;
+         }
       }
    }
 }

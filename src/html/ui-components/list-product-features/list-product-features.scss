@@ -24,14 +24,11 @@
    }
 
    @media all and (max-width: 1440px) {
-      li { font-size: calc((100vw - 1200px)/(1440 - 1200) * (18 - 17) + 17px); }
-   }
-
-   @media all and (max-width: 1200px) {
-      li { font-size: calc((100vw - 990px)/(1200 - 990) * (17 - 16) + 16px); }
+      li { font-size: calc((100vw - 990px)/(1440 - 990) * (18 - 16) + 16px); }
    }
 
    @media all and (max-width: 990px) {
+      order: 4;
       li { font-size: 18px }
    }
    @media all and (max-width: 760px) {
