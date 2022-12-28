@@ -26,15 +26,16 @@
 @import '../html/ui-components/arrows/arrows';
 @import '../html/ui-components/socials/socials';
 @import '../html/ui-components/contact-links/contact-links';
-@import '../html/ui-components/mobileMenu/ui-mobileMenu';
 @import '../html/ui-components/nav-menu/nav-menu';
 @import '../html/ui-components/forms/search-form/search-form';
 @import '../html/ui-components/ui-input/ui-input';
 @import '../html/ui-components/list-product-features/list-product-features';
 
 // ? Templates
-@import '../html/templates/header-default/header-default';
-@import '../html/templates/header-single/header-single';
+@import '../html/templates/header/header-default/header-default';
+@import '../html/templates/header/header-1/header-1';
+@import '../html/templates/mobile-menu/menu-1/menu-1';
+@import '../html/templates/mobile-menu/menu-2/menu-2';
 @import './_footer';
 
 // ? Home

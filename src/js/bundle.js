@@ -33,7 +33,7 @@ addDecArrow()
  * TODO: Mobile menu
  */
 window.addEventListener('load', function() {
-   const mobileMenu = new openMobileMenu('.ui-mobileMenu', '.ui-close', '.ui-burger', '.ui-overlay')
+   const mobileMenu = new openMobileMenu('.mobile-menu-1', '.ui-close', '.burger-1', '.ui-overlay')
    let input = document.querySelector('.search-form input')
    
    clearSearchInputValue(input, mobileMenu)
