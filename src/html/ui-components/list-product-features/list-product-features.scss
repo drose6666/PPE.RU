@@ -7,6 +7,15 @@
       position: relative;
       display: flex;
       align-items: flex-start;
+      $j: 0.7s;
+      @for $i from 1 through 3 {
+         $j: $j + 0.05s;
+         &:nth-child(#{$i}) {
+            &.animate {
+               @include animateScrollFadeIn($toTop: true, $delay: $j)
+            }
+         }
+      }
       strong {
          font-weight: 700;
       }
@@ -29,12 +38,25 @@
 
    @media all and (max-width: 990px) {
       order: 4;
-      li { font-size: 18px }
+      li { 
+         font-size: calc((100vw - 400px)/(990 - 400) * (18 - 17) + 17px); 
+         $j: 0.3s;
+         @for $i from 1 through 3 {
+            $j: $j +0.05s;
+            &:nth-child(#{$i}) {
+               &.animate {
+                  @include animateScrollFadeIn($toTop: true, $delay: $j)
+               }
+            }
+         }
+      }
+      li:not(:last-child) {
+         margin-bottom: 10px;
+      }
    }
-   @media all and (max-width: 760px) {
-      li { font-size: 17px; }
-   }
+
+   
    @media all and (max-width: 400px) {
-      li { font-size: 16px; }
+      li { font-size: 17px; }
    }
 }

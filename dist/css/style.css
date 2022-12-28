@@ -3096,6 +3096,7 @@ button.swiper-pagination-bullet {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
   min-height: 54px;
+  height: 54px;
   background: var(--decorationBright);
   color: var(--lightness);
 }
@@ -3153,6 +3154,7 @@ button.swiper-pagination-bullet {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
   min-height: 54px;
+  height: 54px;
   border: 2px solid var(--decorationBright);
   background: transparent;
   color: var(--decorationBright);
@@ -3212,6 +3214,7 @@ button.swiper-pagination-bullet {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
   min-height: 54px;
+  height: 54px;
   border: 2px solid var(--lightness);
   background: transparent;
   color: var(--lightness);
@@ -3503,6 +3506,29 @@ button.swiper-pagination-bullet {
   line-height: 120%;
   color: var(--decoration);
   text-align: left;
+}
+
+.ui-subtitle.main.animate {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s;
+  transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s;
+  -o-transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s, -o-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s;
+  transition: transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s, opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s;
+  transition: transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s, opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s, -o-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s;
+  -webkit-transform: translateX(15px);
+      -ms-transform: translateX(15px);
+       -o-transform: translateX(15px);
+          transform: translateX(15px);
+}
+
+.ui-subtitle.main.animate.animation {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
 }
 
 .ui-close {
@@ -4388,6 +4414,75 @@ button.swiper-pagination-bullet {
           align-items: flex-start;
 }
 
+.list-product-features li:nth-child(1).animate {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.75s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.75s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.75s;
+  transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.75s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.75s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.75s;
+  -o-transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.75s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.75s, -o-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.75s;
+  transition: transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.75s, opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.75s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.75s;
+  transition: transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.75s, opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.75s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.75s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.75s, -o-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.75s;
+  -webkit-transform: translateY(15px);
+      -ms-transform: translateY(15px);
+       -o-transform: translateY(15px);
+          transform: translateY(15px);
+}
+
+.list-product-features li:nth-child(1).animate.animation {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+}
+
+.list-product-features li:nth-child(2).animate {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.8s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.8s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.8s;
+  transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.8s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.8s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.8s;
+  -o-transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.8s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.8s, -o-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.8s;
+  transition: transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.8s, opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.8s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.8s;
+  transition: transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.8s, opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.8s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.8s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.8s, -o-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.8s;
+  -webkit-transform: translateY(15px);
+      -ms-transform: translateY(15px);
+       -o-transform: translateY(15px);
+          transform: translateY(15px);
+}
+
+.list-product-features li:nth-child(2).animate.animation {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+}
+
+.list-product-features li:nth-child(3).animate {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.85s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.85s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.85s;
+  transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.85s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.85s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.85s;
+  -o-transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.85s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.85s, -o-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.85s;
+  transition: transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.85s, opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.85s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.85s;
+  transition: transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.85s, opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.85s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.85s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.85s, -o-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.85s;
+  -webkit-transform: translateY(15px);
+      -ms-transform: translateY(15px);
+       -o-transform: translateY(15px);
+          transform: translateY(15px);
+}
+
+.list-product-features li:nth-child(3).animate.animation {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+}
+
 .list-product-features li strong {
   font-weight: 700;
 }
@@ -5196,6 +5291,7 @@ footer .copyright {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
   min-height: 54px;
+  height: 54px;
 }
 
 .section-for-why .btn-wrap .ui-btn svg {
@@ -5509,10 +5605,58 @@ footer .copyright {
 
 .main-screen-title strong {
   font-weight: 800;
+  display: inline-block;
+}
+
+.main-screen-title strong.animate {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s;
+  transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s;
+  -o-transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, -o-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s;
+  transition: transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s;
+  transition: transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, -o-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s;
+  -webkit-transform: translateX(15px);
+      -ms-transform: translateX(15px);
+       -o-transform: translateX(15px);
+          transform: translateX(15px);
+}
+
+.main-screen-title strong.animate.animation {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
 }
 
 .main-screen-title span {
-  font-weight: 400;
+  font-weight: 300;
+  display: inline-block;
+}
+
+.main-screen-title span.animate {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s;
+  transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s;
+  -o-transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, -o-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s;
+  transition: transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s;
+  transition: transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, -o-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s;
+  -webkit-transform: translateX(-15px);
+      -ms-transform: translateX(-15px);
+       -o-transform: translateX(-15px);
+          transform: translateX(-15px);
+}
+
+.main-screen-title span.animate.animation {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
 }
 
 .main-screen-title .part-with-logo {
@@ -5537,6 +5681,29 @@ footer .copyright {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+}
+
+.main-screen-title .part-with-logo .product-logo.animate {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.7s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.7s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.7s;
+  transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.7s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.7s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.7s;
+  -o-transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.7s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.7s, -o-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.7s;
+  transition: transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.7s, opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.7s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.7s;
+  transition: transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.7s, opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.7s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.7s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.7s, -o-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.7s;
+  -webkit-transform: translateX(15px);
+      -ms-transform: translateX(15px);
+       -o-transform: translateX(15px);
+          transform: translateX(15px);
+}
+
+.main-screen-title .part-with-logo .product-logo.animate.animation {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
 }
 
 .main-screen-title .part-with-logo .product-logo:before {
@@ -5568,6 +5735,29 @@ footer .copyright {
   z-index: -1;
 }
 
+.main-screen-img.animate {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 1.5s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s, visibility 1.5s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s, -webkit-transform 1.5s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s;
+  transition: opacity 1.5s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s, visibility 1.5s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s, -webkit-transform 1.5s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s;
+  -o-transition: opacity 1.5s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s, visibility 1.5s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s, -o-transform 1.5s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s;
+  transition: transform 1.5s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s, opacity 1.5s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s, visibility 1.5s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s;
+  transition: transform 1.5s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s, opacity 1.5s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s, visibility 1.5s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s, -webkit-transform 1.5s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s, -o-transform 1.5s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s;
+  -webkit-transform: translateX(30px);
+      -ms-transform: translateX(30px);
+       -o-transform: translateX(30px);
+          transform: translateX(30px);
+}
+
+.main-screen-img.animate.animation {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+}
+
 .main-screen-img img {
   max-width: 100%;
   height: auto;
@@ -5586,6 +5776,29 @@ footer .copyright {
       -ms-flex-align: center;
           align-items: center;
   gap: 20px;
+}
+
+.main-screen .btn-wrap.animate {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.95s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.95s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.95s;
+  transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.95s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.95s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.95s;
+  -o-transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.95s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.95s, -o-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.95s;
+  transition: transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.95s, opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.95s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.95s;
+  transition: transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.95s, opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.95s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.95s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.95s, -o-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.95s;
+  -webkit-transform: translateY(15px);
+      -ms-transform: translateY(15px);
+       -o-transform: translateY(15px);
+          transform: translateY(15px);
+}
+
+.main-screen .btn-wrap.animate.animation {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
 }
 
 * {
@@ -9951,6 +10164,29 @@ input:active {
     text-align: center;
   }
 
+  .ui-subtitle.main.animate {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s;
+    transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s;
+    -o-transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s, -o-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s;
+    transition: transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s, opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s;
+    transition: transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s, opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s, -o-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s;
+    -webkit-transform: translateY(15px);
+        -ms-transform: translateY(15px);
+         -o-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+
+  .ui-subtitle.main.animate.animation {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
+  }
+
   .list-product-features {
     -webkit-box-ordinal-group: 5;
     -webkit-order: 4;
@@ -9960,7 +10196,81 @@ input:active {
   }
 
   .list-product-features li {
-    font-size: 18px;
+    font-size: -webkit-calc((100vw - 400px) / 590 * 1 + 17px);
+    font-size: calc((100vw - 400px) / 590 * 1 + 17px);
+  }
+
+  .list-product-features li:nth-child(1).animate {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.35s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.35s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.35s;
+    transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.35s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.35s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.35s;
+    -o-transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.35s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.35s, -o-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.35s;
+    transition: transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.35s, opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.35s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.35s;
+    transition: transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.35s, opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.35s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.35s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.35s, -o-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.35s;
+    -webkit-transform: translateY(15px);
+        -ms-transform: translateY(15px);
+         -o-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+
+  .list-product-features li:nth-child(1).animate.animation {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
+  }
+
+  .list-product-features li:nth-child(2).animate {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s;
+    transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s;
+    -o-transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s, -o-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s;
+    transition: transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s, opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s;
+    transition: transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s, opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s, -o-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s;
+    -webkit-transform: translateY(15px);
+        -ms-transform: translateY(15px);
+         -o-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+
+  .list-product-features li:nth-child(2).animate.animation {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
+  }
+
+  .list-product-features li:nth-child(3).animate {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.45s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.45s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.45s;
+    transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.45s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.45s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.45s;
+    -o-transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.45s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.45s, -o-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.45s;
+    transition: transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.45s, opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.45s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.45s;
+    transition: transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.45s, opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.45s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.45s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.45s, -o-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.45s;
+    -webkit-transform: translateY(15px);
+        -ms-transform: translateY(15px);
+         -o-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+
+  .list-product-features li:nth-child(3).animate.animation {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
+  }
+
+  .list-product-features li:not(:last-child) {
+    margin-bottom: 10px;
   }
 
   .main-screen {
@@ -10034,12 +10344,81 @@ input:active {
     font-weight: 300;
   }
 
+  .main-screen-title span.animate {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s;
+    transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s;
+    -o-transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s, -o-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s;
+    transition: transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s, opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s;
+    transition: transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s, opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s, -o-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s;
+    -webkit-transform: translateY(15px);
+        -ms-transform: translateY(15px);
+         -o-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+
+  .main-screen-title span.animate.animation {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
+  }
+
+  .main-screen-title strong.animate {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s;
+    transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s;
+    -o-transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s, -o-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s;
+    transition: transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s, opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s;
+    transition: transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s, opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s, -o-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s;
+    -webkit-transform: translateY(15px);
+        -ms-transform: translateY(15px);
+         -o-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+
+  .main-screen-title strong.animate.animation {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
+  }
+
   .main-screen-title .part-with-logo {
     gap: 50px;
   }
 
   .main-screen-title .part-with-logo .product-logo {
     padding: 14px 55px;
+  }
+
+  .main-screen-title .part-with-logo .product-logo.animate {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s;
+    transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s;
+    -o-transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, -o-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s;
+    transition: transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s;
+    transition: transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s, -o-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s;
+    -webkit-transform: translateY(15px);
+        -ms-transform: translateY(15px);
+         -o-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+
+  .main-screen-title .part-with-logo .product-logo.animate.animation {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
   }
 
   .main-screen-title .part-with-logo .product-logo img {
@@ -10084,12 +10463,35 @@ input:active {
   }
 
   .main-screen .btn-wrap {
-    margin: 60px 0 50px 0;
+    margin: 60px 0 60px 0;
     -webkit-box-ordinal-group: 4;
     -webkit-order: 3;
        -moz-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
+  }
+
+  .main-screen .btn-wrap.animate {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s;
+    transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s;
+    -o-transition: opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s, -o-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s;
+    transition: transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s, opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s;
+    transition: transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s, opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s, visibility 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s, -webkit-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s, -o-transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s;
+    -webkit-transform: translateY(15px);
+        -ms-transform: translateY(15px);
+         -o-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+
+  .main-screen .btn-wrap.animate.animation {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
   }
 
   .main-screen .btn-wrap button {
@@ -10232,10 +10634,6 @@ input:active {
     font-size: -webkit-calc((100vw - 360px) / 408 * 2 + 18px);
     font-size: calc((100vw - 360px) / 408 * 2 + 18px);
   }
-
-  .list-product-features li {
-    font-size: 17px;
-  }
 }
 
 @media all and (max-width: 688px) {
@@ -10283,6 +10681,10 @@ input:active {
 }
 
 @media all and (max-width: 650px) {
+  .main-screen .ui-container {
+    gap: 50px;
+  }
+
   .main-screen .ui-container:after {
     right: 60%;
     top: -48%;
@@ -10399,7 +10801,7 @@ input:active {
   }
 
   .main-screen .btn-wrap {
-    margin-top: 50px;
+    margin: 50px 0 50px 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -10408,6 +10810,12 @@ input:active {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 15px;
+  }
+
+  .main-screen .btn-wrap button {
+    padding: 17px 28px;
+    font-size: 15px;
+    min-height: 52px;
   }
 }
 
@@ -10589,17 +10997,11 @@ input:active {
   }
 
   .list-product-features li {
-    font-size: 16px;
+    font-size: 17px;
   }
 
   .section-contact .contact-info li {
     gap: 15px;
-  }
-
-  .main-screen .btn-wrap button {
-    padding: 19px 28px;
-    font-size: 15px;
-    min-height: 54px;
   }
 }
 
@@ -10665,6 +11067,17 @@ input:active {
 
   .ui-mobileMenu .separate-line {
     margin: 0 auto 12px auto;
+  }
+}
+
+@media all and (max-width: 320px) {
+  .main-screen .btn-wrap {
+    width: 100%;
+  }
+
+  .main-screen .btn-wrap button {
+    max-width: 100%;
+    width: 100%;
   }
 }
 

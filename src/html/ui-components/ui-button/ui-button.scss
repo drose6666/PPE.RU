@@ -45,6 +45,7 @@
 
    @if $hasHeight {
       min-height: $minHeight;
+      height: $minHeight;
    }
 
    @if $coloredMode {
