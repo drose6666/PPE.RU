@@ -90,6 +90,13 @@
       }
    }
 
+   &.light {
+      a {
+         i { font-size: 20px; color: var(--lightness); }
+         svg { fill: var(--lightness); }
+      }
+   }
+
    a {
       transition: all 0.2s ease-out;
       i { color: var(--text); }

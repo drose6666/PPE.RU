@@ -73,4 +73,11 @@
          margin-left: 20px;
       }
    }
+
+   &.light {
+      a {
+         color: var(--lightness);
+         @include linksHover($hoverFullLinks: true, $color: var(--lightness));
+      }
+   }
 }

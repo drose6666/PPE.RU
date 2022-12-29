@@ -17,17 +17,31 @@
       }
    }
 }
-.mobile-menu-1 {
+.mobile-menu {
    .ui-close {
       position: relative;
       top: 0;
       right: 0;
-      display: none;
       &:hover {
          stroke: var(--decorationBright);
       }
-      @media all and (max-width: 490px) {
+   }
+   &[menu-1] {
+      .ui-close {
+         display: none;
+         @media all and (max-width: 490px) {
+            display: block;
+         }
+      }
+   }
+
+   &[menu-2] {
+      .ui-close {
          display: block;
+         stroke: var(--lightness);
+         &:hover {
+            stroke: var(--decorationBright);
+         }
       }
    }
 }

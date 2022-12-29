@@ -80,6 +80,10 @@
       background: var(--decoration);
    }
 
+   &.light {
+      color: var(--lightness);
+   }
+
    @media all and (max-width: 490px) {
       margin: 0 30px 40px 30px;
    }

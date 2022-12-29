@@ -33,7 +33,7 @@
 }
 
 [color-theme="main"] {
-   .logo.mobile-logo {
+   .logo.menu-logo {
       .logo-title {
          border-left: 1px solid var(--sectionDark);
       }
@@ -41,7 +41,7 @@
 }
 
 [color-theme="tecron"] {
-   .logo.mobile-logo {
+   .logo.menu-logo {
       .logo-title {
          border-left: 1px solid var(--decorationBright);
       }
@@ -78,7 +78,7 @@
       }
    }
 
-   &.mobile-logo {
+   &.menu-logo {
       justify-content: center;
       gap: 23px;
       img {
