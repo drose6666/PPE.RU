@@ -2687,7 +2687,7 @@ button.swiper-pagination-bullet {
       -ms-flex-pack: center;
           justify-content: center;
   background: var(--lightness);
-  z-index: 2;
+  z-index: 3;
   -webkit-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;

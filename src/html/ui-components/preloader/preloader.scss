@@ -14,7 +14,7 @@
    align-items: center;
    justify-content: center;
    background: var(--lightness);
-   z-index: 2;
+   z-index: 3;
    transition: all 0.2s ease-out;
    &.hide {
       opacity: 0;
