@@ -2996,10 +2996,6 @@ button.swiper-pagination-bullet {
   stroke: var(--text);
 }
 
-.header-1 .icons-nav {
-  gap: 20px;
-}
-
 .header-1 .icons-nav li svg {
   stroke: var(--lightness);
 }
@@ -3011,7 +3007,7 @@ button.swiper-pagination-bullet {
   grid-template-columns: 1fr 1fr;
   -ms-grid-rows: auto;
   grid-template-rows: auto;
-  gap: 25px;
+  gap: 20px;
 }
 
 .icons-nav li {
@@ -5612,13 +5608,24 @@ footer .copyright {
   content: "";
   position: absolute;
   top: -580px;
-  right: 150px;
+  right: 30%;
   width: 650px;
   height: 650px;
   -webkit-border-radius: 50%;
           border-radius: 50%;
   background: var(--decorationLight);
   z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 2s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -o-transition: all 2s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 2s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.main-screen .ui-container.animation:after {
+  right: 150px;
+  opacity: 1;
+  visibility: visible;
 }
 
 .main-screen-info {
@@ -10373,8 +10380,12 @@ input:active {
   }
 
   .main-screen .ui-container:after {
-    right: 60%;
+    right: 90%;
     top: -45%;
+  }
+
+  .main-screen .ui-container.animation:after {
+    right: 60%;
   }
 
   .main-screen-info {
@@ -10749,7 +10760,6 @@ input:active {
   }
 
   .main-screen .ui-container:after {
-    right: 60%;
     top: -48%;
   }
 
