@@ -57,4 +57,10 @@
         </clipPath>
         </defs>
     </symbol>
+
+    <!-- check -->
+    <symbol viewBox="0 0 43 30" id="check">
+        <path d="M40.0296 3.76465L16.5961 27.1982L3.34375 14.0414" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>
+    </symbol>
+
 </svg>

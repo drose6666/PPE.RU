@@ -110,9 +110,14 @@
    &-img {
       margin-right: -50px;
       z-index: -1;
-      &.animate {
-         @include animateScrollFadeIn($toLeft: true, $transform: 30px, $duration: 1.5s, $delay: 0.2s);
+      overflow: hidden;
+      picture {
+         display: block;
+         &.animate {
+            @include animateScrollFadeIn($toLeft: true, $transform: 30px, $duration: 1.5s, $delay: 0.2s);
+         }
       }
+      
       img {
          max-width: 100%;
          height: auto;
@@ -151,7 +156,6 @@
    }
 
    @media all and (max-width: 990px) {
-      overflow: hidden;
       .ui-container {
          @include container(
             $flex: true,

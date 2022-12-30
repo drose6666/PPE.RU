@@ -1,45 +1,59 @@
-%sectionTitle {
-   margin-bottom: 60px;
-   padding-bottom: 1.5px;
-   font-family: $Montserrat;
-   font-size: 26px;
-   font-weight: 700;
-   line-height: 120%;
-   color: var(--title);
+
+
+@mixin title (
+   $hasBorderAnimation: false,
+   $margin: 0,
+   $padding: 0,
+   $fontFamily: $Montserrat,
+   $fontSize: 26px,
+   $fontWeight: 700,
+   $lineHeight: 120%,
+   $color: var(--title),
+   $textAlign: left,
+   $textTransform: none,
+   $letterSpacing: 0,
+) {
+   margin: $margin;
+   padding: $padding;
+   font-family: $fontFamily;
+   font-size: $fontSize;
+   font-weight: $fontWeight;
+   line-height: $lineHeight;
+   color: $color;
+   text-align: $textAlign;
+   text-transform: $textTransform;
    position: relative;
-   overflow: hidden;
-   .border-wrap {
-      padding-bottom: 9px;
-      border-bottom: 1px solid var(--border);
+   letter-spacing: $letterSpacing;
+
+   &[light] {
+      color: var(--lightness);
    }
 
-   &.animate {
-      @include animateScrollFadeIn($toTop: true, $delay: 0.2s);
-   }
-
-   &:after {
-      content: '';
-      position: absolute;
-      bottom: 0.5px;
-      height: 3px;
-      width: 50px;
-      background: var(--decoration);
-      animation: titleLine 5s linear infinite forwards;
-   }
-
-   &.animate {
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(5px);
-      &.animation {
-         opacity: 1;
-         visibility: visible;
-         transform: translateY(0);
+   @if $hasBorderAnimation {
+      .border-wrap {
+         padding-bottom: 9px;
+         border-bottom: 1px solid var(--border);
+      }
+      &:after {
+         content: '';
+         position: absolute;
+         bottom: 0.5px;
+         height: 3px;
+         width: 50px;
+         background: var(--decoration);
+         animation: titleLine 5s linear infinite forwards;
       }
    }
+}
 
-   &.light {
-      color: var(--lightness);
+.section-title {
+   @include title( $margin: 0 0 60px 0, $hasBorderAnimation: true, $padding: 0 0 1.5px 0);
+   &.animate {
+      @include animateScrollFadeIn($toTop: true, $delay: 0.2s)
+   }
+
+   @media all and (max-width: 768px) {
+      .border-wrap { padding-bottom: 15px; }
    }
 
    @media all and (max-width: 380px) {
@@ -47,29 +61,13 @@
    }
 }
 
-.section-title {
-   @extend %sectionTitle;
-}
-
-@media all and (max-width: 768px) {
-   .section-title .border-wrap { padding-bottom: 15px; }
-}
-
-@keyframes titleLine {
-   0% { left: -50px; }
-   100% { left: 100%; }
-}
-
-
 .mobile-title {
-   margin: 0 50px 40px 50px;
-   padding-bottom: 10px;
-   font-family: $Montserrat;
-   font-size: 25px;
-   font-weight: 700;
-   line-height: 100%;
-   color: var(--title);
-   position: relative;
+   @include title(
+      $margin: 0 50px 40px 50px,
+      $padding: 0 0 10px 0,
+      $fontSize: 25px,
+      $lineHeight: 100%
+   );
    &:after {
       content: '';
       position: absolute;
@@ -80,14 +78,51 @@
       background: var(--decoration);
    }
 
-   &.light {
-      color: var(--lightness);
-   }
-
    @media all and (max-width: 490px) {
       margin: 0 30px 40px 30px;
    }
    @media all and (max-width: 400px) {
       margin: 0 30px 40px 20px;
    }
+}
+
+.section-title-product {
+   @include title(
+      $margin: 0 0 50px 0,
+      $fontSize: 50px,
+      $fontWeight: 800,
+      $lineHeight: 95%,
+      $color: var(--darkness),
+      $letterSpacing: -0.03em,
+      $textAlign: center,
+      $textTransform: uppercase
+   )
+}
+
+.features-product-title {
+   @include title(
+      $margin: 0 0 20px 0,
+      $fontSize: 20px,
+      $lineHeight: 95%,
+      $textTransform: uppercase,
+      $color: var(--darkness),
+      $letterSpacing: -0.03em
+   );
+   &[right] {
+      text-align: right;
+   }
+
+   @media all and (max-width: 1070px) {
+      margin: 0 0 15px 0;
+      text-align: center;
+      &[right] {
+         text-align: center;
+      }
+   }
+}
+
+// ! keyframes
+@keyframes titleLine {
+   0% { left: -50px; }
+   100% { left: 100%; }
 }

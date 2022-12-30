@@ -138,6 +138,29 @@ document.querySelectorAll('.catalog-swiper').forEach((item, index) => {
 })
 
 
+/**
+ * TODO: Features product swiper
+ */
+window.addEventListener('load', () => {
+
+   new Swiper('.features-product-swiper', {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      loop: true,
+      spaceBetween: 0,
+      speed: 1000,
+      autoplay: {
+         delay: 3000,
+         disableOnInteraction: false,
+      },
+      effect: 'fade',
+      fadeEffect: {
+         crossFade: true
+      },
+   })
+})
+
+
 
 /**
  * TODO: Product catalog accordion
