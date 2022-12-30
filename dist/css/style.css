@@ -4223,15 +4223,6 @@ button.swiper-pagination-bullet {
           background-size: 100% 1px;
 }
 
-.contact-links.mobile a svg {
-  stroke: var(--decorationBright);
-  fill: none;
-}
-
-.contact-links.mobile a i {
-  color: var(--decoration);
-}
-
 .contact-links.mobile a:hover i {
   color: var(--decoration);
 }
@@ -4243,10 +4234,17 @@ button.swiper-pagination-bullet {
 
 .contact-links[menu-1] a i {
   font-size: 20px;
+  color: var(--darkness);
+}
+
+.contact-links[menu-1] a svg {
+  stroke: var(--darkness);
+  fill: none;
 }
 
 .contact-links[menu-2] {
   margin-left: 25px;
+  gap: 20px;
 }
 
 .contact-links[menu-2] a {
@@ -4258,7 +4256,13 @@ button.swiper-pagination-bullet {
 }
 
 .contact-links[menu-2] a i {
-  font-size: 19px;
+  font-size: 17px;
+  color: var(--lightness);
+}
+
+.contact-links[menu-2] a svg {
+  stroke: var(--lightness);
+  fill: none;
 }
 
 .contact-links.light a {
