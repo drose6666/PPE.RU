@@ -1,10 +1,10 @@
 .mobile-menu {
    position: fixed;
    top: 0;
-   right: -450px;
+   right: -320px;
    width: 100%;
    height: 100%;
-   max-width: 450px;
+   max-width: 320px;
    background: $mobileMenuBg;
    overflow-y: auto;
    z-index: 3;
@@ -18,44 +18,73 @@
    }
    
    .m-head {
-      margin-bottom: 60px;
-      padding: 25px 50px;
+      padding: 15px 25px 0 25px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      // border-bottom: 1px solid var(--borderLight);
    }
 
    .m-body {
-      margin-bottom: 60px;
+      margin-bottom: 20px;
       display: flex;
       flex-direction: column;
-      gap: 40px;
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(20px);
+      gap: 60px;
+      opacity: 1;
+      visibility: visible;
+      // transform: translateY(20px);
       transition: all 0.4s ease-out 0s;
-      &.active {
-         transition-delay: 0.8s;
-         opacity: 1;
-         visibility: visible;
-         transform: none;
-      }
+      // &.active {
+      //    transition-delay: 0.8s;
+      //    opacity: 1;
+      //    visibility: visible;
+      //    transform: none;
+      // }
    }   
 
-   .mobile-catalog {
-      margin-top: -16px;
-      & > li {
-         max-width: 425px;
+   .nav-mobile-menu {
+      li {
+         width: 100%;
          position: relative;
          user-select: none;
-         & > a, & > h6 {
-            padding: 16px 25px 16px 50px;
-            font-size: 18px;
+         border-bottom: 1px solid var(--borderLight);
+         &:first-child {
+            border-top: 1px solid var(--borderLight);
+         }
+         a {
+            padding: 10px 25px;
+            font-size: 16px;
             font-weight: 500;
             line-height: 129%;
             color: var(--lightness);
-            border-top-right-radius: 80px;
-            border-bottom-right-radius: 80px;
+            display: flex;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.1s ease-out;
+         }
+         &:hover {
+            a {
+               color: var(--decoration);
+            }
+         }
+      }
+   }
+
+   .mobile-catalog {
+      & > li {
+         width: 100%;
+         position: relative;
+         user-select: none;
+         border-bottom: 1px solid var(--borderLight);
+         &:first-child {
+            border-top: 1px solid var(--borderLight);
+         }
+         & > a, & > h6 {
+            padding: 10px 25px;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 129%;
+            color: var(--lightness);
             display: flex;
             position: relative;
             cursor: pointer;
@@ -72,37 +101,27 @@
          }
 
          .menu-level-2 {
-            margin: 15px 0 15px 70px;
-            padding-left: 30px;
-            border-left: 1px solid var(--border);
             & > li {
-               max-width: 300px;
+               // padding: 0 50px 0 40px;
                &:not(:last-child) {
-                  margin-bottom: 15px;
+                  border-bottom: 1px solid var(--borderLight);
                }
                a {
-                  font-size: 14px;
+                  padding: 10px 50px 10px 40px;
+                  display: inline-block;
+                  font-size: 15px;
                   font-weight: 400;
                   line-height: 129%;
                   color: var(--lightness);
-                  @include linksHover;
-                  transition: $bgsTransition, color 0.1s ease-out
-               }
-               &:hover {
-                  a {
+                  // @include linksHover;
+                  transition: $bgsTransition, color 0.1s ease-out;
+                  &:hover {
                      color: var(--decoration);
                   }
                }
-            }
+            
          }
       }
-   }
-
-   .separate-line {
-      margin: 0 auto 16px auto;
-      width: calc(100% - 100px);
-      height: 1px;
-      background: var(--border);
    }
 
    @media all and (max-width: 490px) {
@@ -135,5 +154,6 @@
          .menu-level-2 { margin: 15px 0 15px 20px; padding-left: 20px; }
       }
       .separate-line { margin: 0 auto 12px auto; }
+   }
    }
 }

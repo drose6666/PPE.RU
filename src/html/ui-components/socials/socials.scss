@@ -57,21 +57,45 @@
    }
 
    &.socials-mobile {
-      margin-top: 35px;
-      margin-left: 50px;
       justify-content: flex-start;
-      gap: 27px;
-      a {
-         i { font-size: 20px; color: var(--text); }
-         svg { fill: var(--text); }
-      }
-      @media all and (max-width: 490px) { margin-left: 30px; }
-      @media all and (max-width: 400px) { margin-left: 20px; }
-      @media all and (max-width: 330px)  {
+      &[menu-1] {
+         margin-top: 35px;
+         margin-left: 50px;
+         gap: 27px;
          a {
-            svg {
+            i { font-size: 20px; color: var(--text); }
+            svg { fill: var(--text); }
+            &:hover {
+               i { color: var(--decoration); }
+               svg { fill: var(--decoration); }
+            }
+         }
+         @media all and (max-width: 490px) { margin-left: 30px; }
+         @media all and (max-width: 400px) { margin-left: 20px; }
+         @media all and (max-width: 330px)  {
+            a {
+               svg {
+                  &.ozon { width: 70px; height: 18px; }
+                  &.avito { width: 18px; height: 18px; }
+               }
+            }
+         }
+      }
+
+      &[menu-2] {
+         margin-top: 20px;
+         margin-left: 25px;
+         gap: 27px;
+         a {
+            i { font-size: 18px; color: var(--lightness); }
+            svg { 
+               fill: var(--lightness); 
                &.ozon { width: 70px; height: 18px; }
                &.avito { width: 18px; height: 18px; }
+            }
+            &:hover {
+               i { color: var(--decoration); }
+               svg { fill: var(--decoration); }
             }
          }
       }

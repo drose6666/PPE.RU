@@ -44,11 +44,9 @@
    }
 
    &.mobile {
-      margin-left: 50px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      gap: 20px;
       a {
          color: var(--darkness);
          @include linksHover($hoverFullLinks: true, $color: var(--decoration));
@@ -57,7 +55,6 @@
             fill: none;
          }
          i {
-            font-size: 20px;
             color: var(--decoration);
          }
          &:hover {
@@ -66,11 +63,31 @@
             }
          }
       }
+   }
+
+   &[menu-1] {
+      margin-left: 50px;
+      gap: 20px;
+      a {
+         i { font-size: 20px; }
+      }
       @media all and (max-width: 490px) {
          margin-left: 30px;
       }
+
       @media all and (max-width: 400px) {
          margin-left: 20px;
+      }
+   }
+
+   &[menu-2] {
+      margin-left: 25px;
+      a {
+         font-size: 15px;  
+         span {
+            font-weight: 500;
+         }
+         i { font-size: 19px; }
       }
    }
 

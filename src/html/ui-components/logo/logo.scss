@@ -79,30 +79,9 @@
    }
 
    &.menu-logo {
-      justify-content: center;
-      gap: 23px;
-      img {
-         max-width: 100px;
-      }
-      .logo-title {
-         padding-left: 15px;
-         font-size: 13px;
-         max-width: 235px;
-         color: var(--darkness);
-      }
-      &:hover {
-         .logo-title { color: var(--decorationBright); }
-      }
-      @media all and (max-width: 490px) {
-         gap: 20px;
-         img { max-width: 80px; }
-         .logo-title { padding-left: 13px; font-size: 11px; }
-      }
-
-      @media all and (max-width: 400px) {
-         img { max-width: 95px; }
-         .logo-title { display: none; }
-      }
+      
+      
+      
    }
 
    &.contact-logo {
@@ -113,5 +92,46 @@
          max-width: 100%;
          height: auto;
       }
+   }
+}
+
+
+.mobile-menu {
+   .logo.menu-logo {
+      justify-content: center;
+      gap: 23px;
+   }
+
+   &[menu-1] {
+      .logo.menu-logo {
+         img {
+            max-width: 100px;
+         }
+         .logo-title {
+            padding-left: 15px;
+            font-size: 13px;
+            max-width: 235px;
+            color: var(--darkness);
+         }
+         &:hover {
+            .logo-title { color: var(--decorationBright); }
+         }
+
+         @media all and (max-width: 490px) {
+            gap: 20px;
+            img { max-width: 80px; }
+            .logo-title { padding-left: 13px; font-size: 11px; }
+         }
+
+         @media all and (max-width: 400px) {
+            img { max-width: 95px; }
+            .logo-title { display: none; }
+         }
+      }
+   } 
+
+   &[munu-2] {
+      img { max-width: 125px;}
+      .logo-title { display: none; }
    }
 }

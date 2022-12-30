@@ -1614,6 +1614,7 @@ html {
 :root[color-theme=main] {
   --bgMobileMenuHead: #F4F6F8;
   --border: #DAE0E3;
+  --borderLight: rgba(255, 255, 255, 0.1);
   --borderInput: #C0C0C0;
   --buttonHover: #00578F;
   --buttonHoverShadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
@@ -1642,6 +1643,7 @@ html {
 :root[color-theme=tecron] {
   --bgMobileMenuHead: #F4F6F8;
   --border: #DAE0E3;
+  --borderLight: rgba(255, 255, 255, 0.1);
   --borderInput: #C0C0C0;
   --buttonHover: #AC1410;
   --buttonHoverShadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
@@ -2867,7 +2869,16 @@ button.swiper-pagination-bullet {
   color: var(--decorationBright);
 }
 
-.logo.menu-logo {
+.logo.contact-logo a {
+  max-width: 120px;
+}
+
+.logo.contact-logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.mobile-menu .logo.menu-logo {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
      -moz-box-pack: center;
@@ -2876,28 +2887,27 @@ button.swiper-pagination-bullet {
   gap: 23px;
 }
 
-.logo.menu-logo img {
+.mobile-menu[menu-1] .logo.menu-logo img {
   max-width: 100px;
 }
 
-.logo.menu-logo .logo-title {
+.mobile-menu[menu-1] .logo.menu-logo .logo-title {
   padding-left: 15px;
   font-size: 13px;
   max-width: 235px;
   color: var(--darkness);
 }
 
-.logo.menu-logo:hover .logo-title {
+.mobile-menu[menu-1] .logo.menu-logo:hover .logo-title {
   color: var(--decorationBright);
 }
 
-.logo.contact-logo a {
-  max-width: 120px;
+.mobile-menu[munu-2] img {
+  max-width: 125px;
 }
 
-.logo.contact-logo img {
-  max-width: 100%;
-  height: auto;
+.mobile-menu[munu-2] .logo-title {
+  display: none;
 }
 
 .phone {
@@ -3541,8 +3551,9 @@ button.swiper-pagination-bullet {
 }
 
 .ui-close svg {
-  width: 20px;
-  height: 20px;
+  width: inherit;
+  height: inherit;
+  stroke-width: 1.5;
   -webkit-transition: all 0.1s ease-out;
   -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
@@ -3689,24 +3700,6 @@ button.swiper-pagination-bullet {
   background: var(--decorationBright);
 }
 
-[data-decArrowActive].active .has-children .decArrow:before,
-.has-children.active .decArrow:before {
-  background: var(--lightness);
-  -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-       -o-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-
-[data-decArrowActive].active .has-children .decArrow:after,
-.has-children.active .decArrow:after {
-  background: var(--lightness);
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-       -o-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
 .has-children {
   position: relative;
 }
@@ -3731,7 +3724,6 @@ button.swiper-pagination-bullet {
   top: 0;
   width: 8px;
   height: 1px;
-  background: var(--darkness);
   -webkit-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
@@ -3773,10 +3765,14 @@ button.swiper-pagination-bullet {
   top: 0;
   width: 8px;
   height: 1px;
-  background: var(--darkness);
   -webkit-transition: all 0.1s ease-out;
   -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
+}
+
+.show-all .decArrow:before,
+.show-all .decArrow:after {
+  background: var(--darkness);
 }
 
 .show-all .decArrow:before {
@@ -3815,10 +3811,14 @@ button.swiper-pagination-bullet {
   top: 0;
   width: 8px;
   height: 1px;
-  background: var(--darkness);
   -webkit-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
+}
+
+.mobile-catalog .decArrow:before,
+.mobile-catalog .decArrow:after {
+  background: var(--lightness);
 }
 
 .mobile-catalog .decArrow:before {
@@ -3837,16 +3837,80 @@ button.swiper-pagination-bullet {
           transform: rotate(-45deg);
 }
 
-.accordion-head:hover .decArrow:before,
-.accordion-head:hover .decArrow:after {
+.mobile-catalog[dark] .decArrow {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 25px;
+  left: auto;
+  position: absolute;
+  width: 13px;
+  right: 25px;
+}
+
+.mobile-catalog[dark] .decArrow:before,
+.mobile-catalog[dark] .decArrow:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 8px;
+  height: 1px;
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.mobile-catalog[dark] .decArrow:before,
+.mobile-catalog[dark] .decArrow:after {
+  background: var(--darkness);
+}
+
+.mobile-catalog[dark] .decArrow:before {
+  left: 0;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.mobile-catalog[dark] .decArrow:after {
+  right: 0;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+       -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+[has-children-parent].active .has-children .decArrow:before,
+.has-children.active .decArrow:before {
+  background: var(--lightness);
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+       -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+[has-children-parent].active .has-children .decArrow:after,
+.has-children.active .decArrow:after {
+  background: var(--lightness);
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+[has-children-parent]:hover .decArrow:before,
+[has-children-parent]:hover .decArrow:after {
   background: var(--lightness);
 }
 
-.mobile-catalog > li[data-decArrowActive]:hover .decArrow:before,
-.mobile-catalog > li[data-decArrowActive]:hover .decArrow:after,
-.mobile-catalog > li[data-decArrowActive].active .decArrow:before,
-.mobile-catalog > li[data-decArrowActive].active .decArrow:after {
-  background: var(--decorationBright);
+.mobile-catalog li[has-children-parent]:hover .decArrow:before,
+.mobile-catalog li[has-children-parent]:hover .decArrow:after,
+.mobile-catalog li[has-children-parent].active .decArrow:before,
+.mobile-catalog li[has-children-parent].active .decArrow:after {
+  background: var(--decoration);
 }
 
 .socials {
@@ -3905,23 +3969,67 @@ button.swiper-pagination-bullet {
 }
 
 .socials.socials-mobile {
-  margin-top: 35px;
-  margin-left: 50px;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
      -moz-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+.socials.socials-mobile[menu-1] {
+  margin-top: 35px;
+  margin-left: 50px;
   gap: 27px;
 }
 
-.socials.socials-mobile a i {
+.socials.socials-mobile[menu-1] a i {
   font-size: 20px;
   color: var(--text);
 }
 
-.socials.socials-mobile a svg {
+.socials.socials-mobile[menu-1] a svg {
   fill: var(--text);
+}
+
+.socials.socials-mobile[menu-1] a:hover i {
+  color: var(--decoration);
+}
+
+.socials.socials-mobile[menu-1] a:hover svg {
+  fill: var(--decoration);
+}
+
+.socials.socials-mobile[menu-2] {
+  margin-top: 20px;
+  margin-left: 25px;
+  gap: 27px;
+}
+
+.socials.socials-mobile[menu-2] a i {
+  font-size: 18px;
+  color: var(--lightness);
+}
+
+.socials.socials-mobile[menu-2] a svg {
+  fill: var(--lightness);
+}
+
+.socials.socials-mobile[menu-2] a svg.ozon {
+  width: 70px;
+  height: 18px;
+}
+
+.socials.socials-mobile[menu-2] a svg.avito {
+  width: 18px;
+  height: 18px;
+}
+
+.socials.socials-mobile[menu-2] a:hover i {
+  color: var(--decoration);
+}
+
+.socials.socials-mobile[menu-2] a:hover svg {
+  fill: var(--decoration);
 }
 
 .socials.header-1-socials {
@@ -4076,7 +4184,6 @@ button.swiper-pagination-bullet {
 }
 
 .contact-links.mobile {
-  margin-left: 50px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -4094,7 +4201,6 @@ button.swiper-pagination-bullet {
      -moz-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  gap: 20px;
 }
 
 .contact-links.mobile a {
@@ -4123,12 +4229,36 @@ button.swiper-pagination-bullet {
 }
 
 .contact-links.mobile a i {
-  font-size: 20px;
   color: var(--decoration);
 }
 
 .contact-links.mobile a:hover i {
   color: var(--decoration);
+}
+
+.contact-links[menu-1] {
+  margin-left: 50px;
+  gap: 20px;
+}
+
+.contact-links[menu-1] a i {
+  font-size: 20px;
+}
+
+.contact-links[menu-2] {
+  margin-left: 25px;
+}
+
+.contact-links[menu-2] a {
+  font-size: 15px;
+}
+
+.contact-links[menu-2] a span {
+  font-weight: 500;
+}
+
+.contact-links[menu-2] a i {
+  font-size: 19px;
 }
 
 .contact-links.light a {
@@ -4529,41 +4659,38 @@ header .h-bottom .contacts {
 .mobile-menu {
   position: fixed;
   top: 0;
-  right: -450px;
+  right: -320px;
   width: 100%;
   height: 100%;
-  max-width: 450px;
-  background: var(--lightness);
+  max-width: 320px;
+  background: #202020;
   overflow-y: auto;
   z-index: 3;
-  -webkit-transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
-  -o-transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
-  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
-  -webkit-box-shadow: 10px 0px 30px 10px rgba(0, 0, 0, 0.15);
-          box-shadow: 10px 0px 30px 10px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  transition: all 0.7s ease;
 }
 
 .mobile-menu.active {
+  opacity: 1;
+  visibility: visible;
   right: 0;
-  -webkit-transition-delay: 0.3s;
-       -o-transition-delay: 0.3s;
-          transition-delay: 0.3s;
 }
 
 .mobile-menu .m-head {
-  margin-bottom: 60px;
-  padding: 25px 0;
-  background: var(--bgMobileMenuHead);
+  padding: 15px 25px 0 25px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-     -moz-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
   -webkit-align-items: center;
      -moz-box-align: center;
@@ -4572,7 +4699,7 @@ header .h-bottom .contacts {
 }
 
 .mobile-menu .m-body {
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -4585,54 +4712,71 @@ header .h-bottom .contacts {
      -moz-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 40px;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transform: translateY(20px);
-      -ms-transform: translateY(20px);
-       -o-transform: translateY(20px);
-          transform: translateY(20px);
+  gap: 60px;
+  opacity: 1;
+  visibility: visible;
   -webkit-transition: all 0.4s ease-out 0s;
   -o-transition: all 0.4s ease-out 0s;
   transition: all 0.4s ease-out 0s;
 }
 
-.mobile-menu .m-body.active {
-  -webkit-transition-delay: 0.8s;
-       -o-transition-delay: 0.8s;
-          transition-delay: 0.8s;
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: none;
-      -ms-transform: none;
-       -o-transform: none;
-          transform: none;
-}
-
-.mobile-menu .mobile-catalog {
-  margin-top: -16px;
-}
-
-.mobile-menu .mobile-catalog > li {
-  max-width: 425px;
+.mobile-menu .nav-mobile-menu li {
+  width: 100%;
   position: relative;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  border-bottom: 1px solid var(--borderLight);
+}
+
+.mobile-menu .nav-mobile-menu li:first-child {
+  border-top: 1px solid var(--borderLight);
+}
+
+.mobile-menu .nav-mobile-menu li a {
+  padding: 10px 25px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 129%;
+  color: var(--lightness);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+.mobile-menu .nav-mobile-menu li:hover a {
+  color: var(--decoration);
+}
+
+.mobile-menu .mobile-catalog > li {
+  width: 100%;
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-bottom: 1px solid var(--borderLight);
+}
+
+.mobile-menu .mobile-catalog > li:first-child {
+  border-top: 1px solid var(--borderLight);
 }
 
 .mobile-menu .mobile-catalog > li > a,
 .mobile-menu .mobile-catalog > li > h6 {
-  padding: 16px 25px 16px 50px;
-  font-size: 18px;
+  padding: 10px 25px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 129%;
-  color: var(--darkness);
-  -webkit-border-top-right-radius: 80px;
-          border-top-right-radius: 80px;
-  -webkit-border-bottom-right-radius: 80px;
-          border-bottom-right-radius: 80px;
+  color: var(--lightness);
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -4658,31 +4802,17 @@ header .h-bottom .contacts {
   color: var(--decoration);
 }
 
-.mobile-menu .mobile-catalog > li .menu-level-2 {
-  margin: 15px 0 15px 70px;
-  padding-left: 30px;
-  border-left: 1px solid var(--border);
-}
-
-.mobile-menu .mobile-catalog > li .menu-level-2 > li {
-  max-width: 300px;
-}
-
 .mobile-menu .mobile-catalog > li .menu-level-2 > li:not(:last-child) {
-  margin-bottom: 15px;
+  border-bottom: 1px solid var(--borderLight);
 }
 
 .mobile-menu .mobile-catalog > li .menu-level-2 > li a {
-  font-size: 14px;
+  padding: 10px 50px 10px 40px;
+  display: inline-block;
+  font-size: 15px;
   font-weight: 400;
   line-height: 129%;
-  color: var(--darkness);
-  background: -webkit-gradient(linear, left top, left bottom, from(var(--decorationBright)));
-  -webkit-background-size: 0% 1px;
-       -o-background-size: 0% 1px;
-          background-size: 0% 1px;
-  background-position: right 0% bottom;
-  background-repeat: no-repeat;
+  color: var(--lightness);
   -webkit-transition: color 0.1s ease-out, -webkit-background-size 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   transition: color 0.1s ease-out, -webkit-background-size 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   -o-transition: color 0.1s ease-out, -o-background-size 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -4691,22 +4821,7 @@ header .h-bottom .contacts {
 }
 
 .mobile-menu .mobile-catalog > li .menu-level-2 > li a:hover {
-  background-position: left 0% bottom;
-  -webkit-background-size: 100% 1px;
-       -o-background-size: 100% 1px;
-          background-size: 100% 1px;
-}
-
-.mobile-menu .mobile-catalog > li .menu-level-2 > li:hover a {
   color: var(--decoration);
-}
-
-.mobile-menu .separate-line {
-  margin: 0 auto 16px auto;
-  width: -webkit-calc(100% - 100px);
-  width: calc(100% - 100px);
-  height: 1px;
-  background: var(--border);
 }
 
 footer {
@@ -10893,15 +11008,15 @@ input:active {
 }
 
 @media all and (max-width: 490px) {
-  .logo.menu-logo {
+  .mobile-menu[menu-1] .logo.menu-logo {
     gap: 20px;
   }
 
-  .logo.menu-logo img {
+  .mobile-menu[menu-1] .logo.menu-logo img {
     max-width: 80px;
   }
 
-  .logo.menu-logo .logo-title {
+  .mobile-menu[menu-1] .logo.menu-logo .logo-title {
     padding-left: 13px;
     font-size: 11px;
   }
@@ -10918,11 +11033,11 @@ input:active {
     display: block;
   }
 
-  .socials.socials-mobile {
+  .socials.socials-mobile[menu-1] {
     margin-left: 30px;
   }
 
-  .contact-links.mobile {
+  .contact-links[menu-1] {
     margin-left: 30px;
   }
 
@@ -10930,7 +11045,7 @@ input:active {
     padding: 0 30px 20px 30px;
   }
 
-  .mobile-menu .m-head {
+  .mobile-menu .mobile-catalog .m-head {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
        -moz-box-pack: justify;
@@ -10939,22 +11054,22 @@ input:active {
     padding: 25px 30px;
   }
 
-  .mobile-menu .mobile-catalog > li {
+  .mobile-menu .mobile-catalog .mobile-catalog > li {
     margin-right: 16px;
     max-width: 405px;
   }
 
-  .mobile-menu .mobile-catalog > li > a,
-  .mobile-menu .mobile-catalog > li > h6 {
+  .mobile-menu .mobile-catalog .mobile-catalog > li > a,
+  .mobile-menu .mobile-catalog .mobile-catalog > li > h6 {
     padding: 16px 25px 16px 30px;
   }
 
-  .mobile-menu .mobile-catalog > li .menu-level-2 {
+  .mobile-menu .mobile-catalog .mobile-catalog > li .menu-level-2 {
     margin: 15px 0 15px 30px;
     padding-left: 20px;
   }
 
-  .mobile-menu .separate-line {
+  .mobile-menu .mobile-catalog .separate-line {
     width: -webkit-calc(100% - 60px);
     width: calc(100% - 60px);
   }
@@ -11021,11 +11136,11 @@ input:active {
 }
 
 @media all and (max-width: 400px) {
-  .logo.menu-logo img {
+  .mobile-menu[menu-1] .logo.menu-logo img {
     max-width: 95px;
   }
 
-  .logo.menu-logo .logo-title {
+  .mobile-menu[menu-1] .logo.menu-logo .logo-title {
     display: none;
   }
 
@@ -11033,11 +11148,11 @@ input:active {
     margin: 0 30px 40px 20px;
   }
 
-  .socials.socials-mobile {
+  .socials.socials-mobile[menu-1] {
     margin-left: 20px;
   }
 
-  .contact-links.mobile {
+  .contact-links[menu-1] {
     margin-left: 20px;
   }
 
@@ -11049,26 +11164,26 @@ input:active {
     font-size: 17px;
   }
 
-  .mobile-menu .m-head {
+  .mobile-menu .mobile-catalog .m-head {
     padding: 12px 20px;
   }
 
-  .mobile-menu .mobile-catalog > li {
+  .mobile-menu .mobile-catalog .mobile-catalog > li {
     margin-right: 15px;
     max-width: 100%;
   }
 
-  .mobile-menu .mobile-catalog > li > a,
-  .mobile-menu .mobile-catalog > li > h6 {
+  .mobile-menu .mobile-catalog .mobile-catalog > li > a,
+  .mobile-menu .mobile-catalog .mobile-catalog > li > h6 {
     padding: 16px 25px 16px 20px;
   }
 
-  .mobile-menu .mobile-catalog > li .menu-level-2 {
+  .mobile-menu .mobile-catalog .mobile-catalog > li .menu-level-2 {
     margin: 15px 0 15px 20px;
     padding-left: 25px 20px;
   }
 
-  .mobile-menu .separate-line {
+  .mobile-menu .mobile-catalog .separate-line {
     width: -webkit-calc(100% - 40px);
     width: calc(100% - 40px);
   }
@@ -11112,33 +11227,33 @@ input:active {
 }
 
 @media all and (max-width: 330px) {
-  .socials.socials-mobile a svg.ozon {
+  .socials.socials-mobile[menu-1] a svg.ozon {
     width: 70px;
     height: 18px;
   }
 
-  .socials.socials-mobile a svg.avito {
+  .socials.socials-mobile[menu-1] a svg.avito {
     width: 18px;
     height: 18px;
   }
 
-  .mobile-menu .mobile-catalog > li {
+  .mobile-menu .mobile-catalog .mobile-catalog > li {
     margin-right: 15px;
     max-width: 100%;
   }
 
-  .mobile-menu .mobile-catalog > li > a,
-  .mobile-menu .mobile-catalog > li > h6 {
+  .mobile-menu .mobile-catalog .mobile-catalog > li > a,
+  .mobile-menu .mobile-catalog .mobile-catalog > li > h6 {
     padding: 12px 25px 12px 20px;
     font-size: 15px;
   }
 
-  .mobile-menu .mobile-catalog > li .menu-level-2 {
+  .mobile-menu .mobile-catalog .mobile-catalog > li .menu-level-2 {
     margin: 15px 0 15px 20px;
     padding-left: 20px;
   }
 
-  .mobile-menu .separate-line {
+  .mobile-menu .mobile-catalog .separate-line {
     margin: 0 auto 12px auto;
   }
 }

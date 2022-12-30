@@ -8,7 +8,8 @@
    $color: var(--darkness),
    $duration: 0.2s,
    $colorHover: var(--lightness),
-
+   $lightMode: false,
+   $darkMode: false
 ) {
    @if $centerY {
       top: 50%;
@@ -34,8 +35,21 @@
       top: 0;
       width: 8px;
       height: 1px;
-      background: $color;
       transition: all $duration ease-out;
+   }
+
+   @if $darkMode {
+      $lightMode: false;
+      &:before, &:after {
+         background: var(--darkness);
+      }
+   }
+
+   @if $lightMode {
+      $darkMode: false;
+      &:before, &:after {
+         background: var(--lightness);
+      }
    }
 
    &:before {
@@ -46,6 +60,35 @@
    &:after {
       right: 0;
       transform: rotate(-45deg);
+   }
+}
+
+@mixin decArrowActive (
+   $darkMode: true,
+   $lightMode: false
+) {
+   @if $darkMode {
+      $lightMode: false;
+      &:before {
+         background: var(--lightness);
+         transform: rotate(-45deg);
+      }
+      &:after {
+         background: var(--lightness);
+         transform: rotate(45deg);
+      }
+   }
+
+   @if $lightMode {
+      $darkMode: false;
+      &:before {
+         background: var(--decoration);
+         transform: rotate(-45deg);
+      }
+      &:after {
+         background: var(--decoration);
+         transform: rotate(45deg);
+      }
    }
 }
 
@@ -69,27 +112,32 @@
 }
 
 .show-all .decArrow {
-   @include decArrow($right: 0, $duration: 0.1s);
+   @include decArrow($right: 0, $duration: 0.1s, $darkMode: true);
 }
 
 .mobile-catalog .decArrow {
-   @include decArrow($right: 25px);
+   @include decArrow($right: 25px, $lightMode: true);
 }
 
-[data-decArrowActive].active .has-children .decArrow,
+.mobile-catalog[dark] .decArrow {
+   @include decArrow($right: 25px, $darkMode: true);
+}
+
+
+[has-children-parent].active .has-children .decArrow,
 .has-children.active .decArrow { 
-   @extend %decArrowActive;
+   @include decArrowActive;
 }
 
-.accordion-head:hover {
+[has-children-parent]:hover {
    .decArrow {
       &:before, &:after { background: var(--lightness); }
    }
 }
 
-.mobile-catalog > li[data-decArrowActive]:hover,
-.mobile-catalog > li[data-decArrowActive].active {
+.mobile-catalog li[has-children-parent]:hover,
+.mobile-catalog li[has-children-parent].active {
    .decArrow {
-      &:before, &:after { background: var(--decorationBright); }
+      &:before, &:after { background: var(--decoration); }
    }
 }

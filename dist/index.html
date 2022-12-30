@@ -11,8 +11,8 @@
    <meta property="og:image" content="http://bkb-company.ru/img/about/about1.jpg">
    <meta property="og:site_name" content="Название">
    
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css?_v=20221230083248" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <link rel="stylesheet" href="css/style.min.css?_v=20221230083248">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css?_v=20221230134301" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="css/style.min.css?_v=20221230134301">
    <title>PPE.RU</title>
 </head>
 
@@ -66,11 +66,10 @@
    </div>
    
 </header>
-<div menu-1 class="mobile-menu">
+<div menu-2 class="mobile-menu">
    <div class="m-head">
       <a href="/" class="logo menu-logo">
-         <img src="../img/optimized/logos/pperu-main-logo.svg" alt="PPE.RU Logo">
-         <h5 class="logo-title">Официальный представитель IntegraWay и TECRON в России</h5>
+         <img src="../img/optimized/logos/pperu_light.svg" alt="PPE.RU Logo">
       </a>
       <button class="ui-close">
    <svg><use xlink:href="../img/optimized/svg-sprite.svg#close"></use></svg>
@@ -79,19 +78,21 @@
 
    <div class="m-body">
       <div class="mobile-item">
-         <form action="" class="search-form">
-   <div class="form-item">
-      <input class="ui-input" type="text" placeholder="Поиск...">
-      <svg><use xlink:href="../img/optimized/svg-sprite.svg#search"></use></svg>
-   </div>
-</form>
+         
       </div>
 
+      <ul class="nav-mobile-menu">
+         <li><a href="#">Преимущества</a></li>
+         <li><a href="#">Характеристики</a></li>
+         <li><a href="#">Отзывы</a></li>
+         <li><a href="#">Контакты</a></li>
+      </ul>
+
       <div class="mobile-item">
-         <h3 class="mobile-title">Каталог</h3>
+         <!-- <h3 class="mobile-title light">Каталог</h3> -->  
 
          <ul class="mobile-catalog">
-            <li data-decArrowActive>
+            <li has-children-parent>
                <h6 class="has-children"><span>Комбинезоны защитные</span></h6>
                <ul class="menu-level-2">
                   <li><a href="#" class="linksHover">Комбинезон защитный TECRON PRO</a></li>
@@ -100,9 +101,9 @@
                   <li><a href="#" class="linksHover">Комбинезон защитный TECRON SMS Comfort</a></li>
                </ul>
             </li>
-            <li data-decArrowActive><a href="#"><span>Очки защитные</span></a></li>
-            <li data-decArrowActive>
-               <h6 class="has-children"><span>Перчатки рабочие</span></h6>
+            <li has-children-parent><a href="#"><span>Защита глаз</span></a></li>
+            <li has-children-parent>
+               <h6 class="has-children"><span>Защита рук</span></h6>
                <ul class="menu-level-2">
                   <li><a href="#" class="linksHover">Перчатки комбинированные летние TECRON™ 201788</a></li>
                   <li><a href="#" class="linksHover">Нитриловые перчатки-краги TECRON™ Nitril</a></li>
@@ -113,15 +114,15 @@
                   <li><a href="#" class="linksHover">Кожаные перчатки TECRON™ 3341</a></li>
                </ul>
             </li>
+            <li has-children-parent><a href="#"><span>Защита слуха</span></a></li>
+            <li has-children-parent><a href="#"><span>Ледоступы</span></a></li>
          </ul>
       </div>
 
-      <div class="separate-line"></div>
-
       <div class="mobile-item">
-         <h3 class="mobile-title">Контакты</h3>
+         <!-- <h3 class="mobile-title light">Контакты</h3> -->
 
-         <div class="contact-links mobile">
+         <div menu-2 class="contact-links mobile light">
             <a href="tel: +79685260007" class="linksHover">
    <!-- <svg width="19" height="19"><use xlink:href="../img/optimized/svg-sprite.svg#phone"></use></svg> -->
    <i class="fal fa-phone-alt"></i>
@@ -134,7 +135,7 @@
 </a>
          </div>
 
-         <div class="socials socials-mobile"><!-- .socials (wrapper element) -->
+         <div menu-2 class="socials socials-mobile light"><!-- .socials (wrapper element) -->
 <a target="_blank" href="https://t.me/tecron" class="telegram"><i class="fab fa-telegram-plane"></i></a>
 <a target="_blank" href="https://wa.me/+8618098948684" class=" whatsapp"><i class="fab fa-whatsapp"></i></a>
 <a target="_blank" href="#"><i class="fab fa-viber"></i></a>
@@ -145,7 +146,7 @@
    </div>
 </div>
 
-<div overlay-1 class="overlay"></div>
+<div overlay-2 class="overlay"></div>
 
    <main>
       
@@ -165,7 +166,7 @@
    <div class="ui-container">
       <ul>
          <li class="accordion-item">
-   <div class="accordion-head animate" data-decArrowActive>
+   <div has-children-parent class="accordion-head animate">
       <h4 class="head-title">Комбинезоны защитные одноразовые</h4>
       <span class="show-all has-children">Смотерть все</span>
    </div>
@@ -287,7 +288,7 @@
    </div>
 </li>
          <li class="accordion-item">
-   <div class="accordion-head animate" data-decArrowActive>
+   <div has-children-parent class="accordion-head animate">
       <h4 class="head-title">Комбинезоны защитные одноразовые</h4>
       <span class="show-all has-children">Смотерть все</span>
    </div>
@@ -507,6 +508,6 @@
    </div>
 </footer>
    
-   <script src="js/bundle.min.js?_v=20221230083248"></script>
+   <script src="js/bundle.min.js?_v=20221230134301"></script>
 </body>
 </html>

@@ -15,8 +15,8 @@
       <div class="mobile-item">
          <h3 class="mobile-title">Каталог</h3>
 
-         <ul class="mobile-catalog">
-            <li data-decArrowActive>
+         <ul dark class="mobile-catalog">
+            <li has-children-parent>
                <h6 class="has-children"><span>Комбинезоны защитные</span></h6>
                <ul class="menu-level-2">
                   <li><a href="#" class="linksHover">Комбинезон защитный TECRON PRO</a></li>
@@ -25,9 +25,10 @@
                   <li><a href="#" class="linksHover">Комбинезон защитный TECRON SMS Comfort</a></li>
                </ul>
             </li>
-            <li data-decArrowActive><a href="#"><span>Очки защитные</span></a></li>
-            <li data-decArrowActive>
-               <h6 class="has-children"><span>Перчатки рабочие</span></h6>
+            <li has-children-parent><a href="#"><span>Защита глаз</span></a></li>
+            <li has-children-parent><a href="#"><span>Защита слуха</span></a></li>
+            <li has-children-parent>
+               <h6 class="has-children"><span>Защита рук</span></h6>
                <ul class="menu-level-2">
                   <li><a href="#" class="linksHover">Перчатки комбинированные летние TECRON™ 201788</a></li>
                   <li><a href="#" class="linksHover">Нитриловые перчатки-краги TECRON™ Nitril</a></li>
@@ -38,6 +39,7 @@
                   <li><a href="#" class="linksHover">Кожаные перчатки TECRON™ 3341</a></li>
                </ul>
             </li>
+            <li has-children-parent><a href="#"><span>Ледоступы</span></a></li>
          </ul>
       </div>
 
@@ -46,11 +48,11 @@
       <div class="mobile-item">
          <h3 class="mobile-title">Контакты</h3>
 
-         <div class="contact-links mobile">
+         <div menu-1 class="contact-links mobile">
             @@include('../../../ui-components/contact-links/contact-links.html')
          </div>
 
-         <div class="socials socials-mobile">@@include('../../../ui-components/socials/socials.html')</div>
+         <div menu-1 class="socials socials-mobile">@@include('../../../ui-components/socials/socials.html')</div>
       </div>
    </div>
 </div>

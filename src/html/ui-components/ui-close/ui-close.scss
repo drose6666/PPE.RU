@@ -5,10 +5,10 @@
    position: absolute;
    top: 0;
    left: 0;
-
    svg {
-      width: 20px;
-      height: 20px; 
+      width: inherit;
+      height: inherit; 
+      stroke-width: 1.5;
       transition: all 0.1s ease-out;
    }
    &:active {

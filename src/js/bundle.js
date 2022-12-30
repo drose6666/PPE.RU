@@ -47,7 +47,7 @@ function openSearchForm(input, mobMenu) {
       mobMenu.open()
 
       setTimeout(() => {
-         input.focus()
+         input?.focus()
       }, 1000)
    })
 }
