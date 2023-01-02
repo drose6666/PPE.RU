@@ -13,6 +13,7 @@
 
 
 .main-screen {
+   padding-bottom: 5px;
    position: relative;
    .ui-container {
       @include container(
