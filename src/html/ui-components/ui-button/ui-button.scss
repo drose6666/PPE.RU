@@ -127,6 +127,11 @@
       z-index: 0;
       animation: ripple 1.3s ease-out;
    }
+   &[ripple-colorful] {
+      span.ripple {
+         background-color: rgba(172, 20, 16, 0.2);
+      }
+   }
 }
 
 @keyframes ripple {

@@ -236,6 +236,7 @@
       $paddingX: calc((100vw - 360px)/(768 - 360) * (50 - 25) + 25px);
       $paddingY: calc((100vw - 360px)/(768 - 360) * (17 - 8) + 8px);
 
+      overflow: hidden;
       &-title {
          font-size: calc((100vw - 360px)/(768 - 360) * (110 - 65) + 65px);
          .part-with-logo {

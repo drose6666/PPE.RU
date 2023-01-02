@@ -15,15 +15,24 @@
 }
 
 
-
 .ui-subtitle {
    margin-bottom: 23px;
    opacity: 0.7;
    @include subtitle;
+   &[light] {
+      opacity: 0.9;
+      color: var(--lightness);
+   }
    &.animate {
       @include animateScrollFadeIn($toLeft: true, $delay: 0.2s);
    }
+
+   @media all and (max-width: 570px) {
+      font-size: 20px;
+   }
 }
+
+
 
 .ui-subtitle.main {
    margin-bottom: 20px;

@@ -96,7 +96,20 @@
       $letterSpacing: -0.03em,
       $textAlign: center,
       $textTransform: uppercase
-   )
+   );
+   &[withStrong] {
+      font-weight: 300;
+      line-height: 115%;
+      color: var(--lightness);
+      strong {
+         font-weight: 700;
+      }
+   }
+
+   @media all and (max-width: 520px) {
+      font-size: calc((100vw - 280px)/(520 - 280) * (50 - 26) + 26px);
+      line-height: 120%;
+   }
 }
 
 .features-product-title {
