@@ -45,3 +45,20 @@
       }
    }
 }
+
+.popup .ui-close {
+   top: -30px;
+   right: 0;
+   left: auto;
+
+   svg {
+      stroke: var(--lightness);
+   }
+   &:hover {
+      svg { stroke: var(--decorationBright); }
+   }
+
+   &[video] {
+      position: relative;
+   }
+}

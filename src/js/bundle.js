@@ -3,11 +3,13 @@
  */
 import $ from "jquery"
 import openMobileMenu from "./modules/openMobileMenu.js";
-import { AccordionAndTabs } from "./modules/accordionAndTabs.js"
-import './modules/scrollAnimation.js'
-import './modules/rippleAnimation.js'
+import openPopup from "./modules/openPopup.js";
+import { AccordionAndTabs } from "./modules/accordionAndTabs.js";
+import './modules/scrollAnimation.js';
+import './modules/rippleAnimation.js';
 
 import Swiper from 'swiper/bundle';
+
 
 // * Preloader
 const preloader = document.querySelector('.preloader')
@@ -60,6 +62,13 @@ function clearSearchInputValue(input, mobMenu) {
       input.value = ''
    })
 }
+
+
+/**
+ * TODO: Opening popup video
+ */
+
+const popupVideo = new openPopup('.popup[video]', '.btn-play', '.popup[video] .ui-close', '.popup-overlay')
 
 
 

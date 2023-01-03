@@ -16,6 +16,7 @@
       max-width: 33.3333%;
       flex: 0 0 33.3333%;
       &[right], &[left] {
+         margin-top: 30px;
          position: relative;
          z-index: 1;
       }
@@ -88,7 +89,7 @@
       }
 
       &:not(:last-child) {
-         margin-bottom: 120px;
+         margin-bottom: 150px;
       }
       &:hover {
          .icon {
@@ -131,6 +132,7 @@
       }
       .features-product-col { max-width: 100%; flex: 0 0 100%; }
       .features-product-col[right], .features-product-col[left] {
+         margin-top: 0;
          display: flex;
          align-items: flex-start;
          justify-content: space-between;

@@ -11,8 +11,8 @@
    <meta property="og:image" content="http://bkb-company.ru/img/about/about1.jpg">
    <meta property="og:site_name" content="Название">
    
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css?_v=20230102222445" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <link rel="stylesheet" href="css/style.min.css?_v=20230102222445">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css?_v=20230103110909" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="css/style.min.css?_v=20230103110909">
    <title>TECRON™ PRO</title>
 </head>
 
@@ -66,7 +66,7 @@
       <a href="/" class="logo menu-logo">
          <img src="../img/optimized/logos/pperu_light.svg" alt="PPE.RU Logo">
       </a>
-      <button class="ui-close">
+      <button title="Закрыть (Esc)" class="ui-close">
    <svg><use xlink:href="../img/optimized/svg-sprite.svg#close"></use></svg>
 </button>
    </div>
@@ -314,8 +314,23 @@
       <p class="copyright">Copyright © PPE.RU | Все права защищены.</p>
    </div>
 </footer>
+   <div video class="popup">
+   
+   <div class="popup-content">
+      <button title="Закрыть (Esc)" class="ui-close">
+   <svg><use xlink:href="../img/optimized/svg-sprite.svg#close"></use></svg>
+</button>
+      <div class="video-wrapper">
+         <iframe loading="lazy" id="video-consult" src="https://www.youtube.com/embed/PkDgq0mG8mg?rel=0&enablejsapi=1" title="YouTube video player"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+      </div>
+   </div>
+   
+   <div class="popup-overlay"></div>
+</div>
 
-   <script src="js/bundle.min.js?_v=20230102222445"></script>
+   <script src="js/bundle.min.js?_v=20230103110909"></script>
 </body>
 
 </html>
