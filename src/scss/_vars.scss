@@ -1,7 +1,7 @@
 // * Colors
 
 :root[color-theme="main"] {
-   --bgMobileMenuHead: #F4F6F8;
+   --decorationBg: #F4F6F8;
    --border: #DAE0E3;
    --borderLight: #f1f1f1;
    --borderLightness: rgba(255, 255, 255, 0.1);
@@ -35,7 +35,7 @@
 }
 
 :root[color-theme="tecron"] {
-   --bgMobileMenuHead: #F4F6F8;
+   --decorationBg: #F4F6F8;
    --border: #DAE0E3;
    --borderLight: #f1f1f1;
    --borderLightness: rgba(255, 255, 255, 0.1);

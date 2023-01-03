@@ -9,7 +9,8 @@
    $duration: 0.2s,
    $colorHover: var(--lightness),
    $lightMode: false,
-   $darkMode: false
+   $darkMode: false,
+   $colorMode: false,
 ) {
    @if $centerY {
       top: 50%;
@@ -37,21 +38,6 @@
       height: 1px;
       transition: all $duration ease-out;
    }
-
-   @if $darkMode {
-      $lightMode: false;
-      &:before, &:after {
-         background: var(--darkness);
-      }
-   }
-
-   @if $lightMode {
-      $darkMode: false;
-      &:before, &:after {
-         background: var(--lightness);
-      }
-   }
-
    &:before {
       left: 0;
       transform: rotate(45deg);
@@ -61,83 +47,125 @@
       right: 0;
       transform: rotate(-45deg);
    }
-}
 
-@mixin decArrowActive (
-   $darkMode: true,
-   $lightMode: false
-) {
    @if $darkMode {
-      $lightMode: false;
-      &:before {
-         background: var(--lightness);
-         transform: rotate(-45deg);
-      }
-      &:after {
-         background: var(--lightness);
-         transform: rotate(45deg);
+      &:before, &:after {
+         background: var(--darkness);
       }
    }
 
    @if $lightMode {
-      $darkMode: false;
-      &:before {
-         background: var(--decoration);
-         transform: rotate(-45deg);
+      &:before, &:after {
+         background: var(--lightness);
       }
-      &:after {
+   }
+
+   @if $colorMode {
+      &:before, &:after {
          background: var(--decoration);
-         transform: rotate(45deg);
       }
    }
 }
 
-%decArrowActive {
+
+
+
+@mixin decArrowActive (
+   $darkMode: false,
+   $lightMode: false,
+   $colorMode: false
+) {
    &:before {
-      background: var(--lightness);
       transform: rotate(-45deg);
    }
-
    &:after {
-      background: var(--lightness);
       transform: rotate(45deg);
    }
+
+   @if $darkMode {
+      &:before, &:after { background: var(--darkness); }
+      
+   }
+   @if $lightMode {
+      &:before, &:after { background: var(--lightness); }
+   }
+   @if $colorMode {
+      &:before, &:after { background: var(--decoration); }
+   }
 }
+
 
 .has-children {
    position: relative;
-   .decArrow {
-      @include decArrow;
-   }
 }
 
 .show-all .decArrow {
    @include decArrow($right: 0, $duration: 0.1s, $darkMode: true);
 }
 
-.mobile-catalog .decArrow {
-   @include decArrow($right: 25px, $lightMode: true);
+.specific-list h5 .decArrow {
+   @include decArrow($right: 20px, $duration: 0.1s, $darkMode: true);
 }
 
-.mobile-catalog[dark] .decArrow {
+.mobile-catalog .decArrow {
    @include decArrow($right: 25px, $darkMode: true);
 }
 
-
-[has-children-parent].active .has-children .decArrow,
-.has-children.active .decArrow { 
-   @include decArrowActive;
+.mobile-menu[menu-2] .decArrow {
+   @include decArrow($right: 25px, $lightMode: true);
 }
 
-[has-children-parent]:hover {
-   .decArrow {
-      &:before, &:after { background: var(--lightness); }
+
+[has-children-parent] {
+   &[lightActive] {
+      &.active {
+         .decArrow { @include decArrowActive($lightMode: true) }
+      }
+      &:hover {
+         .decArrow { &:before, &:after { background: var(--lightness); } }
+      }
+   }
+   &[darkActive] {
+      &.active {
+         .decArrow { @include decArrowActive($darkMode: true) }
+      }
+      &:hover {
+         .decArrow { &:before, &:after { background: var(--darkness); } }
+      }
+   }
+   &[colorActive] {
+      &.active {
+         .decArrow { @include decArrowActive($colorMode: true) }
+      }
+      &:hover {
+         .decArrow { &:before, &:after { background: var(--decoration); } }
+      }
    }
 }
 
-.mobile-catalog li[has-children-parent]:hover,
-.mobile-catalog li[has-children-parent].active {
-   .decArrow {
-      &:before, &:after { background: var(--decoration); }
+.has-children {
+   &[lightActive] {
+      &.active {
+         .decArrow { @include decArrowActive($lightMode: true) }
+      }
+      &:hover {
+         .decArrow { &:before, &:after { background: var(--lightness); } }
+      }
+   }
+   &[darkActive] {
+      &.active {
+         .decArrow { @include decArrowActive($darkMode: true) }
+      }
+      &:hover {
+         .decArrow { &:before, &:after { background: var(--darkness); } }
+      }
+   }
+   &[colorActive] {
+      &.active {
+         .decArrow { @include decArrowActive($colorMode: true) }
+      }
+      &:hover {
+         .decArrow { &:before, &:after { background: var(--decoration); } }
+      }
    }
 }

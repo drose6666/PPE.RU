@@ -1612,7 +1612,7 @@ html {
 }
 
 :root[color-theme=main] {
-  --bgMobileMenuHead: #F4F6F8;
+  --decorationBg: #F4F6F8;
   --border: #DAE0E3;
   --borderLight: #f1f1f1;
   --borderLightness: rgba(255, 255, 255, 0.1);
@@ -1642,7 +1642,7 @@ html {
 }
 
 :root[color-theme=tecron] {
-  --bgMobileMenuHead: #F4F6F8;
+  --decorationBg: #F4F6F8;
   --border: #DAE0E3;
   --borderLight: #f1f1f1;
   --borderLightness: rgba(255, 255, 255, 0.1);
@@ -3794,47 +3794,6 @@ button.swiper-pagination-bullet {
   position: relative;
 }
 
-.has-children .decArrow {
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-       -o-transform: translateY(-50%);
-          transform: translateY(-50%);
-  right: 15px;
-  left: auto;
-  position: absolute;
-  width: 13px;
-  right: 15px;
-}
-
-.has-children .decArrow:before,
-.has-children .decArrow:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 8px;
-  height: 1px;
-  -webkit-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-}
-
-.has-children .decArrow:before {
-  left: 0;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-       -o-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.has-children .decArrow:after {
-  right: 0;
-  -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-       -o-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-
 .show-all .decArrow {
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -3860,11 +3819,6 @@ button.swiper-pagination-bullet {
   transition: all 0.1s ease-out;
 }
 
-.show-all .decArrow:before,
-.show-all .decArrow:after {
-  background: var(--darkness);
-}
-
 .show-all .decArrow:before {
   left: 0;
   -webkit-transform: rotate(45deg);
@@ -3879,6 +3833,57 @@ button.swiper-pagination-bullet {
       -ms-transform: rotate(-45deg);
        -o-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+
+.show-all .decArrow:before,
+.show-all .decArrow:after {
+  background: var(--darkness);
+}
+
+.specific-list h5 .decArrow {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 20px;
+  left: auto;
+  position: absolute;
+  width: 13px;
+  right: 20px;
+}
+
+.specific-list h5 .decArrow:before,
+.specific-list h5 .decArrow:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 8px;
+  height: 1px;
+  -webkit-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+.specific-list h5 .decArrow:before {
+  left: 0;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.specific-list h5 .decArrow:after {
+  right: 0;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+       -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.specific-list h5 .decArrow:before,
+.specific-list h5 .decArrow:after {
+  background: var(--darkness);
 }
 
 .mobile-catalog .decArrow {
@@ -3906,11 +3911,6 @@ button.swiper-pagination-bullet {
   transition: all 0.2s ease-out;
 }
 
-.mobile-catalog .decArrow:before,
-.mobile-catalog .decArrow:after {
-  background: var(--lightness);
-}
-
 .mobile-catalog .decArrow:before {
   left: 0;
   -webkit-transform: rotate(45deg);
@@ -3927,7 +3927,12 @@ button.swiper-pagination-bullet {
           transform: rotate(-45deg);
 }
 
-.mobile-catalog[dark] .decArrow {
+.mobile-catalog .decArrow:before,
+.mobile-catalog .decArrow:after {
+  background: var(--darkness);
+}
+
+.mobile-menu[menu-2] .decArrow {
   top: 50%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
@@ -3940,8 +3945,8 @@ button.swiper-pagination-bullet {
   right: 25px;
 }
 
-.mobile-catalog[dark] .decArrow:before,
-.mobile-catalog[dark] .decArrow:after {
+.mobile-menu[menu-2] .decArrow:before,
+.mobile-menu[menu-2] .decArrow:after {
   content: "";
   position: absolute;
   top: 0;
@@ -3952,12 +3957,7 @@ button.swiper-pagination-bullet {
   transition: all 0.2s ease-out;
 }
 
-.mobile-catalog[dark] .decArrow:before,
-.mobile-catalog[dark] .decArrow:after {
-  background: var(--darkness);
-}
-
-.mobile-catalog[dark] .decArrow:before {
+.mobile-menu[menu-2] .decArrow:before {
   left: 0;
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
@@ -3965,7 +3965,7 @@ button.swiper-pagination-bullet {
           transform: rotate(45deg);
 }
 
-.mobile-catalog[dark] .decArrow:after {
+.mobile-menu[menu-2] .decArrow:after {
   right: 0;
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
@@ -3973,33 +3973,152 @@ button.swiper-pagination-bullet {
           transform: rotate(-45deg);
 }
 
-[has-children-parent].active .has-children .decArrow:before,
-.has-children.active .decArrow:before {
+.mobile-menu[menu-2] .decArrow:before,
+.mobile-menu[menu-2] .decArrow:after {
   background: var(--lightness);
+}
+
+[has-children-parent][lightActive].active .decArrow:before {
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
        -o-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 
-[has-children-parent].active .has-children .decArrow:after,
-.has-children.active .decArrow:after {
-  background: var(--lightness);
+[has-children-parent][lightActive].active .decArrow:after {
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
        -o-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-[has-children-parent]:hover .decArrow:before,
-[has-children-parent]:hover .decArrow:after {
+[has-children-parent][lightActive].active .decArrow:before,
+[has-children-parent][lightActive].active .decArrow:after {
   background: var(--lightness);
 }
 
-.mobile-catalog li[has-children-parent]:hover .decArrow:before,
-.mobile-catalog li[has-children-parent]:hover .decArrow:after,
-.mobile-catalog li[has-children-parent].active .decArrow:before,
-.mobile-catalog li[has-children-parent].active .decArrow:after {
+[has-children-parent][lightActive]:hover .decArrow:before,
+[has-children-parent][lightActive]:hover .decArrow:after {
+  background: var(--lightness);
+}
+
+[has-children-parent][darkActive].active .decArrow:before {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+       -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+[has-children-parent][darkActive].active .decArrow:after {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+[has-children-parent][darkActive].active .decArrow:before,
+[has-children-parent][darkActive].active .decArrow:after {
+  background: var(--darkness);
+}
+
+[has-children-parent][darkActive]:hover .decArrow:before,
+[has-children-parent][darkActive]:hover .decArrow:after {
+  background: var(--darkness);
+}
+
+[has-children-parent][colorActive].active .decArrow:before {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+       -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+[has-children-parent][colorActive].active .decArrow:after {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+[has-children-parent][colorActive].active .decArrow:before,
+[has-children-parent][colorActive].active .decArrow:after {
+  background: var(--decoration);
+}
+
+[has-children-parent][colorActive]:hover .decArrow:before,
+[has-children-parent][colorActive]:hover .decArrow:after {
+  background: var(--decoration);
+}
+
+.has-children[lightActive].active .decArrow:before {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+       -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.has-children[lightActive].active .decArrow:after {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.has-children[lightActive].active .decArrow:before,
+.has-children[lightActive].active .decArrow:after {
+  background: var(--lightness);
+}
+
+.has-children[lightActive]:hover .decArrow:before,
+.has-children[lightActive]:hover .decArrow:after {
+  background: var(--lightness);
+}
+
+.has-children[darkActive].active .decArrow:before {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+       -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.has-children[darkActive].active .decArrow:after {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.has-children[darkActive].active .decArrow:before,
+.has-children[darkActive].active .decArrow:after {
+  background: var(--darkness);
+}
+
+.has-children[darkActive]:hover .decArrow:before,
+.has-children[darkActive]:hover .decArrow:after {
+  background: var(--darkness);
+}
+
+.has-children[colorActive].active .decArrow:before {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+       -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.has-children[colorActive].active .decArrow:after {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.has-children[colorActive].active .decArrow:before,
+.has-children[colorActive].active .decArrow:after {
+  background: var(--decoration);
+}
+
+.has-children[colorActive]:hover .decArrow:before,
+.has-children[colorActive]:hover .decArrow:after {
   background: var(--decoration);
 }
 
@@ -6745,6 +6864,167 @@ footer .copyright {
     -webkit-box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.3), 0 0 0 20px rgba(255, 255, 255, 0.3), 0 0 0 30px rgba(255, 255, 255, 0);
             box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.3), 0 0 0 20px rgba(255, 255, 255, 0.3), 0 0 0 30px rgba(255, 255, 255, 0);
   }
+}
+
+.section-specifications {
+  padding: 100px 0;
+}
+
+.section-specifications .ui-container {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1440px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+  -webkit-box-align: start;
+  -webkit-align-items: start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  gap: 40px;
+}
+
+.section-specifications .img {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 80px;
+}
+
+.section-specifications .img img {
+  max-width: 100%;
+  height: auto;
+}
+
+.specific-list {
+  margin: 45px 0 63px 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+  gap: 10px;
+}
+
+.specific-list li {
+  width: 100%;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.specific-list li h5 {
+  padding: 5px 22px;
+  min-height: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 100%;
+  color: var(--text);
+  background: var(--decorationLight);
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.specific-list li h5:hover,
+.specific-list li h5.active {
+  color: var(--lightness);
+  background: var(--decoration);
+}
+
+.specific-list li:hover h5,
+.specific-list li.active h5 {
+  color: var(--lightness);
+  background: var(--decoration);
+}
+
+.specific-list .content-list {
+  padding: 30px 20px 13px 20px;
+  background: var(--decorationBg);
+}
+
+.specific-list .content-list li:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.specific-list .content-list li.hasImage {
+  margin: 15px 0;
+}
+
+.specific-list .content-list li.hasImage img {
+  max-width: 100%;
+  height: auto;
+}
+
+.specific-list .content-list li strong {
+  font-weight: 600;
+}
+
+.specific-list .content-list li.strong {
+  margin-bottom: 5px;
+}
+
+.specific-list .content-list li[point] li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.specific-list .content-list li[point] li:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.specific-list .content-list li[point] li:before {
+  content: "";
+  margin-right: 10px;
+  display: block;
+  width: 4px;
+  height: 4px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  position: relative;
+  top: 8px;
+  background-color: var(--decorationBg);
+}
+
+.specific-list .content-list li .sizes-block {
+  margin-top: 20px;
+}
+
+.specific-list .content-list li .sizes-block .img {
+  max-width: 295px;
+}
+
+.specific-list .content-list li .sizes-block .img img {
+  max-width: 100%;
+  height: auto;
+  mix-blend-mode: multiply;
 }
 
 .popup {

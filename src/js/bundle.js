@@ -192,6 +192,25 @@ $('.accordion-collapse .btn-hide').on('click', function() {
 
 
 
+/**
+ * TODO: Accordion product specifications
+ */
+$('.specific-list > li > h5').next().hide()
+$('.specific-list > li > h5').on('click', function () {
+   $(this).toggleClass('active').next().slideToggle()
+})
+
+onClickHideArrow('.product-descr .content')
+
+function onClickHideArrow(content) {
+   $('.hide-arrow').on('click', function () {
+      $(this).parents(content).slideUp()
+      $(this).parents(content).prev().removeClass('active')
+   })
+}
+
+
+
 
 
 
