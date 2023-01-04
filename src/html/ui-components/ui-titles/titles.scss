@@ -98,16 +98,25 @@
       $textTransform: uppercase
    );
    &[withStrong] {
-      font-weight: 300;
+      font-weight: 400;
       line-height: 115%;
-      color: var(--lightness);
       strong {
          font-weight: 700;
+         display: block;
       }
+      @media all and (max-width: 580px) {
+         strong { display: inline-block; }
+      }
+   }
+   &[light] {
+      color: var(--lightness);
+   }
+   &[left] {
+      text-align: left;
    }
 
    @media all and (max-width: 520px) {
-      font-size: calc((100vw - 280px)/(520 - 280) * (50 - 26) + 26px);
+      font-size: calc((100vw - 280px)/(520 - 280) * (50 - 25) + 25px);
       line-height: 120%;
    }
 }

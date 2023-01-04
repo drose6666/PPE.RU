@@ -1,3 +1,10 @@
+/* 
+  ! INSTRUCTION
+  * каждой стрелке задается цветовая тема (lightMode, darkMode, colorMode) отдельно через миксин decArrow
+  * цветовая тема при наведении задается через атрибуты (lightActive, darkActive, colorActive) элементам [has-children-parent] или .has-children
+*/
+
+
 @mixin decArrow (
    $centerY: true,
    $isRight: true,
