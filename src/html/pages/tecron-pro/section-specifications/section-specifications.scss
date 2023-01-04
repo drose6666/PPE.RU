@@ -71,7 +71,7 @@
          line-height: 100%;
          color: var(--text);
          background: var(--decorationLight);
-         transition: all 0.2s ease-out;
+         transition: all 0.1s ease-out;
          &.active {
             color: var(--lightness);
             background: var(--decoration);

@@ -54,6 +54,7 @@
 @import '../html/ui-components/popups/popup-video/popup-video';
 @import '../html/pages/tecron-pro/section-specifications/section-specifications';
 @import '../html/pages/tecron-pro/section-action/section-action';
+@import '../html/pages/tecron-pro/section-reviews/section-reviews';
 
 
 
@@ -127,8 +128,8 @@ input, input:focus, input:hover, input:active {
       }
       svg {
          opacity: 0.7;
-         width: 13px;
-         height: 26px;
+         width: 16px;
+         height: 29px;
          stroke: var(--sliderNavElementsLight);
          transition: all 0.1s ease-out;
       }

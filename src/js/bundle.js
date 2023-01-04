@@ -99,7 +99,7 @@ function customSliderArrow(selector, direction) {
 /**
  * TODO: Product slider (home screen accordion)
  */
-document.querySelectorAll('.swiper-container').forEach((item, index) => {
+document.querySelectorAll('.section-catalog .swiper-container').forEach((item, index) => {
    item.querySelector('.swiper-pagination').classList.add('pagID' + index)
 })
 
@@ -210,6 +210,43 @@ function onClickHideArrow(content) {
 }
 
 
+
+/**
+ * TODO: Swiper reviews
+ */
+
+const swiperReviews = new Swiper('#swiper-reviews', {
+   slidesPerView: 3,
+   slidesPerGroup: 1,
+   loop: true,
+   spaceBetween: 40,
+   centeredSlides: true,
+   speed: 800,
+   autoplay: {
+      delay: 3000,
+   },
+   navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+   },
+   breakpoints: {
+      120: {
+         slidesPerView: 1,
+         slidesPerGroup: 1,
+         spaceBetween: 30,
+      },
+      700: {
+         slidesPerView: 2,
+         spaceBetween: 30,
+         slidesPerGroup: 1
+      },
+      1150: {
+         slidesPerView: 3,
+         spaceBetween: 40,
+         slidesPerGroup: 1
+      }
+   }
+})
 
 
 

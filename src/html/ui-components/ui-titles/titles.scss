@@ -48,6 +48,7 @@
 
 .section-title {
    @include title( $margin: 0 0 60px 0, $hasBorderAnimation: true, $padding: 0 0 1.5px 0);
+   overflow: hidden;
    &.animate {
       @include animateScrollFadeIn($toTop: true, $delay: 0.2s)
    }
