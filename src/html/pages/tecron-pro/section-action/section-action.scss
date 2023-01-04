@@ -1,0 +1,35 @@
+.section-action {
+   padding: 75px 0;
+   background: url('../../../../img/optimized/bg/action_bg.webp') no-repeat center / cover;
+   .ui-container {
+      @include container($flex: true)
+   }
+
+   .btn-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      &.animate {
+         @include animateScrollFadeIn($toTop: true, $delay: 0.1s)
+      }
+   }
+
+   .section-title-product {
+      margin-bottom: 0;
+      max-width: 650px;
+   }
+
+   @media all and (max-width: 1240px) {
+      .ui-container {
+         flex-direction: column;
+      }
+      .ui-subtitle { text-align: center; }
+      .section-title-product { text-align: center; }
+      .btn-wrap { margin-top: 20px; }
+   }
+
+   @media all and (max-width: 550px) {
+      .btn-wrap { flex-direction: column; }
+   }
+}

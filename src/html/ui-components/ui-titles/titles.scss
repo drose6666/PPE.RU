@@ -102,11 +102,15 @@
       line-height: 115%;
       strong {
          font-weight: 700;
-         display: block;
+         
       }
-      @media all and (max-width: 580px) {
-         strong { display: inline-block; }
+      &[block] {
+         strong { display: block; }
+         @media all and (max-width: 580px) {
+            strong { display: inline-block; }
+         }
       }
+      
    }
    &[light] {
       color: var(--lightness);
