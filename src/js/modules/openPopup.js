@@ -1,10 +1,12 @@
 export default class openPopup {
-   constructor(popup, openBtn, closeBtn, overlay, target = '') {
+   constructor(popup, openBtn, closeBtn, overlay, hasFrame, whereInsert, frame) {
       this.$popup = document.querySelector(popup)
       this.$openBtn = document.querySelector(openBtn)
       this.$closeBtn = document.querySelector(closeBtn)
       this.$overlay = document.querySelector(overlay)
-      this.target = target
+      this.$whereInsert = document.querySelector(whereInsert)
+      this.hasFrame = hasFrame
+      this.frame = frame
 
       this.#setup()
    }
@@ -21,10 +23,28 @@ export default class openPopup {
    open = () => {
       this.$popup.classList.add('active')
       document.body.classList.add('no-scroll')
+      console.log(this.hasFrame);
+      
+      if (this.hasFrame) {
+         this.insertIframe()
+      }
    }
 
    close = () => {
       this.$popup.classList.remove('active')
       document.body.classList.remove('no-scroll')
+
+      if (this.hasFrame) this.deleteFrame()
+      
+   }
+
+   insertIframe = () => {
+      console.log('insertIframe');
+      this.$whereInsert.insertAdjacentHTML('afterbegin', this.frame)
+   }
+
+   deleteFrame = () => {
+      if (this.$whereInsert.querySelector('iframe'))
+         this.$whereInsert.querySelector('iframe').remove()
    }
 }
