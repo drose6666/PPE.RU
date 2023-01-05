@@ -2,7 +2,7 @@ export default class openMobileMenu {
    constructor (selectorMenu, selectorClose, burger, overlay) {
       this.$selectorMenu = document.querySelector(selectorMenu)
       this.$selectorClose = document.querySelector(selectorClose)
-      this.$burger = document.querySelector(burger)
+      this.$burger = document.querySelectorAll(burger)
       this.$overlay = document.querySelector(overlay)
       this.$mobContent = document.querySelector('.m-body')
 
@@ -10,7 +10,9 @@ export default class openMobileMenu {
    }
 
    #setup = () => {
-      this.$burger?.addEventListener('click', this.open)
+      for (let i = 0; i < this.$burger.length; i++) {
+         this.$burger[i].addEventListener('click', this.open)
+      }
       this.$overlay?.addEventListener('click', this.close)
       this.$selectorClose?.addEventListener('click', this.close)
       document.body?.addEventListener('keydown', (e) => {

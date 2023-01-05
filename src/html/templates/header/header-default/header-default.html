@@ -27,4 +27,35 @@
    </div>
    
 </header>
+
+
+<header class="header-default sticky">
+   <div class="h-top">
+      <div class="ui-container">
+         <div class="work">
+            <img src="../img/optimized/clock.svg" alt="Clock">
+            <p><strong>График работы:</strong> круглосуточно</p>
+         </div>
+
+         @@include('../../../ui-components/icons-nav/icons-nav.html')
+      </div>
+   </div>
+
+   <div class="h-bottom">
+      <div class="ui-container">
+         <a href="/" class="logo">
+            <img src="../img/optimized/logos/pperu-main-logo.svg" alt="PPE.RU Logo">
+            <h5 class="logo-title">Официальный представитель IntegraWay и TECRON в России</h5>
+         </a>
+         
+         <div class="contacts">
+            @@include('../../../ui-components/header-phone/header-phone.html')
+      
+            <div class="socials socials-header">@@include('../../../ui-components/socials/socials.html')</div>
+            @@include('../../mobile-menu/burger-1.html')
+         </div>
+      </div>
+   </div>
+   
+</header>
 @@include('../../mobile-menu/menu-2/menu-2.html')

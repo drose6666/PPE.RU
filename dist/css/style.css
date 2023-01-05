@@ -4805,6 +4805,34 @@ button.swiper-pagination-bullet {
   color: var(--decoration);
 }
 
+header.header-default.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-20px);
+      -ms-transform: translateY(-20px);
+       -o-transform: translateY(-20px);
+          transform: translateY(-20px);
+  z-index: 2;
+  -webkit-box-shadow: 0px 0px 60px rgba(46, 78, 96, 0.25);
+          box-shadow: 0px 0px 60px rgba(46, 78, 96, 0.25);
+}
+
+header.header-default.sticky.active {
+  -webkit-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
 header .h-top {
   padding: 10px 0;
   background: var(--lightness);
@@ -4927,6 +4955,8 @@ header .h-bottom .contacts {
       -ms-transform: translateY(-20px);
        -o-transform: translateY(-20px);
           transform: translateY(-20px);
+  -webkit-box-shadow: 0px 0px 60px rgba(46, 78, 96, 0.25);
+          box-shadow: 0px 0px 60px rgba(46, 78, 96, 0.25);
 }
 
 .header-1.sticky.active {

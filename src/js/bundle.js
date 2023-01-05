@@ -36,30 +36,33 @@ window.addEventListener('load', function() {
    const mobileMenu = new openMobileMenu('.mobile-menu', '.ui-close', '.burger-1', '.overlay')
    let input = document.querySelector('.search-form input')
    
-   clearSearchInputValue(input, mobileMenu)
+   // clearSearchInputValue(input, mobileMenu)
    openSearchForm(input, mobileMenu) 
 })
 
 // * Opening a search form
 function openSearchForm(input, mobMenu) {
-   let searchIconHeader = document.querySelector('header .openSearch')
-   searchIconHeader?.addEventListener('click', () => {
-      mobMenu.open()
+   let searchIconHeader = document.querySelectorAll('header .openSearch')
+   
+   for (let i = 0; i < searchIconHeader.length; i++) {
+      searchIconHeader[i].addEventListener('click', () => {
+         mobMenu.open()
 
-      setTimeout(() => {
-         input?.focus()
-      }, 1000)
-   })
+         setTimeout(() => {
+            input?.focus()
+         }, 1000)
+      })
+   }
 }
 
 // * Closing the search form and clear search value
-function clearSearchInputValue(input, mobMenu) {
-   let startSearch = document.querySelector('.search-form .form-item svg')
-   startSearch?.addEventListener('click', () => {
-      mobMenu.close()
-      input.value = ''
-   })
-}
+// function clearSearchInputValue(input, mobMenu) {
+//    let startSearch = document.querySelector('.search-form .form-item svg')
+//    startSearch?.addEventListener('click', () => {
+//       mobMenu.close()
+//       input.value = ''
+//    })
+// }
 
 
 /**
