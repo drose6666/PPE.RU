@@ -209,6 +209,7 @@ function onClickHideArrow(content) {
 
 
 
+
 /**
  * TODO: Swiper reviews
  */
@@ -248,5 +249,65 @@ const swiperReviews = new Swiper('#swiper-reviews', {
 })
 
 
+
+/**
+ * TODO: Scroll up arrow
+ */
+let scrollUpArrow = document.querySelector('.scrollUp-arrow')
+scrollUpArrow.addEventListener('click', () => {
+   window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+   });
+})
+
+
+
+
+/**
+ * TODO: The appearance of an arrow and a header when scrolling
+ */
+window.addEventListener('load', () => {
+   fadeInNavOnScroll('.sticky', 200)
+   
+   window.addEventListener('scroll', () => {
+      fadeInNavOnScroll('.sticky', 200)
+   })
+})
+
+function fadeInNavOnScroll(elements, distance) {
+   let items = document.querySelectorAll(elements)
+   for (let i = 0; i < items.length; i++) {
+      if (window.scrollY >= distance) 
+         items[i].classList.add('active')
+      
+      if (window.scrollY <= 150)
+         items[i].classList.remove('active')
+   }
+}
+
+
+/**
+ * TODO: Video
+ */
+
+
+// let wrap = document.getElementById('video-consult')
+// let btnPlay = document.querySelector('.btn-play')
+// let btnClose = document.querySelector('.popup .ui-close')
+
+// btnClose.addEventListener('click', () => {
+//    let frame = wrap.querySelector('iframe')
+//    if (frame)
+//       frame.remove()
+// })
+
+// btnPlay.addEventListener('click', () => {
+//    wrap.insertAdjacentHTML('afterbegin', `<iframe src="https://www.youtube.com/embed/PkDgq0mG8mg?rel=0&enablejsapi=1" title="YouTube video player"
+//          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+//          allowfullscreen></iframe>`)
+   
+// })
 
 

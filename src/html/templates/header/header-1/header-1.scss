@@ -3,6 +3,21 @@
    background: var(--darkness);
    position: relative;
    z-index: 2;
+   &.sticky {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-20px);
+      &.active {
+         transform: none;
+         opacity: 1;
+         visibility: visible;
+         transition: all 1s ease-in-out;
+      }
+   }
    .ui-container {
       @include container($flex: true, $gap: 0)
    }
