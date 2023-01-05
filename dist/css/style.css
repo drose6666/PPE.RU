@@ -7383,7 +7383,6 @@ footer .copyright {
 
 .section-reviews {
   padding-top: 120px;
-  padding-bottom: 80px;
 }
 
 .section-reviews .swiper-container {
@@ -7508,6 +7507,22 @@ footer .copyright {
   font-weight: 700;
   line-height: 15px;
   color: var(--decoration);
+}
+
+.section-contact[light] {
+  padding-top: 80px;
+  padding-bottom: 0;
+  background: var(--lightness);
+}
+
+.section-contact[light] #map {
+  width: 100%;
+  height: 600px;
+}
+
+.section-contact[light] #map iframe {
+  width: 100%;
+  height: 100%;
 }
 
 * {
@@ -12556,6 +12571,10 @@ input:active {
     height: calc((100vw - 280px) / 488 * 70 + 50px);
     font-size: -webkit-calc((100vw - 280px) / 488 * 6 + 16px);
     font-size: calc((100vw - 280px) / 488 * 6 + 16px);
+  }
+
+  .section-contact[light] #map {
+    height: 450px;
   }
 }
 

@@ -7,9 +7,7 @@ import openPopup from "./modules/openPopup.js";
 import { AccordionAndTabs } from "./modules/accordionAndTabs.js";
 import './modules/scrollAnimation.js';
 import './modules/rippleAnimation.js';
-
 import Swiper from 'swiper/bundle';
-
 
 // * Preloader
 const preloader = document.querySelector('.preloader')
@@ -224,6 +222,7 @@ const swiperReviews = new Swiper('#swiper-reviews', {
    speed: 800,
    autoplay: {
       delay: 3000,
+      disableOnInteraction: false,
    },
    navigation: {
       nextEl: ".swiper-button-next",
@@ -247,7 +246,6 @@ const swiperReviews = new Swiper('#swiper-reviews', {
       }
    }
 })
-
 
 
 
