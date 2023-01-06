@@ -102,7 +102,7 @@ function customSliderArrow(selector, direction) {
 
 
 /**
- * TODO: Product slider (home screen accordion)
+ * TODO: Products slider (home accordion)
  */
 document.querySelectorAll('.section-catalog .swiper-container').forEach((item, index) => {
    item.querySelector('.swiper-pagination').classList.add('pagID' + index)
@@ -157,12 +157,12 @@ document.querySelectorAll('.catalog-swiper').forEach((item, index) => {
  */
 window.addEventListener('load', () => {
 
-   new Swiper('.features-product-swiper', {
+   new Swiper('#swiper-features', {
       slidesPerView: 1,
       slidesPerGroup: 1,
       loop: true,
       spaceBetween: 0,
-      speed: 1000,
+      speed: 800,
       autoplay: {
          delay: 3000,
          disableOnInteraction: false,

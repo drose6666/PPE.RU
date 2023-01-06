@@ -9,19 +9,28 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: nowrap;
+      max-width: 1260px;
    }
 
    .features-product-col {
-      padding: 0;
+      display: flex;  
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 30%;
+      flex: 0 0 30%;
       width: 100%;
-      max-width: 33.3333%;
-      flex: 0 0 33.3333%;
-      &[right], &[left] {
-         margin-top: 30px;
+      gap: 100px;
+      
+      &[left], &[right] {
+         margin-top: -50px;
          position: relative;
+         max-width: 35%;
+         flex: 0 0 35%;
          z-index: 1;
       }
-      &[right] {
+
+      &[left] {
          .item {
             $j: 0.2s;
             @for $i from 1 through 2 {
@@ -35,7 +44,7 @@
          }
       }
 
-      &[left] {
+      &[right] {
          .item {
             $j: 0.2s;
             @for $i from 1 through 2 {
@@ -61,7 +70,7 @@
             font-weight: 400;
             line-height: 150%;
             color: var(--text);
-            max-width: 315px;
+            max-width: 400px; // 315
             &[right] {
                text-align: right;
             }
@@ -89,9 +98,6 @@
          }
       }
 
-      &:not(:last-child) {
-         margin-bottom: 150px;
-      }
       &:hover {
          .icon {
             background: var(--decoration);
@@ -100,8 +106,9 @@
       }
    }
 
-   .features-product-swiper {
+   #swiper-features {
       z-index: 0;
+      width: 100%;
       &.animate {
          @include animateScrollFadeIn($toTop: true, $delay: 0.05s)
       }
@@ -119,25 +126,45 @@
       }
    }
 
-   @media all and (max-width: 1440px) {
-      .features-product-row { justify-content: center; }
-      .features-product-col[right] .item { margin-right: -50px; }
-      .features-product-col[left] .item { margin-left: -50px; }
+   @media all and (max-width: 1200px) {
+      .features-product-row { max-width: 100%; }
+      .features-product-col { gap: 65px; }
+      .features-product-col[left], .features-product-col[right] { margin-top: 0; }
+      .item {
+         gap: 25px;
+         .info { margin-top: 25px; }
+         .icon {
+            width: 70px;
+            height: 70px;
+            flex: 0 0 70px;
+            svg {
+               width: 37px;
+               height: 24px;
+            }
+         }
+      }
    }
 
    @media all and (max-width: 1070px) {
       .features-product-row {
-         display: flex;
          flex-direction: column;
          align-items: center;
+         gap: 40px;
       }
-      .features-product-col { max-width: 100%; flex: 0 0 100%; }
-      .features-product-col[right], .features-product-col[left] {
-         margin-top: 0;
-         display: flex;
+
+      .features-product-col, .features-product-col[left], .features-product-col[right] {
+         max-width: 100%;
+         flex: 0 0 100%;
+         flex-direction: row;
          align-items: flex-start;
          justify-content: space-between;
          gap: 40px;
+      }
+
+      .features-product-col {
+         &[left] { order: 2; }
+         &[right] { order: 3; }
+         
          .item { 
             margin: 0; 
             display: flex;
@@ -150,7 +177,6 @@
                order: 2;
                .text {
                   text-align: center;
-                  max-width: 350px;
                }
             }
             .icon {
@@ -158,28 +184,36 @@
                order: 1;
             }
          }
+      
       }
-      .features-product-col[right] {
-         margin-bottom: 50px;
-         order: 2;
-      }
-      .features-product-col[left] {
-         order: 3;
+
+      #swiper-features .swiper-wrapper .swiper-slide img { width: 100%; max-width: 400px; }
+
+      .item {
+         gap: 30px;
+         .info { margin-top: 40px; }
+         .icon {
+            width: 89px;
+            height: 89px;
+            flex: 0 0 89px;
+            svg {
+               width: 43px;
+               height: 30px;
+            }
+         }
       }
    }
 
    @media all and (max-width: 700px) {
-      .features-product-col[right], .features-product-col[left] {
+      .features-product-col[left], .features-product-col[right] {
          flex-direction: column;
          align-items: center;
          gap: 50px;
          .item {
-            width: 100%;
             .info {
                .text { max-width: 500px; }
             }
          }
       }
-      .features-product-col[right] { margin-bottom: 50px; margin-top: 30px; }
    }
 }
