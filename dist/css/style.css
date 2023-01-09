@@ -6102,7 +6102,7 @@ footer .copyright {
   margin-top: 110px;
   position: -webkit-sticky;
   position: sticky;
-  top: 110px;
+  top: 140px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -6949,11 +6949,12 @@ footer .copyright {
 }
 
 .video-wrap .video-baner {
-  padding: 10px;
+  padding: 5px;
   -webkit-border-radius: 10px;
           border-radius: 10px;
   position: relative;
   top: 70px;
+  max-width: 1160px;
   display: inline-block;
   background: var(--lightness);
 }
@@ -7676,7 +7677,7 @@ footer .copyright {
 
 .section-contact[light] #map {
   width: 100%;
-  height: 600px;
+  height: 450px;
 }
 
 .section-contact[light] #map iframe {
@@ -12781,11 +12782,6 @@ input:active {
     padding: calc((100vw - 470px) / 298 * 70 + 210px) 0 100px 0;
   }
 
-  .video-wrap .video-baner {
-    padding: -webkit-calc((100vw - 280px) / 488 * 5 + 5px);
-    padding: calc((100vw - 280px) / 488 * 5 + 5px);
-  }
-
   .video-wrap .video-baner .btn-play {
     width: -webkit-calc((100vw - 280px) / 488 * 70 + 50px);
     width: calc((100vw - 280px) / 488 * 70 + 50px);
@@ -12796,7 +12792,7 @@ input:active {
   }
 
   .section-contact[light] #map {
-    height: 450px;
+    height: 350px;
   }
 }
 

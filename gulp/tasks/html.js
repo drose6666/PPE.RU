@@ -7,7 +7,7 @@ import webpHtmlNoSvg from "gulp-webp-html-nosvg";  // generates <picture> tag
 import versionNumber from "gulp-version-number";  // adds hash (current date and time) to files so they are not cached
 
 
-export const html = () => {
+export default function html () {
    return app.gulp.src(app.path.src.html)  // take files from the src path specified in path.js (all .html files from the src root) 
       .pipe(app.plugins.plumber(
          app.plugins.notify.onError({
@@ -16,8 +16,8 @@ export const html = () => {
          })
       ))
       .pipe(fileinclude()) // use fileInclude
-      .pipe(app.plugins.replace(/@img\//g, 'img/'))
-      .pipe(webpHtmlNoSvg())
+      // .pipe(app.plugins.replace(/@img\//g, 'img/'))
+      // .pipe(webpHtmlNoSvg())
       .pipe(versionNumber({
          'value': '%DT%',
          'append': {

@@ -50,10 +50,11 @@
       @include container($flex: true, $alignX: center)
    }
    .video-baner {
-      padding: 10px;
+      padding: 5px;
       border-radius: 10px;
       position: relative;
       top: 70px;
+      max-width: 1160px;
       display: inline-block;
       background: var(--lightness);
       img {
@@ -82,9 +83,8 @@
    @media all and (max-width: 768px) {
       $sizeBtn: calc((100vw - 280px)/(768 - 280) * (120 - 50) + 50px);
       $fontSize: calc((100vw - 280px)/(768 - 280) * (22 - 16) + 16px);
-      $padding: calc((100vw - 280px)/(768 - 280) * (10 - 5) + 5px);
+      // $padding: calc((100vw - 280px)/(768 - 280) * (10 - 5) + 5px);
 
-      .video-baner { padding: $padding; }
       .video-baner .btn-play { 
          width: $sizeBtn; 
          height: $sizeBtn; 

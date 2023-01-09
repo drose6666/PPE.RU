@@ -13,7 +13,7 @@ import { path } from "./gulp/config/path.js"; // Import paths
 import { copyLibs } from "./gulp/tasks/copyLibs.js";
 import { copyOther } from "./gulp/tasks/copyOther.js";
 import { cleanDist } from "./gulp/tasks/clean.js";
-import { html } from "./gulp/tasks/html.js";
+import  html  from "./gulp/tasks/html.js";
 import { server } from "./gulp/tasks/server.js";
 import { scss } from "./gulp/tasks/scss.js";
 import { js } from "./gulp/tasks/js.js";
