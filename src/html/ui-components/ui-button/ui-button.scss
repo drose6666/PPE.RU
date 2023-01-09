@@ -54,7 +54,6 @@
       color: $color;
       &:hover {
          color: $hoverColor;
-         background: $hoverBg;
          box-shadow: var(--buttonHoverShadow);
          svg {
             stroke: $hoverIconColor;
@@ -84,7 +83,27 @@
 
 // ! colorful button
 .ui-btn[colored]  {
-   @include button ( $coloredMode: true )
+   @include button ( $coloredMode: true );
+   &:before {
+      content: "";
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      top: 110%;
+      left: 50%;
+      background: var(--darkness);
+      transform: translateX(-50%);
+      border-radius: 50%;
+      z-index: 0;
+      transition: all 0.8s ease;
+   }
+   span, svg {
+      position: relative;
+      z-index: 1;
+   }
+   &:hover::before {
+      top: -40%;
+   }
 }
 
 // ! button with border
@@ -117,7 +136,7 @@
       height: 100%;
       background: transparent;
       border-radius: 50%;
-      z-index: 1;
+      z-index: 2;
    }
    span.ripple {
       position: absolute;

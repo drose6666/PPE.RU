@@ -3123,7 +3123,6 @@ button.swiper-pagination-bullet {
 
 .ui-btn[colored]:hover {
   color: var(--lightness);
-  background: var(--buttonHover);
   -webkit-box-shadow: var(--buttonHoverShadow);
           box-shadow: var(--buttonHoverShadow);
 }
@@ -3131,6 +3130,36 @@ button.swiper-pagination-bullet {
 .ui-btn[colored]:hover svg {
   stroke: var(--lightness);
   fill: none;
+}
+
+.ui-btn[colored]:before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: 110%;
+  left: 50%;
+  background: var(--darkness);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+       -o-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  z-index: 0;
+  -webkit-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+
+.ui-btn[colored] span,
+.ui-btn[colored] svg {
+  position: relative;
+  z-index: 1;
+}
+
+.ui-btn[colored]:hover::before {
+  top: -40%;
 }
 
 .ui-btn[bordered] {
@@ -3266,7 +3295,7 @@ button.swiper-pagination-bullet {
   background: transparent;
   -webkit-border-radius: 50%;
           border-radius: 50%;
-  z-index: 1;
+  z-index: 2;
 }
 
 .btn-ripple span.ripple {
@@ -6347,7 +6376,7 @@ footer .copyright {
 }
 
 .section-features-company {
-  padding-top: 120px;
+  padding-top: 110px;
 }
 
 .section-features-company .col-flex {
@@ -6533,8 +6562,7 @@ footer .copyright {
 }
 
 .section-features-product {
-  padding-top: 120px;
-  padding-bottom: 30px;
+  padding-top: 80px;
   overflow: hidden;
 }
 
@@ -6580,12 +6608,12 @@ footer .copyright {
      -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  max-width: 30%;
+  max-width: 28%;
   -webkit-box-flex: 0;
-  -webkit-flex: 0 0 30%;
+  -webkit-flex: 0 0 28%;
      -moz-box-flex: 0;
-      -ms-flex: 0 0 30%;
-          flex: 0 0 30%;
+      -ms-flex: 0 0 28%;
+          flex: 0 0 28%;
   width: 100%;
   gap: 100px;
 }
@@ -6594,12 +6622,12 @@ footer .copyright {
 .section-features-product .features-product-col[right] {
   margin-top: -50px;
   position: relative;
-  max-width: 35%;
+  max-width: 36%;
   -webkit-box-flex: 0;
-  -webkit-flex: 0 0 35%;
+  -webkit-flex: 0 0 36%;
      -moz-box-flex: 0;
-      -ms-flex: 0 0 35%;
-          flex: 0 0 35%;
+      -ms-flex: 0 0 36%;
+          flex: 0 0 36%;
   z-index: 1;
 }
 
@@ -6829,8 +6857,8 @@ footer .copyright {
 }
 
 .section-consult {
-  margin-top: -60px;
-  padding: 280px 0 100px 0;
+  margin-top: -90px;
+  padding: 280px 0 110px 0;
   background: url("../../../../img/optimized/tecron_pro/consultation/consult-bg.webp") no-repeat center/cover;
 }
 
@@ -7129,7 +7157,7 @@ footer .copyright {
 }
 
 .section-specifications {
-  padding: 120px 0;
+  padding: 110px 0;
 }
 
 .section-specifications .ui-container {
@@ -7542,7 +7570,7 @@ footer .copyright {
 }
 
 .section-reviews {
-  padding-top: 120px;
+  padding-top: 110px;
 }
 
 .section-reviews .swiper-container {
@@ -7670,7 +7698,7 @@ footer .copyright {
 }
 
 .section-contact[light] {
-  padding-top: 80px;
+  padding-top: 70px;
   padding-bottom: 0;
   background: var(--lightness);
 }
@@ -7692,6 +7720,7 @@ footer .copyright {
   font-display: auto;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
 }
 
 button {
@@ -13158,8 +13187,8 @@ input:active {
 
   .section-consult {
     margin-top: 0;
-    padding: -webkit-calc((100vw - 280px) / 190 * 130 + 80px) 0 100px 0;
-    padding: calc((100vw - 280px) / 190 * 130 + 80px) 0 100px 0;
+    padding: -webkit-calc((100vw - 280px) / 190 * 130 + 80px) 0 110px 0;
+    padding: calc((100vw - 280px) / 190 * 130 + 80px) 0 110px 0;
   }
 }
 

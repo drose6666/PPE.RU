@@ -164,7 +164,7 @@ window.addEventListener('load', () => {
       spaceBetween: 0,
       speed: 800,
       autoplay: {
-         delay: 3000,
+         delay: 1700,
          disableOnInteraction: false,
       },
       effect: 'fade',
