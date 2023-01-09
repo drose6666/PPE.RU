@@ -33,7 +33,7 @@ addDecArrow()
  * TODO: Mobile menu
  */
 window.addEventListener('load', function() {
-   const mobileMenu = new openMobileMenu('.mobile-menu', '.ui-close', '.burger-1', '.overlay')
+   const mobileMenu = new openMobileMenu('.mobile-menu', '.ui-close', '.burger-1', '.overlay', '.close-menu-item')
    let input = document.querySelector('.search-form input')
    
    // clearSearchInputValue(input, mobileMenu)
@@ -70,7 +70,7 @@ function openSearchForm(input, mobMenu) {
  */
 
 const popupVideo = new openPopup('.popup[video]', '.btn-play', '.popup[video] .ui-close', '.popup-overlay', true, '#video-consult', `
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/PkDgq0mG8mg" title="YouTube video player"
+   <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/PkDgq0mG8mg" title="YouTube video player"
                      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                      allowfullscreen></iframe>
 `)
