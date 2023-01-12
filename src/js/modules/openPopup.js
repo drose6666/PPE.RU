@@ -1,7 +1,7 @@
 export default class openPopup {
-   constructor(popup, openBtn, closeBtn, overlay, hasFrame, whereInsert, frame) {
+   constructor(popup, openBtn, closeBtn, overlay = null, hasFrame = false, whereInsert = null, frame = null) {
       this.$popup = document.querySelector(popup)
-      this.$openBtn = document.querySelector(openBtn)
+      this.$openBtn = document.querySelectorAll(openBtn)
       this.$closeBtn = document.querySelector(closeBtn)
       this.$overlay = document.querySelector(overlay)
       this.$whereInsert = document.querySelector(whereInsert)
@@ -12,7 +12,10 @@ export default class openPopup {
    }
 
    #setup = () => {
-      this.$openBtn?.addEventListener('click', this.open)
+      for (let i = 0; i < this.$openBtn.length; i++) {
+         this.$openBtn[i].addEventListener('click', this.open)
+      }
+
       this.$overlay?.addEventListener('click', this.close)
       this.$closeBtn?.addEventListener('click', this.close)
       document.body?.addEventListener('keydown', (e) => {
@@ -23,7 +26,6 @@ export default class openPopup {
    open = () => {
       this.$popup.classList.add('active')
       document.body.classList.add('no-scroll')
-      console.log(this.hasFrame);
       
       if (this.hasFrame) {
          this.insertIframe()
@@ -39,7 +41,6 @@ export default class openPopup {
    }
 
    insertIframe = () => {
-      console.log('insertIframe');
       this.$whereInsert.insertAdjacentHTML('afterbegin', this.frame)
    }
 

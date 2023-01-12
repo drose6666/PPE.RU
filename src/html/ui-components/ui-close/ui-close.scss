@@ -46,19 +46,19 @@
    }
 }
 
-.popup .ui-close {
+.popup[video] .ui-close {
    top: -30px;
    right: 0;
    left: auto;
 
-   svg {
-      stroke: var(--lightness);
-   }
-   &:hover {
-      svg { stroke: var(--decorationBright); }
-   }
+   svg { stroke: var(--lightness); }
+   &:hover {  stroke: var(--decorationBright); }
+}
 
-   &[video] {
-      position: relative;
-   }
+.popup[search] .ui-close {
+   top: 40px;
+   right: 40px;
+   left: auto;
+   svg { stroke: var(--decoration); }
+   &:hover svg { stroke: var(--darkness); }
 }

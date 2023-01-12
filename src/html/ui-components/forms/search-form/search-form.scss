@@ -1,5 +1,4 @@
 .search-form {
-   padding: 0 50px 20px 50px;
    max-width: 100%;
    width: 100%;
    .form-item {
@@ -8,25 +7,19 @@
          position: absolute;
          top: 50%;
          transform: translateY(-50%);
-         right: 15px;
-         width: 16px;
-         height: 16px;
-         stroke: var(--text);
+         right: 20px;
+         width: 20px;
+         height: 20px;
+         stroke: var(--decoration);
+         stroke-width: 1.5;
          fill: none;
          cursor: pointer;
          transition: all 0.1s ease-out;
          &:hover {
             font-style: italic;
-            stroke: var(--decorationBright);
+            stroke: var(--darkness);
          }
       }
    }
 
-   @media all and (max-width: 490px) {
-      padding: 0 30px 20px 30px;
-   }
-
-   @media all and (max-width: 400px) {
-      padding: 0 20px 20px 20px;
-   }
 }

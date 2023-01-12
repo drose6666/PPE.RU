@@ -34,35 +34,11 @@ addDecArrow()
  */
 window.addEventListener('load', function() {
    const mobileMenu = new openMobileMenu('.mobile-menu', '.ui-close', '.burger-1', '.overlay', '.close-menu-item')
-   let input = document.querySelector('.search-form input')
-   
-   // clearSearchInputValue(input, mobileMenu)
-   openSearchForm(input, mobileMenu) 
 })
 
-// * Opening a search form
-function openSearchForm(input, mobMenu) {
-   let searchIconHeader = document.querySelectorAll('header .openSearch')
-   
-   for (let i = 0; i < searchIconHeader.length; i++) {
-      searchIconHeader[i].addEventListener('click', () => {
-         mobMenu.open()
 
-         setTimeout(() => {
-            input?.focus()
-         }, 1000)
-      })
-   }
-}
 
-// * Closing the search form and clear search value
-// function clearSearchInputValue(input, mobMenu) {
-//    let startSearch = document.querySelector('.search-form .form-item svg')
-//    startSearch?.addEventListener('click', () => {
-//       mobMenu.close()
-//       input.value = ''
-//    })
-// }
+
 
 
 /**
@@ -75,6 +51,13 @@ const popupVideo = new openPopup('.popup[video]', '.btn-play', '.popup[video] .u
                      allowfullscreen></iframe>
 `)
 
+
+
+
+/**
+ * TODO: Opening popup search
+ */
+const popupSearch = new openPopup('.popup[search]', '.openSearch', '.popup[search] .ui-close')
 
 
 
