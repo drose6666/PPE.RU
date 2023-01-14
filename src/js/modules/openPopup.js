@@ -1,14 +1,22 @@
 export default class openPopup {
-   constructor(popup, openBtn, closeBtn, overlay = null, hasFrame = false, whereInsert = null, frame = null) {
-      this.$popup = document.querySelector(popup)
-      this.$openBtn = document.querySelectorAll(openBtn)
-      this.$closeBtn = document.querySelector(closeBtn)
-      this.$overlay = document.querySelector(overlay)
-      this.$whereInsert = document.querySelector(whereInsert)
-      this.hasFrame = hasFrame
-      this.frame = frame
+   constructor (
+      popup, 
+      openBtn, 
+      closeBtn, 
+      overlay = null, 
+      hasFrame = false, 
+      whereInsert = null, 
+      frame = null
+      ) {
+         this.$popup = document.querySelector(popup)
+         this.$openBtn = document.querySelectorAll(openBtn)
+         this.$closeBtn = document.querySelector(closeBtn)
+         this.$overlay = document.querySelector(overlay)
+         this.$whereInsert = document.querySelector(whereInsert)
+         this.hasFrame = hasFrame
+         this.frame = frame
 
-      this.#setup()
+         this.#setup()
    }
 
    #setup = () => {
