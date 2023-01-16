@@ -38,7 +38,7 @@
     "gulp-webp-html-nosvg": "^1.0.2",
     "gulp-webpcss": "^1.1.1",
     "gulp-zip": "^5.1.0",
-    "jquery": "^3.6.0",
+    
     "less": "^4.1.2",
     "less-loader": "^10.2.0",
     "postcss": "^8.4.12",

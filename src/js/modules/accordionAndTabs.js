@@ -1,5 +1,3 @@
-import $ from "jquery"
-
 /**
  * 
  * @param {''} whatsThis whatsThis: 'accordion', 'tabs', 'accordionAndTabs'  

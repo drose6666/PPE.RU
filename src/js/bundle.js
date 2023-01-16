@@ -1,7 +1,8 @@
 /**
  * ! IMPORT 
  */
-import $ from "jquery"
+// "jquery": "^3.6.0",
+// import $ from "jquery"
 import openMobileMenu from "./modules/openMobileMenu.js";
 import openPopup from "./modules/openPopup.js";
 import { AccordionAndTabs } from "./modules/accordionAndTabs.js";
@@ -42,10 +43,19 @@ window.addEventListener('load', function() {
 
 
 /**
+ * TODO: Opening popup search
+ */
+new openPopup('.popup[search]', '.openSearch', '.popup[search] .ui-close', null, false, null, null)
+
+
+
+
+
+/**
  * TODO: Opening popup video
  */
 
-const popupVideo = new openPopup('.popup[video]', '.btn-play', '.popup[video] .ui-close', '.popup-overlay', true, '#video-consult', `
+new openPopup('.popup[video]', '.btn-play', '.popup[video] .ui-close', '.popup-overlay', true, '#video-consult', `
    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/PkDgq0mG8mg" title="YouTube video player"
                      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                      allowfullscreen></iframe>
@@ -54,10 +64,6 @@ const popupVideo = new openPopup('.popup[video]', '.btn-play', '.popup[video] .u
 
 
 
-/**
- * TODO: Opening popup search
- */
-const popupSearch = new openPopup('.popup[search]', '.openSearch', '.popup[search] .ui-close')
 
 
 

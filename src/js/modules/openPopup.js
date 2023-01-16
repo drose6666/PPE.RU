@@ -3,10 +3,10 @@ export default class openPopup {
       popup, 
       openBtn, 
       closeBtn, 
-      overlay = null, 
-      hasFrame = false, 
-      whereInsert = null, 
-      frame = null
+      overlay,
+      hasFrame, 
+      whereInsert, 
+      frame
       ) {
          this.$popup = document.querySelector(popup)
          this.$openBtn = document.querySelectorAll(openBtn)
@@ -41,10 +41,13 @@ export default class openPopup {
    }
 
    close = () => {
-      this.$popup.classList.remove('active')
+      this.$popup?.classList.remove('active')
       document.body.classList.remove('no-scroll')
 
-      if (this.hasFrame) this.deleteFrame()
+      console.log(this.hasFrame);
+      if (this.hasFrame) {
+         this.deleteFrame()
+      }
       
    }
 
