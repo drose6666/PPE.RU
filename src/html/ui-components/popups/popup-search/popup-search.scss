@@ -6,8 +6,8 @@
    left: 0;
    width: 100%;
    height: 100%;
-   opacity: 0;
-   visibility: hidden;
+   opacity: 1;
+   visibility: visible;
    transition: all 0.8s ease;
 
    .popup-content {
@@ -15,8 +15,6 @@
    }
 
    &.active {
-      opacity: 1;
-      visibility: visible;
       top: 0;
    }
    .search-form-wrap {

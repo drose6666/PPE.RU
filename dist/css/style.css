@@ -1766,6 +1766,7 @@ button.swiper-pagination-bullet {
   max-width: 100%;
   width: 100%;
   border: none;
+  background: transparent;
   border-bottom: 2px solid var(--decoration);
 }
 
@@ -3102,6 +3103,7 @@ button.swiper-pagination-bullet {
   max-width: 100%;
   width: 100%;
   border: none;
+  background: transparent;
   border-bottom: 2px solid var(--decoration);
 }
 
@@ -6033,8 +6035,8 @@ footer .copyright {
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0;
-  visibility: hidden;
+  opacity: 1;
+  visibility: visible;
   -webkit-transition: all 0.8s ease;
   -o-transition: all 0.8s ease;
   transition: all 0.8s ease;
@@ -6045,8 +6047,6 @@ footer .copyright {
 }
 
 .popup[search].active {
-  opacity: 1;
-  visibility: visible;
   top: 0;
 }
 
