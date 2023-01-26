@@ -4,16 +4,14 @@ export default class openPopup {
       openBtn, 
       closeBtn, 
       overlay,
-      hasFrame, 
       whereInsert, 
-      frame
+      frame,
       ) {
          this.$popup = document.querySelector(popup)
          this.$openBtn = document.querySelectorAll(openBtn)
          this.$closeBtn = document.querySelector(closeBtn)
          this.$overlay = document.querySelector(overlay)
          this.$whereInsert = document.querySelector(whereInsert)
-         this.hasFrame = hasFrame
          this.frame = frame
 
          this.#setup()
@@ -23,10 +21,10 @@ export default class openPopup {
       for (let i = 0; i < this.$openBtn.length; i++) {
          this.$openBtn[i].addEventListener('click', this.open)
       }
-
+      
       this.$overlay?.addEventListener('click', this.close)
       this.$closeBtn?.addEventListener('click', this.close)
-      document.body?.addEventListener('keydown', (e) => {
+      document.body.addEventListener('keydown', (e) => {
          if (e.keyCode == 27) this.close()
       })
    }
@@ -34,8 +32,8 @@ export default class openPopup {
    open = () => {
       this.$popup.classList.add('active')
       document.body.classList.add('no-scroll')
-      
-      if (this.hasFrame) {
+      // debugger
+      if (this.frame) {
          this.insertIframe()
       }
    }
@@ -44,11 +42,10 @@ export default class openPopup {
       this.$popup?.classList.remove('active')
       document.body.classList.remove('no-scroll')
 
-      console.log(this.hasFrame);
-      if (this.hasFrame) {
+      // debugger
+      if (this.frame) {
          this.deleteFrame()
       }
-      
    }
 
    insertIframe = () => {

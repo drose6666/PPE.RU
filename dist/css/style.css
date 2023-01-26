@@ -3954,7 +3954,7 @@ footer .copyright {
 }
 
 .product-card {
-  padding: 10px 17px 0 17px;
+  padding: 10px 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -3971,6 +3971,7 @@ footer .copyright {
           border-radius: 5px;
   border: 1px solid var(--border);
   position: relative;
+  width: 100%;
   -webkit-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
@@ -4017,7 +4018,7 @@ footer .copyright {
 }
 
 .product-card .info {
-  padding: 16px 11px 13px 11px;
+  padding: 16px 25px 13px 25px;
   border-top: 1px solid var(--border);
   -webkit-border-image: var(--horizontalLine);
        -o-border-image: var(--horizontalLine);

@@ -41,11 +41,11 @@ window.addEventListener('load', function() {
 
 
 
-
 /**
  * TODO: Opening popup search
  */
-new openPopup('.popup[search]', '.openSearch', '.popup[search] .ui-close', null, false, null, null)
+new openPopup('.popup[search]', '.openSearch', '.popup[search] .ui-close', null, null, null)
+
 
 
 
@@ -54,14 +54,11 @@ new openPopup('.popup[search]', '.openSearch', '.popup[search] .ui-close', null,
 /**
  * TODO: Opening popup video
  */
-
-new openPopup('.popup[video]', '.btn-play', '.popup[video] .ui-close', '.popup-overlay', true, '#video-consult', `
-   <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/PkDgq0mG8mg" title="YouTube video player"
+let videoProduct = `<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/PkDgq0mG8mg" title="YouTube video player"
                      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                     allowfullscreen></iframe>
-`)
+                     allowfullscreen></iframe>`
 
-
+new openPopup('.popup[video]', '.btn-play', '.popup[video] .ui-close', '.popup-overlay', '#video-consult', videoProduct)
 
 
 
@@ -71,6 +68,10 @@ new openPopup('.popup[video]', '.btn-play', '.popup[video] .ui-close', '.popup-o
  * TODO: Accordion (catalog) in mobile menu
  */
 new AccordionAndTabs('accordion', '.mobile-catalog > li', '.menu-level-2')
+
+
+
+
 
 
 /**
@@ -88,6 +89,9 @@ function customSliderArrow(selector, direction) {
       else btnArrows[i].innerHTML = '<svg width="16" height="29" viewBox="0 0 16 29" fill="none" xmlns="http://www.w3.org/2000/svg"><path  d="M1 27.3119L14.2411 14.156L1 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg >'
    }
 }
+
+
+
 
 
 /**
@@ -121,17 +125,17 @@ document.querySelectorAll('.catalog-swiper').forEach((item, index) => {
             slidesPerGroup: 1,
             spaceBetween: 30,
          },
-         600: {
+         541: {
             slidesPerView: 2,
             spaceBetween: 30,
             slidesPerGroup: 1
          },
-         900: {
+         901: {
             slidesPerView: 3,
             spaceBetween: 30,
             slidesPerGroup: 1
          },
-         1200: {
+         1201: {
             slidesPerView: 4,
             spaceBetween: 30,
             slidesPerGroup: 1
