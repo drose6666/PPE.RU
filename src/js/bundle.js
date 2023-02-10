@@ -33,8 +33,15 @@ addDecArrow()
 /**
  * TODO: Mobile menu
  */
-window.addEventListener('load', function() {
-   const mobileMenu = new openMobileMenu('.mobile-menu', '.ui-close', '.burger-1', '.overlay', '.close-menu-item')
+window.addEventListener('load', () => {
+   let options = {
+      menu: '.mobile-menu',
+      close: '.ui-close',
+      open: '.burger-1',
+      overlay: '.overlay',
+      closeItems: '.close-menu-item'
+   }
+   const mobileMenu = new openMobileMenu(options)
 })
 
 
@@ -44,7 +51,14 @@ window.addEventListener('load', function() {
 /**
  * TODO: Opening popup search
  */
-new openPopup('.popup[search]', '.openSearch', '.popup[search] .ui-close', null, null, null)
+window.addEventListener('load', () => {
+   let options = {
+      popup: '.popup[search]',
+      open: '.openSearch',
+      close: '.popup[search] .ui-close'
+   }
+   new openPopup(options)
+})
 
 
 
@@ -54,11 +68,24 @@ new openPopup('.popup[search]', '.openSearch', '.popup[search] .ui-close', null,
 /**
  * TODO: Opening popup video
  */
-let videoProduct = `<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/PkDgq0mG8mg" title="YouTube video player"
+window.addEventListener('load', () => {
+   let videoProduct = `<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/PkDgq0mG8mg" title="YouTube video player"
                      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                      allowfullscreen></iframe>`
 
-new openPopup('.popup[video]', '.btn-play', '.popup[video] .ui-close', '.popup-overlay', '#video-consult', videoProduct)
+   let options = {
+      popup: '.popup[video]',
+      open: '.btn-play',
+      close: '.popup[video] .ui-close',
+      overlay: '.popup-overlay',
+      whereInsert: '#video-consult',
+      frame: videoProduct
+   }
+
+   new openPopup(options)
+})
+
+
 
 
 
@@ -67,7 +94,15 @@ new openPopup('.popup[video]', '.btn-play', '.popup[video] .ui-close', '.popup-o
 /**
  * TODO: Accordion (catalog) in mobile menu
  */
-new AccordionAndTabs('accordion', '.mobile-catalog > li', '.menu-level-2')
+window.addEventListener('load', () => {
+   let options = {
+      target: 'accordion',
+      title: '.mobile-catalog > li',
+      collapse: '.menu-level-2'
+   }
+
+   new AccordionAndTabs(options)
+})
 
 
 

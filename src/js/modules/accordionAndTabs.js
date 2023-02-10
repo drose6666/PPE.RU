@@ -5,11 +5,11 @@
  * @param {''} collapse collapse: HTMLCollection селектор скрытых элементов '.collapse'
  */
 
-export function AccordionAndTabs(whatsThis, title, collapse, firstHide) {
-   /**
-    * accordion
-    */
-   if (whatsThis == 'accordion') {
+export function AccordionAndTabs({ target, title, collapse, firstHide = true }) {
+
+   // accordion
+
+   if (target == 'accordion') {
       $(collapse).hide()
       $(title).on('click', function () {
          $(title).not($(this)).removeClass('active')
@@ -18,10 +18,11 @@ export function AccordionAndTabs(whatsThis, title, collapse, firstHide) {
       })
    }
 
-   /**
-    * tabs
-    */
-   if (whatsThis == 'tabs') {
+
+   
+   // tabs
+
+   if (target == 'tabs') {
       if (firstHide) 
          $(collapse).hide();
       else $(collapse).not(':first').hide();

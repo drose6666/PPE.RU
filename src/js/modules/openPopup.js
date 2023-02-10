@@ -1,35 +1,29 @@
 export default class openPopup {
-   constructor (
-      popup, 
-      openBtn, 
-      closeBtn, 
-      overlay,
-      whereInsert, 
-      frame,
-      ) {
-         this.$popup = document.querySelector(popup)
-         this.$openBtn = document.querySelectorAll(openBtn)
-         this.$closeBtn = document.querySelector(closeBtn)
-         this.$overlay = document.querySelector(overlay)
-         this.$whereInsert = document.querySelector(whereInsert)
-         this.frame = frame
+   constructor ({ popup, open, close, overlay = null, whereInsert = null, frame = null }) {
+      this.$popup = document.querySelector(popup)
+      this.$openBtn = document.querySelectorAll(open)
+      this.$closeBtn = document.querySelector(close)
+      this.$overlay = document.querySelector(overlay)
+      this.$whereInsert = document.querySelector(whereInsert)
+      this.frame = frame
 
-         this.#setup()
+      this.#setup()
    }
 
    #setup = () => {
       for (let i = 0; i < this.$openBtn.length; i++) {
-         this.$openBtn[i].addEventListener('click', this.open)
+         this.$openBtn[i].addEventListener('click', this.onOpen)
       }
       
-      this.$overlay?.addEventListener('click', this.close)
-      this.$closeBtn?.addEventListener('click', this.close)
+      this.$overlay?.addEventListener('click', this.onClose)
+      
+      this.$closeBtn?.addEventListener('click', this.onClose)
       document.body.addEventListener('keydown', (e) => {
-         if (e.keyCode == 27) this.close()
+         if (e.keyCode == 27) this.onClose()
       })
    }
 
-   open = () => {
+   onOpen = () => {
       this.$popup.classList.add('active')
       document.body.classList.add('no-scroll')
       // debugger
@@ -38,7 +32,7 @@ export default class openPopup {
       }
    }
 
-   close = () => {
+   onClose = () => {
       this.$popup?.classList.remove('active')
       document.body.classList.remove('no-scroll')
 
