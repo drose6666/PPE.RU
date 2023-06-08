@@ -4,8 +4,8 @@ Website layout for the sale of professional protective equipment
 
 ## Preview
 
-![App Screenshot](http://bkb-company.ru/preview.jpg)
-![App Screenshot](http://bkb-company.ru/preview_2.jpg)
+![App Screenshot](http://danilarose.net/preview-projects/pperu/preview.jpg)
+![App Screenshot](http://danilarose.net/preview-projects/pperu/preview_2.jpg)
 
 
 ## Tech Stack
